@@ -1,0 +1,229 @@
+# Arabic translation of JAKH ERP customer-facing modules.
+# Common framework terminology follows the bundled upstream Arabic catalogs.
+# Original component license and copyright notices remain in the source distribution.
+msgid ""
+msgstr ""
+"Project-Id-Version: JAKH ERP 2.0\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+#. module: jakh_migration
+#. odoo-python
+#: code:addons/jakh_migration/migration.py:0
+msgid ""
+"%s opportunities imported; %s existing sources skipped. Foreign amounts were"
+" not relabelled as company currency."
+msgstr ""
+"تم استيراد %s فرصة وتجاوز %s مصدر موجود. لم تُعد تسمية المبالغ الأجنبية "
+"باعتبارها بعملة الشركة."
+
+#. module: jakh_migration
+#. odoo-python
+#: code:addons/jakh_migration/migration.py:0
+msgid ""
+"%s valid opportunities. Original fields and currencies will be retained. No "
+"contacts, balances, posted journals or user credentials are imported."
+msgstr ""
+"توجد %s فرصة صالحة. ستُحفظ الحقول والعملات الأصلية. لن تُستورد جهات اتصال أو"
+" أرصدة أو قيود مرحّلة أو بيانات دخول المستخدمين."
+
+#. module: jakh_migration
+#. odoo-python
+#: code:addons/jakh_migration/migration.py:0
+msgid ""
+"An authorized construction manager must import into an allowed company."
+msgstr "يجب أن يجري الاستيراد مدير إنشاءات مخوّل إلى شركة مسموح بها."
+
+#. module: jakh_migration
+#: model:ir.model.constraint,message:jakh_migration.constraint_crm_lead_jakh_source_unique
+msgid "An original CRM source can be imported only once per legal entity."
+msgstr ""
+"يمكن استيراد المصدر الأصلي لعلاقات العملاء مرة واحدة فقط لكل كيان قانوني."
+
+#. module: jakh_migration
+#. odoo-python
+#: code:addons/jakh_migration/migration.py:0
+msgid "An original amount requires an explicit three-letter currency."
+msgstr "يتطلب المبلغ الأصلي رمز عملة صريحاً من ثلاثة أحرف."
+
+#. module: jakh_migration
+#: model_terms:ir.ui.view,arch_db:jakh_migration.view_crm_import
+msgid "Close"
+msgstr "إغلاق"
+
+#. module: jakh_migration
+#: model:ir.model.fields,field_description:jakh_migration.field_jakh_crm_import__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: jakh_migration
+#: model:ir.model.fields,field_description:jakh_migration.field_jakh_crm_import__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: jakh_migration
+#: model:ir.model.fields,field_description:jakh_migration.field_jakh_crm_import__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: jakh_migration
+#: model:ir.model.fields,field_description:jakh_migration.field_crm_lead__display_name
+#: model:ir.model.fields,field_description:jakh_migration.field_jakh_crm_import__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: jakh_migration
+#. odoo-python
+#: code:addons/jakh_migration/migration.py:0
+msgid "Each opportunity requires a unique source ID and a title."
+msgstr "تتطلب كل فرصة معرّف مصدر فريداً وعنواناً."
+
+#. module: jakh_migration
+#. odoo-python
+#: code:addons/jakh_migration/migration.py:0
+msgid "Every opportunity must be a JSON object."
+msgstr "يجب أن تكون كل فرصة كائناً بصيغة JSON."
+
+#. module: jakh_migration
+#: model:ir.model.fields,field_description:jakh_migration.field_jakh_crm_import__filename
+msgid "Filename"
+msgstr "اسم الملف"
+
+#. module: jakh_migration
+#: model:ir.model.fields,field_description:jakh_migration.field_jakh_crm_import__reviewed
+msgid ""
+"I reviewed the source and confirmed it contains real customer CRM data, not "
+"illustrative financial balances"
+msgstr ""
+"راجعت المصدر وأؤكد أنه يحتوي على بيانات حقيقية لعلاقات العملاء، وليس أرصدة "
+"مالية توضيحية"
+
+#. module: jakh_migration
+#: model:ir.model.fields,field_description:jakh_migration.field_crm_lead__id
+#: model:ir.model.fields,field_description:jakh_migration.field_jakh_crm_import__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: jakh_migration
+#: model_terms:ir.ui.view,arch_db:jakh_migration.view_crm_import
+msgid "Import Reviewed CRM"
+msgstr "استيراد بيانات علاقات العملاء المراجَعة"
+
+#. module: jakh_migration
+#: model:ir.module.module,shortdesc:base.module_jakh_migration
+msgid "JAKH CRM Data Import"
+msgstr "استيراد بيانات علاقات العملاء في JAKH"
+
+#. module: jakh_migration
+#: model:ir.model.fields,field_description:jakh_migration.field_jakh_crm_import__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: jakh_migration
+#: model:ir.model.fields,field_description:jakh_migration.field_jakh_crm_import__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: jakh_migration
+#: model:ir.model,name:jakh_migration.model_crm_lead
+msgid "Lead"
+msgstr "عميل مهتم"
+
+#. module: jakh_migration
+#: model:ir.model,name:jakh_migration.model_jakh_crm_import
+#: model:ir.ui.menu,name:jakh_migration.menu_crm_import
+msgid "CRM Data Import"
+msgstr "استيراد بيانات علاقات العملاء"
+
+#. module: jakh_migration
+#: model_terms:ir.ui.view,arch_db:jakh_migration.view_crm_import
+msgid ""
+"Only CRM opportunities are imported. Original financial fields are "
+"protected. Review sample-versus-real data before loading. Passwords, opening"
+" balances and accounting history are never guessed."
+msgstr ""
+"تُستورد فرص علاقات العملاء فقط. الحقول المالية الأصلية محمية. ميّز بين "
+"البيانات التجريبية والحقيقية قبل التحميل. لا تُخمَّن كلمات المرور أو الأرصدة"
+" الافتتاحية أو السجل المحاسبي مطلقاً."
+
+#. module: jakh_migration
+#. odoo-python
+#: code:addons/jakh_migration/migration.py:0
+msgid "Original amounts cannot be negative or non-finite."
+msgstr "لا يمكن أن تكون المبالغ الأصلية سالبة أو غير محدودة."
+
+#. module: jakh_migration
+#. odoo-python
+#: code:addons/jakh_migration/migration.py:0
+msgid "Original amounts must be finite non-negative decimal numbers."
+msgstr "يجب أن تكون المبالغ الأصلية أعداداً عشرية محدودة وغير سالبة."
+
+#. module: jakh_migration
+#. odoo-python
+#: code:addons/jakh_migration/migration.py:0
+msgid "Original amounts must be numeric."
+msgstr "يجب أن تكون المبالغ الأصلية رقمية."
+
+#. module: jakh_migration
+#. odoo-python
+#: code:addons/jakh_migration/migration.py:0
+msgid "Provide between 1 and 20,000 CRM opportunity records."
+msgstr "قدّم ما بين 1 و20,000 سجل لفرص علاقات العملاء."
+
+#. module: jakh_migration
+#: model:ir.model.fields,field_description:jakh_migration.field_jakh_crm_import__result
+msgid "Result"
+msgstr "النتيجة"
+
+#. module: jakh_migration
+#. odoo-python
+#: code:addons/jakh_migration/migration.py:0
+msgid "Review and confirm the source before importing."
+msgstr "راجع المصدر وأكّده قبل الاستيراد."
+
+#. module: jakh_migration
+#: model:ir.actions.act_window,name:jakh_migration.action_crm_import
+msgid "Import CRM Data"
+msgstr "استيراد بيانات علاقات العملاء"
+
+#. module: jakh_migration
+#. odoo-python
+#: code:addons/jakh_migration/migration.py:0
+msgid "Select a JSON file no larger than 20 MiB."
+msgstr "اختر ملف JSON لا يتجاوز حجمه 20 ميبيبايت."
+
+#. module: jakh_migration
+#: model:ir.model.fields,field_description:jakh_migration.field_jakh_crm_import__source_system
+msgid "Source System"
+msgstr "النظام المصدر"
+
+#. module: jakh_migration
+#. odoo-python
+#: code:addons/jakh_migration/migration.py:0
+msgid "The original currency is not available in the ERP."
+msgstr "العملة الأصلية غير متاحة في نظام إدارة الموارد."
+
+#. module: jakh_migration
+#. odoo-python
+#: code:addons/jakh_migration/migration.py:0
+msgid "The source must be valid UTF-8 JSON."
+msgstr "يجب أن يكون المصدر ملف JSON صالحاً بترميز UTF-8."
+
+#. module: jakh_migration
+#. odoo-python
+#: code:addons/jakh_migration/migration.py:0
+msgid "The workspace records must be a JSON object."
+msgstr "يجب أن تكون سجلات مساحة العمل كائناً بصيغة JSON."
+
+#. module: jakh_migration
+#: model:ir.model.fields,field_description:jakh_migration.field_jakh_crm_import__upload
+msgid "Upload"
+msgstr "رفع"
+
+#. module: jakh_migration
+#: model_terms:ir.ui.view,arch_db:jakh_migration.view_crm_import
+msgid "Validate / Preview"
+msgstr "تحقق ومعاينة"

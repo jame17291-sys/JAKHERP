@@ -1,0 +1,261 @@
+id,name,model_id,group_id/id,operation,domain
+boq_location_financial,Reviewed BOQ location budgets,jakh.boq.location.budget,jakh_core.group_financial,crud,
+boq_location_company,BOQ location company,jakh.boq.location.budget,,crud,"[('company_id', 'in', company_ids)]"
+boq_location_project,BOQ location project,jakh.boq.location.budget,,crud,"[('project_id', 'access', 'read')]"
+boq_location_detail_financial,Reviewed BOQ location detail,jakh.boq.location.budget.line,jakh_core.group_financial,crud,
+boq_location_detail_company,BOQ location detail company,jakh.boq.location.budget.line,,crud,"[('company_id', 'in', company_ids)]"
+boq_location_detail_parent,BOQ location allocation scope,jakh.boq.location.budget.line,,crud,"[('allocation_id', 'access', 'read')]"
+material_return_manager,Manager material returns,jakh.material.return,jakh_core.group_manager,crud,
+material_return_pm,PM material returns,jakh.material.return,jakh_core.group_project_manager,cru,
+material_return_procurement,Procurement material returns,jakh.material.return,jakh_core.group_procurement,cru,
+material_return_company,Material return company,jakh.material.return,,crud,"[('company_id', 'in', company_ids)]"
+material_return_parent,Material return demand,jakh.material.return,,crud,"[('material_request_id', 'access', 'read')]"
+material_pm_picking_read,PM site issue evidence,stock.picking,jakh_core.group_project_manager,r,"[('jakh_material_request_id', 'access', 'read')]"
+material_pm_move_read,PM site issue quantities,stock.move,jakh_core.group_project_manager,r,"[('jakh_material_request_id', 'access', 'read')]"
+binding_manager,Manager source mappings,jakh.integration.binding,jakh_core.group_manager,crud,
+binding_pm,PM source mappings,jakh.integration.binding,jakh_core.group_project_manager,cru,
+binding_finance,Finance source mappings,jakh.integration.binding,jakh_core.group_finance,cru,
+binding_company,Source mapping company,jakh.integration.binding,,crud,"[('company_id', 'in', company_ids)]"
+binding_project,Source mapping project,jakh.integration.binding,,crud,"[('project_id', 'access', 'read')]"
+review_financial,Financial review evidence,jakh.certificate.review,jakh_core.group_financial,r,
+review_manager,Manager review recording,jakh.certificate.review,jakh_core.group_manager,cr,
+review_pm,PM review recording,jakh.certificate.review,jakh_core.group_project_manager,cr,
+review_finance,Finance review recording,jakh.certificate.review,jakh_core.group_finance,cr,
+review_technical,Technical review recording,jakh.certificate.review,jakh_core.group_technical,cr,
+review_company,Review company scope,jakh.certificate.review,,crud,"[('company_id', 'in', company_ids)]"
+review_parent,Review certificate visibility,jakh.certificate.review,,crud,"[('certificate_id', 'access', 'read')]"
+boq_revision_manager,Manager BOQ revision,jakh.contract.boq.revision,jakh_core.group_manager,crud,
+boq_revision_finance,Finance BOQ revision,jakh.contract.boq.revision,jakh_core.group_finance,cru,
+boq_revision_pm,PM BOQ revision,jakh.contract.boq.revision,jakh_core.group_project_manager,cru,
+boq_revision_company,BOQ revision company,jakh.contract.boq.revision,,crud,"[('company_id', 'in', company_ids)]"
+boq_revision_parent,BOQ revision contract,jakh.contract.boq.revision,,crud,"[('contract_id', 'access', 'read')]"
+boq_revision_line_manager,Manager BOQ revision detail,jakh.contract.boq.revision.line,jakh_core.group_manager,crud,
+boq_revision_line_finance,Finance BOQ revision detail,jakh.contract.boq.revision.line,jakh_core.group_finance,cru,
+boq_revision_line_pm,PM BOQ revision detail,jakh.contract.boq.revision.line,jakh_core.group_project_manager,cru,
+boq_revision_line_company,BOQ revision detail company,jakh.contract.boq.revision.line,,crud,"[('company_id', 'in', company_ids)]"
+boq_revision_line_parent,BOQ revision detail parent,jakh.contract.boq.revision.line,,crud,"[('revision_id', 'access', 'read')]"
+boq_current_manager,Manager current BOQ,jakh.contract.boq.report,jakh_core.group_manager,crud,
+boq_current_finance,Finance current BOQ,jakh.contract.boq.report,jakh_core.group_finance,crud,
+boq_current_pm,PM current BOQ,jakh.contract.boq.report,jakh_core.group_project_manager,crud,
+boq_current_company,Current BOQ company,jakh.contract.boq.report,,crud,"[('company_id', 'in', company_ids)]"
+boq_current_parent,Current BOQ contract,jakh.contract.boq.report,,crud,"[('contract_id', 'access', 'read')]"
+boq_current_line_manager,Manager current BOQ detail,jakh.contract.boq.report.line,jakh_core.group_manager,crud,
+boq_current_line_finance,Finance current BOQ detail,jakh.contract.boq.report.line,jakh_core.group_finance,crud,
+boq_current_line_pm,PM current BOQ detail,jakh.contract.boq.report.line,jakh_core.group_project_manager,crud,
+boq_current_line_company,Current BOQ detail company,jakh.contract.boq.report.line,,crud,"[('company_id', 'in', company_ids)]"
+boq_current_line_parent,Current BOQ detail report,jakh.contract.boq.report.line,,crud,"[('report_id', 'access', 'read')]"
+variation_technical_read,Technical variation quantities,jakh.project.variation,jakh_core.group_technical,r,"[('project_id', 'access', 'read')]"
+variation_measure_technical,Technical variation measurements,jakh.payment.certificate.variation.line,jakh_core.group_technical,cru,"[('certificate_id', 'access', 'write')]"
+material_pm,PM material demand,jakh.material.request,jakh_core.group_project_manager,crud,
+material_manager,Manager material demand,jakh.material.request,jakh_core.group_manager,crud,
+material_procurement,Procurement material demand,jakh.material.request,jakh_core.group_procurement,cru,
+material_company,Material demand company scope,jakh.material.request,,crud,"[('company_id', 'in', company_ids)]"
+material_project,Material demand project scope,jakh.material.request,,crud,"[('project_id', 'access', 'read')]"
+construction_report_financial,Construction report finance,jakh.construction.report,jakh_core.group_financial,crud,
+construction_report_company,Construction report company,jakh.construction.report,,crud,"[('company_id', 'in', company_ids)]"
+construction_report_project,Construction report project,jakh.construction.report,,crud,"[('project_id', 'access', 'read')]"
+construction_report_owner,Construction report owner,jakh.construction.report,,crud,"[('create_uid', '=', user.id)]"
+construction_detail_financial,Construction detail finance,jakh.construction.report.line,jakh_core.group_financial,crud,
+construction_detail_parent,Construction detail report,jakh.construction.report.line,,crud,"[('report_id', 'access', 'read')]"
+unbilled_detail_financial,Unbilled detail finance,jakh.unbilled.report.line,jakh_core.group_financial,crud,
+unbilled_detail_parent,Unbilled detail report,jakh.unbilled.report.line,,crud,"[('report_id', 'access', 'read')]"
+threshold_policy_financial,Threshold policy finance,jakh.project.threshold.policy,jakh_core.group_financial,crud,
+threshold_policy_company,Threshold policy company,jakh.project.threshold.policy,,crud,"[('company_id', 'in', company_ids)]"
+threshold_policy_project,Threshold policy project,jakh.project.threshold.policy,,crud,"[('project_id', 'access', 'read')]"
+threshold_alert_financial,Threshold alert finance,jakh.project.threshold.alert,jakh_core.group_financial,cru,
+threshold_alert_company,Threshold alert company,jakh.project.threshold.alert,,crud,"[('company_id', 'in', company_ids)]"
+threshold_alert_project,Threshold alert project,jakh.project.threshold.alert,,crud,"[('project_id', 'access', 'read')]"
+subcontract_agreement_manager,Manager subcontract finance agreements,jakh.subcontract.finance.agreement,jakh_core.group_manager,crud,
+subcontract_agreement_finance,Finance subcontract finance agreements,jakh.subcontract.finance.agreement,jakh_core.group_finance,crud,
+subcontract_agreement_company,Subcontract agreement company scope,jakh.subcontract.finance.agreement,,crud,"[('company_id', 'in', company_ids)]"
+subcontract_agreement_project,Subcontract agreement project scope,jakh.subcontract.finance.agreement,,crud,"[('project_id', 'access', 'read')]"
+subcontract_certificate_manager,Manager subcontract certificates,jakh.subcontract.payment.certificate,jakh_core.group_manager,crud,
+subcontract_certificate_finance,Finance subcontract certificates,jakh.subcontract.payment.certificate,jakh_core.group_finance,crud,
+subcontract_certificate_company,Subcontract certificate company scope,jakh.subcontract.payment.certificate,,crud,"[('company_id', 'in', company_ids)]"
+subcontract_certificate_project,Subcontract certificate agreement scope,jakh.subcontract.payment.certificate,,crud,"[('agreement_id', 'access', 'read')]"
+subcontract_cash_manager,Manager subcontract cash documents,jakh.subcontract.cash.document,jakh_core.group_manager,crud,
+subcontract_cash_finance,Finance subcontract cash documents,jakh.subcontract.cash.document,jakh_core.group_finance,crud,
+subcontract_cash_company,Subcontract cash company scope,jakh.subcontract.cash.document,,crud,"[('company_id', 'in', company_ids)]"
+subcontract_cash_project,Subcontract cash agreement scope,jakh.subcontract.cash.document,,crud,"[('agreement_id', 'access', 'read')]"
+request_financial_read,Financial requisition read,jakh.purchase.request,jakh_core.group_financial,r,
+request_manager,Manager requisitions,jakh.purchase.request,jakh_core.group_manager,crud,
+request_pm,Project manager requisitions,jakh.purchase.request,jakh_core.group_project_manager,cru,
+request_procurement,Procurement requisitions,jakh.purchase.request,jakh_core.group_procurement,cru,
+request_finance,Finance requisitions,jakh.purchase.request,jakh_core.group_finance,cru,
+request_technical,Assigned technical requisitions,jakh.purchase.request,jakh_core.group_technical,cru,"['|', ('project_id.user_id', '=', user.id), ('project_id.message_partner_ids', 'in', [user.partner_id.id])]"
+request_company,Requisition company restriction,jakh.purchase.request,,crud,"[('company_id', 'in', company_ids)]"
+request_project,Requisition project restriction,jakh.purchase.request,,crud,"[('project_id', 'access', 'read')]"
+quantity_financial_read,Financial quantity read,jakh.purchase.request.line,jakh_core.group_financial,r,
+quantity_manager,Manager quantities,jakh.purchase.request.line,jakh_core.group_manager,crud,
+quantity_pm,PM quantities,jakh.purchase.request.line,jakh_core.group_project_manager,cru,
+quantity_procurement,Procurement quantities,jakh.purchase.request.line,jakh_core.group_procurement,cru,
+quantity_finance,Finance quantities,jakh.purchase.request.line,jakh_core.group_finance,cru,
+quantity_technical,Assigned technical quantities,jakh.purchase.request.line,jakh_core.group_technical,cru,"[('request_id', 'access', 'write')]"
+quantity_company,Quantity company restriction,jakh.purchase.request.line,,crud,"[('company_id', 'in', company_ids)]"
+quantity_parent,Quantity parent access,jakh.purchase.request.line,,crud,"[('request_id', 'access', 'read')]"
+cost_financial_read,Financial cost read,jakh.purchase.request.cost,jakh_core.group_financial,r,
+cost_manager,Manager prices,jakh.purchase.request.cost,jakh_core.group_manager,crud,
+cost_procurement,Procurement prices,jakh.purchase.request.cost,jakh_core.group_procurement,crud,
+cost_finance,Finance prices,jakh.purchase.request.cost,jakh_core.group_finance,crud,
+cost_company,Pricing company restriction,jakh.purchase.request.cost,,crud,"[('company_id', 'in', company_ids)]"
+cost_parent,Pricing parent access,jakh.purchase.request.cost,,crud,"[('request_id', 'access', 'read')]"
+contract_financial_read,Financial contract read,jakh.project.contract,jakh_core.group_financial,r,
+contract_technical,Technical contract read,jakh.project.contract,jakh_core.group_technical,r,"[('project_id', 'access', 'read')]"
+contract_manager,Manager contracts,jakh.project.contract,jakh_core.group_manager,crud,
+contract_finance,Finance contracts,jakh.project.contract,jakh_core.group_finance,crud,
+contract_company,Contract company restriction,jakh.project.contract,,crud,"[('company_id', 'in', company_ids)]"
+contract_project,Contract project restriction,jakh.project.contract,,crud,"[('project_id', 'access', 'read')]"
+boq_financial_read,Financial contract quantities,jakh.project.contract.line,jakh_core.group_financial,r,
+boq_technical,Technical contract quantities,jakh.project.contract.line,jakh_core.group_technical,r,"[('contract_id', 'access', 'read')]"
+boq_manager,Manager BOQ,jakh.project.contract.line,jakh_core.group_manager,crud,
+boq_finance,Finance BOQ,jakh.project.contract.line,jakh_core.group_finance,crud,
+boq_company,Contract quantity company restriction,jakh.project.contract.line,,crud,"[('company_id', 'in', company_ids)]"
+boq_parent,Contract quantity parent restriction,jakh.project.contract.line,,crud,"[('contract_id', 'access', 'read')]"
+certificate_financial_read,Financial measurement read,jakh.payment.certificate,jakh_core.group_financial,r,
+certificate_pm,PM measurement,jakh.payment.certificate,jakh_core.group_project_manager,cru,
+certificate_technical,Technical measurement,jakh.payment.certificate,jakh_core.group_technical,cru,"['|', ('contract_id.project_id.user_id', '=', user.id), ('contract_id.project_id.message_partner_ids', 'in', [user.partner_id.id])]"
+certificate_manager,Manager certificates,jakh.payment.certificate,jakh_core.group_manager,crud,
+certificate_finance,Finance certificates,jakh.payment.certificate,jakh_core.group_finance,crud,
+certificate_company,Certificate company restriction,jakh.payment.certificate,,crud,"[('company_id', 'in', company_ids)]"
+certificate_parent,Certificate contract visibility,jakh.payment.certificate,,crud,"[('contract_id', 'access', 'read')]"
+measure_financial_read,Financial measurement quantity read,jakh.payment.certificate.line,jakh_core.group_financial,r,
+measure_pm,PM measured quantities,jakh.payment.certificate.line,jakh_core.group_project_manager,cru,
+measure_technical,Technical measured quantities,jakh.payment.certificate.line,jakh_core.group_technical,cru,"[('certificate_id', 'access', 'write')]"
+measure_manager,Manager measured quantities,jakh.payment.certificate.line,jakh_core.group_manager,crud,
+measure_finance,Finance measured quantities,jakh.payment.certificate.line,jakh_core.group_finance,crud,
+measure_company,Measurement company restriction,jakh.payment.certificate.line,,crud,"[('company_id', 'in', company_ids)]"
+measure_parent,Measurement parent access,jakh.payment.certificate.line,,crud,"[('certificate_id', 'access', 'read')]"
+report_manager,Manager ledger reports,jakh.financial.report,jakh_core.group_manager,crud,
+report_finance,Finance ledger reports,jakh.financial.report,jakh_core.group_finance,crud,
+report_company,Report company restriction,jakh.financial.report,,crud,"[('company_id', 'in', company_ids)]"
+report_creator,Personal report scope,jakh.financial.report,,crud,"[('create_uid', '=', user.id)]"
+report_line_manager,Manager ledger detail,jakh.financial.report.line,jakh_core.group_manager,crud,
+report_line_finance,Finance ledger detail,jakh.financial.report.line,jakh_core.group_finance,crud,
+report_line_company,Report detail company restriction,jakh.financial.report.line,,crud,"[('company_id', 'in', company_ids)]"
+report_line_owner,Report detail parent access,jakh.financial.report.line,,crud,"[('wizard_id', 'access', 'read')]"
+control_entry_financial,Financial project-control ledger,jakh.project.control.entry,jakh_core.group_financial,cr,
+control_entry_stock,Warehouse project-control append only,jakh.project.control.entry,stock.group_stock_user,c,
+request_stock_read,Warehouse requisition quantities,jakh.purchase.request,stock.group_stock_user,r,
+request_quantity_stock_read,Warehouse requested quantities,jakh.purchase.request.line,stock.group_stock_user,r,
+boq_stock_read,Warehouse BOQ quantities,jakh.project.contract.line,stock.group_stock_user,r,
+contract_stock_read,Warehouse contract scope,jakh.project.contract,stock.group_stock_user,r,
+control_entry_accounting,Accounting project-control recording,jakh.project.control.entry,account.group_account_user,cr,
+control_entry_company,Project-control company restriction,jakh.project.control.entry,,r,"[('company_id', 'in', company_ids)]"
+control_entry_project,Project-control project restriction,jakh.project.control.entry,,r,"[('project_id', 'access', 'read')]"
+budget_revision_manager,Manager budget revisions,jakh.project.budget.revision,jakh_core.group_manager,crud,
+budget_revision_pm,Project manager budget revisions,jakh.project.budget.revision,jakh_core.group_project_manager,crud,
+budget_revision_finance,Finance budget revisions,jakh.project.budget.revision,jakh_core.group_finance,crud,
+budget_revision_company,Budget-revision company restriction,jakh.project.budget.revision,,crud,"[('company_id', 'in', company_ids)]"
+budget_revision_project,Budget-revision project restriction,jakh.project.budget.revision,,crud,"[('project_id', 'access', 'read')]"
+forecast_manager,Manager forecasts,jakh.project.forecast,jakh_core.group_manager,crud,
+forecast_pm,Project manager forecasts,jakh.project.forecast,jakh_core.group_project_manager,crud,
+forecast_finance,Finance forecasts,jakh.project.forecast,jakh_core.group_finance,crud,
+forecast_company,Forecast company restriction,jakh.project.forecast,,crud,"[('company_id', 'in', company_ids)]"
+forecast_project,Forecast project restriction,jakh.project.forecast,,crud,"[('project_id', 'access', 'read')]"
+variation_manager,Manager variations,jakh.project.variation,jakh_core.group_manager,crud,
+variation_pm,Project manager variations,jakh.project.variation,jakh_core.group_project_manager,crud,
+variation_finance,Finance variations,jakh.project.variation,jakh_core.group_finance,crud,
+variation_company,Variation company restriction,jakh.project.variation,,crud,"[('company_id', 'in', company_ids)]"
+variation_project,Variation project restriction,jakh.project.variation,,crud,"[('project_id', 'access', 'read')]"
+certificate_variation_manager,Manager variation measurements,jakh.payment.certificate.variation.line,jakh_core.group_manager,crud,
+certificate_variation_pm,PM variation measurements,jakh.payment.certificate.variation.line,jakh_core.group_project_manager,cru,
+certificate_variation_finance,Finance variation measurements,jakh.payment.certificate.variation.line,jakh_core.group_finance,crud,
+certificate_variation_company,Variation measurement company restriction,jakh.payment.certificate.variation.line,,crud,"[('company_id', 'in', company_ids)]"
+certificate_variation_parent,Variation measurement certificate access,jakh.payment.certificate.variation.line,,crud,"[('certificate_id', 'access', 'read')]"
+control_report_manager,Manager project-control reports,jakh.project.control.report,jakh_core.group_manager,crud,
+control_report_pm,PM project-control reports,jakh.project.control.report,jakh_core.group_project_manager,crud,
+control_report_finance,Finance project-control reports,jakh.project.control.report,jakh_core.group_finance,crud,
+control_report_company,Project-control report company restriction,jakh.project.control.report,,crud,"[('company_id', 'in', company_ids)]"
+control_report_project,Project-control report project restriction,jakh.project.control.report,,crud,"[('project_id', 'access', 'read')]"
+control_report_line_manager,Manager project-control output,jakh.project.control.report.line,jakh_core.group_manager,crud,
+control_report_line_pm,PM project-control output,jakh.project.control.report.line,jakh_core.group_project_manager,crud,
+control_report_line_finance,Finance project-control output,jakh.project.control.report.line,jakh_core.group_finance,crud,
+control_report_line_company,Project-control output company restriction,jakh.project.control.report.line,,crud,"[('company_id', 'in', company_ids)]"
+control_report_line_owner,Project-control output parent access,jakh.project.control.report.line,,crud,"[('wizard_id', 'access', 'read')]"
+ses_manager,Manager subcontract service entries,jakh.subcontract.service.entry,jakh_core.group_manager,crud,
+ses_pm,Project manager subcontract service entries,jakh.subcontract.service.entry,jakh_core.group_project_manager,cru,
+ses_procurement,Procurement subcontract service entries,jakh.subcontract.service.entry,jakh_core.group_procurement,cru,
+ses_finance,Finance subcontract service entries,jakh.subcontract.service.entry,jakh_core.group_finance,crud,
+ses_company,Subcontract service-entry company restriction,jakh.subcontract.service.entry,,crud,"[('company_id', 'in', company_ids)]"
+ses_project,Subcontract service-entry project restriction,jakh.subcontract.service.entry,,crud,"[('project_id', 'access', 'read')]"
+actual_feed_manager,Manager actual-cost feeds,jakh.project.actual.feed,jakh_core.group_manager,crud,
+actual_feed_pm,Project manager actual-cost feeds,jakh.project.actual.feed,jakh_core.group_project_manager,crud,
+actual_feed_finance,Finance actual-cost feeds,jakh.project.actual.feed,jakh_core.group_finance,crud,
+actual_feed_company,Actual-cost feed company restriction,jakh.project.actual.feed,,crud,"[('company_id', 'in', company_ids)]"
+actual_feed_project,Actual-cost feed project restriction,jakh.project.actual.feed,,crud,"[('project_id', 'access', 'read')]"
+schedule_progress_manager,Manager schedule progress,jakh.project.schedule.progress,jakh_core.group_manager,crud,
+schedule_progress_pm,Project manager schedule progress,jakh.project.schedule.progress,jakh_core.group_project_manager,crud,
+schedule_progress_finance,Finance schedule progress,jakh.project.schedule.progress,jakh_core.group_finance,crud,
+schedule_progress_company,Schedule-progress company restriction,jakh.project.schedule.progress,,crud,"[('company_id', 'in', company_ids)]"
+schedule_progress_project,Schedule-progress project restriction,jakh.project.schedule.progress,,crud,"[('project_id', 'access', 'read')]"
+cash_forecast_manager,Manager cash forecasts,jakh.project.cash.forecast,jakh_core.group_manager,crud,
+cash_forecast_pm,Project manager cash forecasts,jakh.project.cash.forecast,jakh_core.group_project_manager,crud,
+cash_forecast_finance,Finance cash forecasts,jakh.project.cash.forecast,jakh_core.group_finance,crud,
+cash_forecast_company,Cash-forecast company restriction,jakh.project.cash.forecast,,crud,"[('company_id', 'in', company_ids)]"
+cash_forecast_project,Cash-forecast project restriction,jakh.project.cash.forecast,,crud,"[('project_id', 'access', 'read')]"
+cashflow_report_manager,Manager cashflow reports,jakh.project.cashflow.report,jakh_core.group_manager,crud,
+cashflow_report_pm,Project manager cashflow reports,jakh.project.cashflow.report,jakh_core.group_project_manager,crud,
+cashflow_report_finance,Finance cashflow reports,jakh.project.cashflow.report,jakh_core.group_finance,crud,
+cashflow_report_company,Cashflow report company restriction,jakh.project.cashflow.report,,crud,"[('company_id', 'in', company_ids)]"
+cashflow_report_project,Cashflow report project restriction,jakh.project.cashflow.report,,crud,"[('project_id', 'access', 'read')]"
+cashflow_line_manager,Manager cashflow report output,jakh.project.cashflow.report.line,jakh_core.group_manager,crud,
+cashflow_line_pm,Project manager cashflow report output,jakh.project.cashflow.report.line,jakh_core.group_project_manager,crud,
+cashflow_line_finance,Finance cashflow report output,jakh.project.cashflow.report.line,jakh_core.group_finance,crud,
+cashflow_line_company,Cashflow output company restriction,jakh.project.cashflow.report.line,,crud,"[('company_id', 'in', company_ids)]"
+cashflow_line_parent,Cashflow output parent restriction,jakh.project.cashflow.report.line,,crud,"[('wizard_id', 'access', 'read')]"
+report_schedule_manager,Manager report schedules,jakh.report.schedule,jakh_core.group_manager,crud,
+report_schedule_pm,Project manager report schedules,jakh.report.schedule,jakh_core.group_project_manager,crud,
+report_schedule_finance,Finance report schedules,jakh.report.schedule,jakh_core.group_finance,crud,
+report_schedule_company,Report schedule company restriction,jakh.report.schedule,,crud,"[('company_id', 'in', company_ids)]"
+report_schedule_project,Report schedule project restriction,jakh.report.schedule,,crud,"[('project_id', 'access', 'read')]"
+report_delivery_manager,Manager report deliveries,jakh.report.delivery,jakh_core.group_manager,crud,
+report_delivery_pm,Project manager report deliveries,jakh.report.delivery,jakh_core.group_project_manager,crud,
+report_delivery_finance,Finance report deliveries,jakh.report.delivery,jakh_core.group_finance,crud,
+report_delivery_company,Report delivery company restriction,jakh.report.delivery,,crud,"[('company_id', 'in', company_ids)]"
+report_delivery_parent,Report delivery schedule restriction,jakh.report.delivery,,crud,"[('schedule_id', 'access', 'read')]"
+production_readiness_manager,Manager production readiness,jakh.production.readiness,jakh_core.group_manager,crud,
+production_readiness_company,Production readiness company restriction,jakh.production.readiness,,crud,"[('company_id', 'in', company_ids)]"
+integration_manager,Manager integration inbox,jakh.integration.event,jakh_core.group_manager,cru,
+integration_finance,Finance integration inbox,jakh.integration.event,jakh_core.group_finance,cru,
+integration_pm,PM integration inbox,jakh.integration.event,jakh_core.group_project_manager,cru,
+integration_company,Integration company scope,jakh.integration.event,,crud,"[('company_id', 'in', company_ids)]"
+integration_project,Integration project scope,jakh.integration.event,,crud,"[('project_id', 'access', 'read')]"
+site_resource_manager,Manager site resources,jakh.site.resource,jakh_core.group_manager,crud,
+site_resource_pm,PM site resources,jakh.site.resource,jakh_core.group_project_manager,cru,
+site_resource_finance,Finance site resources,jakh.site.resource,jakh_core.group_finance,ru,
+site_resource_company,Site resource company scope,jakh.site.resource,,crud,"[('company_id', 'in', company_ids)]"
+allocation_manager,Manager resource allocations,jakh.resource.assignment,jakh_core.group_manager,crud,
+allocation_pm,PM resource allocations,jakh.resource.assignment,jakh_core.group_project_manager,cru,
+allocation_finance,Finance resource allocations,jakh.resource.assignment,jakh_core.group_finance,r,
+allocation_company,Resource allocation company scope,jakh.resource.assignment,,crud,"[('company_id', 'in', company_ids)]"
+allocation_project,Resource allocation project scope,jakh.resource.assignment,,crud,"[('project_id', 'access', 'read')]"
+ses_reversal_manager,Manager service corrections,jakh.subcontract.service.reversal,jakh_core.group_manager,crud,
+ses_reversal_finance,Finance service corrections,jakh.subcontract.service.reversal,jakh_core.group_finance,crud,
+ses_reversal_procurement,Procurement service corrections,jakh.subcontract.service.reversal,jakh_core.group_procurement,r,
+ses_reversal_pm,PM service corrections,jakh.subcontract.service.reversal,jakh_core.group_project_manager,r,
+ses_reversal_company,Service correction company scope,jakh.subcontract.service.reversal,,crud,"[('company_id', 'in', company_ids)]"
+ses_reversal_project,Service correction project scope,jakh.subcontract.service.reversal,,crud,"[('project_id', 'access', 'read')]"
+ses_reversal_parent,Service correction source access,jakh.subcontract.service.reversal,,crud,"[('service_entry_id', 'access', 'read')]"
+sub_amendment_manager,Manager subcontract amendments,jakh.subcontract.amendment,jakh_core.group_manager,crud,
+sub_amendment_finance,Finance subcontract amendments,jakh.subcontract.amendment,jakh_core.group_finance,crud,
+sub_amendment_procurement,Procurement subcontract amendments,jakh.subcontract.amendment,jakh_core.group_procurement,cru,
+sub_amendment_pm,PM subcontract amendments,jakh.subcontract.amendment,jakh_core.group_project_manager,r,
+sub_amendment_company,Subcontract amendment company scope,jakh.subcontract.amendment,,crud,"[('company_id', 'in', company_ids)]"
+sub_amendment_project,Subcontract amendment project scope,jakh.subcontract.amendment,,crud,"[('project_id', 'access', 'read')]"
+finance_po_match,Finance subcontract match orders,purchase.order,jakh_core.group_finance,ru,"[('company_id', 'in', company_ids)]"
+finance_po_line_match,Finance subcontract match lines,purchase.order.line,jakh_core.group_finance,ru,"[('company_id', 'in', company_ids)]"
+contract_cash_manager,Manager contract cash documents,jakh.contract.cash.document,jakh_core.group_manager,crud,
+contract_cash_finance,Finance contract cash documents,jakh.contract.cash.document,jakh_core.group_finance,cru,
+contract_cash_company,Contract cash company scope,jakh.contract.cash.document,,crud,"[('company_id', 'in', company_ids)]"
+contract_cash_project,Contract cash project scope,jakh.contract.cash.document,,crud,"[('project_id', 'access', 'read')]"
+final_account_manager,Manager final accounts,jakh.project.final.account,jakh_core.group_manager,crud,
+final_account_finance,Finance final accounts,jakh.project.final.account,jakh_core.group_finance,cru,
+final_account_company,Final account company scope,jakh.project.final.account,,crud,"[('company_id', 'in', company_ids)]"
+final_account_project,Final account project scope,jakh.project.final.account,,crud,"[('project_id', 'access', 'read')]"
+cashflow_policy_manager,Manager company cash policies,jakh.cashflow.policy,jakh_core.group_manager,crud,
+cashflow_policy_finance,Finance company cash policies,jakh.cashflow.policy,jakh_core.group_finance,crud,
+cashflow_policy_company,Company cash policy scope,jakh.cashflow.policy,,crud,"[('company_id', 'in', company_ids)]"
+cashflow_policy_line_manager,Manager cash policy mappings,jakh.cashflow.policy.line,jakh_core.group_manager,crud,
+cashflow_policy_line_finance,Finance cash policy mappings,jakh.cashflow.policy.line,jakh_core.group_finance,crud,
+cashflow_policy_line_company,Cash policy mapping company scope,jakh.cashflow.policy.line,,crud,"[('company_id', 'in', company_ids)]"
+cashflow_policy_line_parent,Cash policy mapping parent access,jakh.cashflow.policy.line,,crud,"[('policy_id', 'access', 'read')]"

@@ -1,0 +1,5 @@
+<odoo noupdate="1">
+  <!-- Fresh installations only. Module upgrades never reset an owner's later
+       approved provider policy. Existing tenants require explicit action. -->
+  <function model="res.users" name="_jakh_disable_automatic_enrichment"/>
+</odoo>

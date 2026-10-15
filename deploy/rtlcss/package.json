@@ -1,0 +1,17 @@
+{
+  "name": "jakh-native-arabic-layout",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Pinned native RTL compiler required by the ERP asset pipeline",
+  "jakhRtlcssVersion": "4.3.0",
+  "jakhSourceBuild": "Official tagged source archives packaged locally; see provenance/",
+  "dependencies": {
+    "rtlcss": "file:vendor/rtlcss-4.3.0.tgz",
+    "postcss": "file:vendor/postcss-8.5.6.tgz",
+    "nanoid": "file:vendor/nanoid-3.3.11.tgz",
+    "source-map-js": "file:vendor/source-map-js-1.2.1.tgz",
+    "escalade": "file:vendor/escalade-3.1.1.tgz",
+    "picocolors": "file:vendor/picocolors-1.1.1.tgz",
+    "strip-json-comments": "file:vendor/strip-json-comments-3.1.1.tgz"
+  }
+}

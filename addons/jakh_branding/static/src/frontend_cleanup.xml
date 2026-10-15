@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <!-- Remove the whole provider-generation component before it mounts. The
+         inherited native list/kanban New buttons and Action-menu import stay
+         untouched. No lead records or manual entry actions are altered. -->
+    <t t-name="jakh_branding.CrmListWithoutGeneration" t-inherit="crm.List.Buttons" t-inherit-mode="extension">
+        <xpath expr="//t[LeadGenerationDropdown]" position="replace"/>
+    </t>
+
+    <t t-name="jakh_branding.CrmKanbanWithoutGeneration" t-inherit="crm.Kanban.Buttons" t-inherit-mode="extension">
+        <xpath expr="//t[LeadGenerationDropdown]" position="replace"/>
+    </t>
+
+    <t t-name="jakh_branding.SalesEmptyState" t-inherit="sale.SaleActionHelper" t-inherit-mode="extension">
+        <!-- Preserve native quotation guidance and New/import controls. -->
+        <xpath expr="//a[hasclass('o_sale_action_preview')]" position="replace"/>
+        <xpath expr="//t[@t-out='this.props.noContentHelp']" position="replace">
+            <h2>No sales documents match this view</h2>
+            <p>Create a quotation, hand over an approved estimate from Tender &amp; BOQ, or adjust your filters.</p>
+        </xpath>
+    </t>
+
+    <t t-name="jakh_branding.SettingsTabIcons" t-inherit="web.SettingsPage.SidePanel.Regular" t-inherit-mode="extension">
+        <!-- Font icons have a short line box; center it beside the native 40px label row. -->
+        <xpath expr="//a[hasclass('tab')]" position="attributes">
+            <attribute name="class" add="align-items-center" separator=" "/>
+        </xpath>
+        <xpath expr="//span[hasclass('icon')]" position="replace">
+            <i class="icon oi fs-5 text-primary d-none d-md-block" t-att-data-icon="this.jakhSettingsIcon(module.key)" aria-hidden="true"/>
+        </xpath>
+    </t>
+
+    <t t-name="jakh_branding.SettingsMobileTabIcons" t-inherit="web.SettingsPage.SidePanel.Small" t-inherit-mode="extension">
+        <xpath expr="//i[@t-attf-style]" position="replace">
+            <i class="oi fs-5 text-primary d-inline-block flex-shrink-0 me-2" t-att-data-icon="this.jakhSettingsIcon(this.selectedModule().key)" aria-hidden="true"/>
+        </xpath>
+        <xpath expr="//span[@t-attf-style]" position="replace">
+            <i class="oi fs-5 text-primary flex-shrink-0 me-2" t-att-data-icon="this.jakhSettingsIcon(module.key)" aria-hidden="true"/>
+        </xpath>
+    </t>
+
+    <t t-name="jakh_branding.SettingsSearchIcons" t-inherit="web.SettingsApp" t-inherit-mode="extension">
+        <xpath expr="//img[hasclass('icon')]" position="replace">
+            <i class="icon oi fs-5 text-primary" t-att-data-icon="this.jakhSettingsIcon" aria-hidden="true"/>
+        </xpath>
+    </t>
+
+    <t t-name="jakh_branding.InstallPublisher" t-inherit="web.InstallScopedApp" t-inherit-mode="extension">
+        <xpath expr="//a[@href='https://odoo.com']" position="replace">
+            <span class="text-muted">JAKH Contracting Platform</span>
+        </xpath>
+    </t>
+
+    <t t-name="jakh_branding.CrmProbabilityHelp" t-inherit="crm.PlsTooltip" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('o_crm_pls_tooltip_footer')]/span[@t-else]" position="replace">
+            <span t-else="">Estimated from your recorded lead outcomes and attributes.</span>
+        </xpath>
+        <xpath expr="//div[hasclass('o_crm_pls_tooltip_footer')]/a" position="attributes">
+            <attribute name="href">/jakh/help#crm-probability</attribute>
+            <attribute name="rel">noopener noreferrer</attribute>
+        </xpath>
+    </t>
+</templates>

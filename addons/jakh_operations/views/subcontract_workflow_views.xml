@@ -1,0 +1,64 @@
+<odoo>
+  <record id="ses_form_payable_workflow" model="ir.ui.view">
+    <field name="name">jakh.subcontract.service.entry.payable.workflow</field>
+    <field name="model">jakh.subcontract.service.entry</field>
+    <field name="inherit_id" ref="jakh_operations.ses_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//header/field[@name='state']" position="before">
+        <button name="action_create_bill" type="object" string="Create supplier bill" class="btn-primary" groups="jakh_core.group_manager,jakh_core.group_finance" invisible="state != 'approved' or net_accepted_quantity &lt;= 0"/>
+        <button name="action_prepare_reversal" type="object" string="Correct accepted work" groups="jakh_core.group_manager,jakh_core.group_finance" invisible="state != 'approved' or net_accepted_quantity &lt;= 0"/>
+      </xpath>
+      <xpath expr="//field[@name='accepted_amount']" position="after">
+        <field name="net_accepted_quantity"/>
+        <field name="invoice_id" groups="jakh_core.group_financial"/>
+      </xpath>
+      <xpath expr="//sheet" position="inside">
+        <group string="Work correction history">
+          <field name="reversal_ids" readonly="1"><list create="false" edit="false" delete="false"><field name="name"/><field name="date"/><field name="quantity"/><field name="reason"/><field name="state" widget="badge"/></list></field>
+        </group>
+      </xpath>
+    </field>
+  </record>
+  <record id="service_reversal_list" model="ir.ui.view">
+    <field name="name">jakh.subcontract.service.reversal.list</field><field name="model">jakh.subcontract.service.reversal</field>
+    <field name="arch" type="xml"><list><field name="name"/><field name="service_entry_id"/><field name="purchase_order_id"/><field name="project_id"/><field name="wbs_id"/><field name="date"/><field name="quantity"/><field name="reversed_amount" groups="jakh_core.group_financial"/><field name="currency_id" column_invisible="True"/><field name="state" widget="badge"/></list></field>
+  </record>
+  <record id="service_reversal_form" model="ir.ui.view">
+    <field name="name">jakh.subcontract.service.reversal.form</field><field name="model">jakh.subcontract.service.reversal</field>
+    <field name="arch" type="xml"><form><header>
+      <button name="action_submit" type="object" string="Submit correction" class="btn-primary" invisible="state != 'draft'"/>
+      <button name="action_approve" type="object" string="Approve correction" class="btn-primary" invisible="state != 'submitted'"/>
+      <button name="action_reject" type="object" string="Reject" invisible="state != 'submitted'"/>
+      <field name="state" widget="statusbar"/>
+    </header><sheet><group><group><field name="name" readonly="state != 'draft'"/><field name="service_entry_id" readonly="state != 'draft'" domain="[('state','=','approved')]"/><field name="purchase_order_id"/><field name="project_id"/><field name="wbs_id"/><field name="company_id"/></group><group><field name="date" readonly="state != 'draft'"/><field name="quantity" readonly="state != 'draft'"/><field name="currency_id" invisible="1"/><field name="reversed_amount" groups="jakh_core.group_financial"/><field name="approved_by"/><field name="approved_at"/></group></group><group><field name="reason" readonly="state != 'draft'"/></group></sheet><chatter/></form></field>
+  </record>
+  <record id="service_reversal_search" model="ir.ui.view">
+    <field name="name">jakh.subcontract.service.reversal.search</field><field name="model">jakh.subcontract.service.reversal</field>
+    <field name="arch" type="xml"><search><field name="name"/><field name="service_entry_id"/><field name="project_id"/><field name="wbs_id"/><filter name="pending" string="Awaiting approval" domain="[('state','=','submitted')]"/><filter name="project_group" string="Project" context="{'group_by':'project_id'}"/><filter name="status_group" string="Status" context="{'group_by':'state'}"/></search></field>
+  </record>
+  <record id="action_service_reversals" model="ir.actions.act_window"><field name="name">Subcontract work corrections</field><field name="res_model">jakh.subcontract.service.reversal</field><field name="view_mode">list,form</field></record>
+  <menuitem id="menu_service_reversals" name="Subcontract work corrections" parent="jakh_core.menu_construction" action="action_service_reversals" sequence="59" groups="jakh_core.group_manager,jakh_core.group_finance"/>
+  <record id="subcontract_amendment_list" model="ir.ui.view">
+    <field name="name">jakh.subcontract.amendment.list</field><field name="model">jakh.subcontract.amendment</field>
+    <field name="arch" type="xml"><list><field name="name"/><field name="variation_id"/><field name="purchase_order_id"/><field name="project_id"/><field name="wbs_id"/><field name="date"/><field name="commitment_delta" groups="jakh_core.group_financial"/><field name="currency_id" column_invisible="True"/><field name="state" widget="badge"/></list></field>
+  </record>
+  <record id="subcontract_amendment_form" model="ir.ui.view">
+    <field name="name">jakh.subcontract.amendment.form</field><field name="model">jakh.subcontract.amendment</field>
+    <field name="arch" type="xml"><form><header>
+      <button name="action_submit" type="object" string="Submit amendment" class="btn-primary" invisible="state != 'draft'"/>
+      <button name="action_approve" type="object" string="Approve and amend order" class="btn-primary" groups="jakh_core.group_manager,jakh_core.group_finance" invisible="state != 'submitted'"/>
+      <button name="action_reject" type="object" string="Reject" groups="jakh_core.group_manager,jakh_core.group_finance" invisible="state != 'submitted'"/>
+      <field name="state" widget="statusbar"/>
+    </header><sheet><group><group><field name="name" readonly="state != 'draft'"/><field name="variation_id" readonly="state != 'draft'" domain="[('variation_type','=','subcontract'),('state','=','approved')]"/><field name="purchase_line_id" readonly="state != 'draft'" domain="[('jakh_request_line_id.request_id.project_id','=',project_id),('jakh_request_line_id.request_id.wbs_id','=',wbs_id),('order_id.state','in',['purchase','done']),('product_id.type','=','service')]"/><field name="purchase_order_id"/><field name="project_id"/><field name="wbs_id"/><field name="company_id"/></group><group><field name="date" readonly="state != 'draft'"/><field name="applied_line_id"/><field name="currency_id" invisible="1"/><field name="commitment_delta" groups="jakh_core.group_financial"/><field name="approved_by"/><field name="approved_at"/></group></group><group><field name="reason" readonly="state != 'draft'"/></group></sheet><chatter/></form></field>
+  </record>
+  <record id="subcontract_amendment_search" model="ir.ui.view">
+    <field name="name">jakh.subcontract.amendment.search</field><field name="model">jakh.subcontract.amendment</field>
+    <field name="arch" type="xml"><search><field name="name"/><field name="variation_id"/><field name="purchase_order_id"/><field name="project_id"/><filter name="pending" string="Awaiting approval" domain="[('state','=','submitted')]"/><filter name="project_group" string="Project" context="{'group_by':'project_id'}"/><filter name="status_group" string="Status" context="{'group_by':'state'}"/></search></field>
+  </record>
+  <record id="action_subcontract_amendments" model="ir.actions.act_window"><field name="name">Subcontract order amendments</field><field name="res_model">jakh.subcontract.amendment</field><field name="view_mode">list,form</field></record>
+  <menuitem id="menu_subcontract_amendments" name="Subcontract order amendments" parent="jakh_core.menu_construction" action="action_subcontract_amendments" sequence="57" groups="jakh_core.group_manager,jakh_core.group_procurement,jakh_core.group_finance"/>
+  <record id="variation_form_subcontract_amendment" model="ir.ui.view">
+    <field name="name">jakh.project.variation.subcontract.amendment</field><field name="model">jakh.project.variation</field><field name="inherit_id" ref="jakh_operations.variation_form"/>
+    <field name="arch" type="xml"><xpath expr="//header/field[@name='state']" position="before"><button name="action_prepare_subcontract_amendment" type="object" string="Prepare order amendment" groups="jakh_core.group_manager,jakh_core.group_procurement,jakh_core.group_finance" invisible="variation_type != 'subcontract' or state != 'approved'"/></xpath></field>
+  </record>
+</odoo>

@@ -1,0 +1,102 @@
+<odoo>
+  <record id="cash_forecast_presentation_form" model="ir.ui.view"><field name="name">jakh.project.cashflow.report.presentation.form</field><field name="model">jakh.project.cashflow.report</field><field name="inherit_id" ref="cashflow_report_form"/><field name="arch" type="xml"><xpath expr="//header" position="inside"><button name="action_export_xlsx" type="object" string="Download XLSX"/><button name="action_print_pdf" type="object" string="Company-branded PDF"/></xpath></field></record>
+  <record id="financial_report_presentation_form" model="ir.ui.view"><field name="name">jakh.financial.report.presentation.form</field><field name="model">jakh.financial.report</field><field name="inherit_id" ref="financial_report_form"/><field name="arch" type="xml"><xpath expr="//header" position="inside"><button name="action_print_pdf" type="object" string="Company-branded PDF"/></xpath></field></record>
+  <record id="construction_report_form" model="ir.ui.view">
+    <field name="name">jakh.construction.report.form</field><field name="model">jakh.construction.report</field>
+    <field name="arch" type="xml">
+      <form>
+        <header>
+          <button name="action_generate" type="object" string="Generate report" class="btn-primary"/>
+          <button name="action_open_detail" type="object" string="Pivot / chart / detail" invisible="report_type != 'cost'"/>
+          <button name="action_export_xlsx" type="object" string="Download XLSX"/>
+          <button name="action_print_pdf" type="object" string="Company-branded PDF"/>
+          <button name="action_open_receipts" type="object" string="Matched receipt sources" invisible="not receipts_available"/>
+        </header>
+        <sheet>
+          <group><group><field name="report_type"/><field name="project_id"/><field name="company_id"/><field name="currency_id"/></group>
+            <group><field name="as_of_date"/><field name="generated_at"/></group></group>
+          <group string="Detail filters" invisible="report_type != 'cost'">
+            <field name="wbs_id" domain="[('project_id','=',project_id)]"/>
+            <field name="contract_line_id" domain="[('contract_id.project_id','=',project_id)]"/>
+            <field name="location_id" domain="[('project_id','=',project_id)]"/>
+            <field name="discipline_id" domain="[('company_id','=',company_id)]"/>
+          </group>
+          <group string="Whole-project performance" invisible="not generated_at">
+            <group><field name="physical_progress" string="Physical progress"/><field name="financial_progress" string="Certified financial progress"/><field name="billing_progress" string="Posted billing progress"/></group>
+            <group><field name="revised_budget"/><field name="commitments"/><field name="actual_cost"/><field name="forecast_final_cost"/><field name="forecast_margin"/><field name="matched_receipts" invisible="not receipts_available"/></group>
+          </group>
+          <div class="alert alert-info" role="status">Project performance is for the whole project. Detail filters affect only the BOQ/location table. An Undefined percentage means missing approved progress or a non-positive denominator, not zero progress.</div>
+          <field name="basis" invisible="not generated_at"/>
+          <field name="dimension_complete" invisible="1"/>
+          <field name="receipts_available" invisible="1"/>
+          <div class="alert alert-info" invisible="not generated_at or receipts_available" role="status">Posted receipt details require current accounting-document permissions. No zero balance is implied.</div>
+          <div class="alert alert-warning" role="status" invisible="not generated_at or dimension_complete or report_type != 'cost'">Some facts have no approved BOQ or building allocation. Unallocated rows remain in the totals; they are never divided between buildings without evidence.</div>
+          <field name="cost_line_ids" readonly="1" invisible="report_type != 'cost'">
+            <list create="false" edit="false" delete="false" decoration-warning="allocation_status == 'unallocated'">
+              <field name="wbs_id"/><field name="contract_line_id"/><field name="building_id"/><field name="location_id"/><field name="discipline_id" optional="show"/><field name="allocation_status" widget="badge"/>
+              <field name="original_budget" sum="Original budget"/><field name="revised_budget" sum="Revised budget"/><field name="commitments" sum="Commitments"/><field name="received_cost" sum="Received exposure" optional="hide"/><field name="actual_cost" sum="Posted actual cost"/>
+              <field name="original_revenue" sum="Original contract value" optional="hide"/><field name="variation_revenue" sum="Owner changes" optional="hide"/><field name="certified_revenue" sum="Certified gross" optional="hide"/><field name="billed_revenue" sum="Posted billing" optional="hide"/>
+              <field name="currency_id" column_invisible="True"/><button name="action_open_sources" type="object" string="Source facts" icon="fa-external-link"/>
+            </list>
+          </field>
+          <field name="unbilled_line_ids" readonly="1" invisible="report_type != 'unbilled'">
+            <list create="false" edit="false" delete="false" decoration-danger="age_days &gt; 30">
+              <field name="certificate_id"/><field name="contract_id"/><field name="date"/><field name="approved_date"/><field name="age_days"/>
+              <field name="approved_gross" sum="Approved gross"/><field name="posted_gross" sum="Posted gross"/><field name="unbilled_gross" sum="Unbilled gross"/>
+              <field name="invoice_id"/><field name="invoice_status" widget="badge"/><field name="currency_id" column_invisible="True"/>
+              <button name="action_open_certificate" type="object" string="Open certificate" icon="fa-external-link"/>
+            </list>
+          </field>
+        </sheet>
+      </form>
+    </field>
+  </record>
+  <record id="construction_cost_line_list" model="ir.ui.view">
+    <field name="name">jakh.construction.report.line.list</field><field name="model">jakh.construction.report.line</field>
+    <field name="arch" type="xml"><list create="false" edit="false" delete="false"><field name="wbs_id"/><field name="contract_line_id"/><field name="building_id"/><field name="location_id"/><field name="discipline_id"/><field name="allocation_status"/>
+      <field name="original_budget" sum="Original budget"/><field name="revised_budget" sum="Revised budget"/><field name="commitments" sum="Commitments"/><field name="actual_cost" sum="Posted actual cost"/><field name="currency_id" column_invisible="True"/>
+      <button name="action_open_sources" type="object" string="Source facts" icon="fa-external-link"/></list></field>
+  </record>
+  <record id="construction_cost_line_pivot" model="ir.ui.view">
+    <field name="name">jakh.construction.report.line.pivot</field><field name="model">jakh.construction.report.line</field>
+    <field name="arch" type="xml"><pivot string="BOQ and building cost" disable_linking="1"><field name="building_id" type="row"/><field name="contract_line_id" type="row"/><field name="location_id" type="col"/>
+      <field name="original_budget" type="measure"/><field name="revised_budget" type="measure"/><field name="commitments" type="measure"/><field name="actual_cost" type="measure"/><field name="received_cost" type="measure"/>
+    </pivot></field>
+  </record>
+  <record id="construction_cost_line_graph" model="ir.ui.view">
+    <field name="name">jakh.construction.report.line.graph</field><field name="model">jakh.construction.report.line</field>
+    <field name="arch" type="xml"><graph string="BOQ and building cost"><field name="building_id"/><field name="actual_cost" type="measure"/></graph></field>
+  </record>
+  <record id="construction_cost_line_search" model="ir.ui.view">
+    <field name="name">jakh.construction.report.line.search</field><field name="model">jakh.construction.report.line</field>
+    <field name="arch" type="xml"><search><field name="wbs_id"/><field name="contract_line_id"/><field name="building_id"/><field name="location_id"/><field name="discipline_id"/>
+      <filter name="unallocated" string="Unallocated / incomplete" domain="[('allocation_status','=','unallocated')]"/>
+      <filter name="by_building" string="Building" context="{'group_by':'building_id'}"/><filter name="by_boq" string="BOQ item" context="{'group_by':'contract_line_id'}"/><filter name="by_wbs" string="WBS" context="{'group_by':'wbs_id'}"/>
+    </search></field>
+  </record>
+  <record id="action_construction_cost_rows" model="ir.actions.act_window"><field name="name">BOQ and building cost detail</field><field name="res_model">jakh.construction.report.line</field><field name="view_mode">list,pivot,graph</field><field name="group_ids" eval="[(4,ref('jakh_core.group_financial'))]"/></record>
+  <record id="action_construction_reports" model="ir.actions.act_window"><field name="name">Construction control</field><field name="res_model">jakh.construction.report</field><field name="view_mode">form</field><field name="group_ids" eval="[(4,ref('jakh_core.group_financial'))]"/></record>
+  <record id="action_unbilled_reports" model="ir.actions.act_window"><field name="name">Approved unbilled certificates</field><field name="res_model">jakh.construction.report</field><field name="view_mode">form</field><field name="context">{'default_report_type':'unbilled'}</field><field name="group_ids" eval="[(4,ref('jakh_core.group_financial'))]"/></record>
+  <menuitem id="menu_construction_reports" name="BOQ &amp; building cost control" parent="jakh_core.menu_reports" action="action_construction_reports" sequence="12" groups="jakh_core.group_manager,jakh_core.group_project_manager,jakh_core.group_finance"/>
+  <menuitem id="menu_unbilled_reports" name="Approved unbilled certificates" parent="jakh_core.menu_reports" action="action_unbilled_reports" sequence="13" groups="jakh_core.group_manager,jakh_core.group_project_manager,jakh_core.group_finance"/>
+
+  <record id="threshold_policy_list" model="ir.ui.view"><field name="name">jakh.project.threshold.policy.list</field><field name="model">jakh.project.threshold.policy</field><field name="arch" type="xml"><list><field name="name"/><field name="project_id"/><field name="metric"/><field name="comparison"/><field name="threshold"/><field name="owner_id"/><field name="state" widget="badge"/><field name="last_checked_at"/></list></field></record>
+  <record id="threshold_policy_form" model="ir.ui.view">
+    <field name="name">jakh.project.threshold.policy.form</field><field name="model">jakh.project.threshold.policy</field>
+    <field name="arch" type="xml"><form><header><button name="action_approve" type="object" string="Approve threshold" class="btn-primary" invisible="state != 'draft'" groups="jakh_core.group_manager,jakh_core.group_finance"/>
+      <button name="action_evaluate" type="object" string="Evaluate now" invisible="state != 'active'"/><button name="action_retire" type="object" string="Retire rule" invisible="state != 'active'" groups="jakh_core.group_manager,jakh_core.group_finance"/><field name="state" widget="statusbar"/></header>
+      <sheet><group><group><field name="name" readonly="state != 'draft'"/><field name="project_id" readonly="state != 'draft'"/><field name="company_id"/><field name="currency_id"/><field name="owner_id" readonly="state != 'draft'"/></group>
+        <group><field name="metric" readonly="state != 'draft'"/><field name="comparison" readonly="state != 'draft'"/><field name="threshold" readonly="state != 'draft'"/><field name="escalation_days" readonly="state != 'draft'"/></group></group>
+        <div class="alert alert-info" role="status">A manager or finance user approves the rule. Evaluation uses the owner's current project permissions. Undefined measures do not silently clear an open exception. Rules use one company currency and cannot be rewritten after approval.</div>
+        <group><field name="approved_by"/><field name="approved_at"/><field name="last_checked_at"/><field name="evaluation_note"/><field name="retirement_reason" readonly="state == 'retired'"/></group>
+        <field name="alert_ids" readonly="1"><list create="false" edit="false" delete="false"><field name="state"/><field name="observed_value"/><field name="opened_at"/><field name="escalation_at"/><field name="resolved_at"/><field name="occurrence_count"/></list></field>
+      </sheet><chatter/></form></field>
+  </record>
+  <record id="threshold_alert_list" model="ir.ui.view"><field name="name">jakh.project.threshold.alert.list</field><field name="model">jakh.project.threshold.alert</field><field name="arch" type="xml"><list create="false" edit="false" delete="false" decoration-danger="state == 'escalated'"><field name="name"/><field name="project_id"/><field name="owner_id"/><field name="metric"/><field name="threshold"/><field name="observed_value"/><field name="state" widget="badge"/><field name="opened_at"/><button name="action_open_report" type="object" string="Control report" icon="fa-external-link"/></list></field></record>
+  <record id="threshold_alert_form" model="ir.ui.view"><field name="name">jakh.project.threshold.alert.form</field><field name="model">jakh.project.threshold.alert</field><field name="arch" type="xml"><form create="false" edit="false" delete="false"><header><button name="action_recheck" type="object" string="Recheck and resolve if cleared" class="btn-primary"/><button name="action_open_report" type="object" string="Open contributing report"/><field name="state" widget="statusbar"/></header><sheet><group><field name="name"/><field name="policy_id"/><field name="project_id"/><field name="company_id"/><field name="owner_id"/><field name="metric"/><field name="threshold"/><field name="observed_value"/></group><group><field name="opened_at"/><field name="escalation_at"/><field name="resolved_at"/><field name="occurrence_count"/><field name="resolution_note"/></group></sheet><chatter/></form></field></record>
+  <record id="threshold_alert_search" model="ir.ui.view"><field name="name">jakh.project.threshold.alert.search</field><field name="model">jakh.project.threshold.alert</field><field name="arch" type="xml"><search><field name="name"/><field name="project_id"/><field name="owner_id"/><filter name="open" string="Open exceptions" domain="[('state','in',['open','escalated'])]"/><filter name="escalated" string="Escalated" domain="[('state','=','escalated')]"/><filter name="by_project" string="Project" context="{'group_by':'project_id'}"/></search></field></record>
+  <record id="action_project_threshold_policies" model="ir.actions.act_window"><field name="name">Project threshold rules</field><field name="res_model">jakh.project.threshold.policy</field><field name="view_mode">list,form</field><field name="group_ids" eval="[(4,ref('jakh_core.group_financial'))]"/></record>
+  <record id="action_project_threshold_alerts" model="ir.actions.act_window"><field name="name">Project exceptions</field><field name="res_model">jakh.project.threshold.alert</field><field name="view_mode">list,form</field><field name="context">{'search_default_open':1}</field><field name="group_ids" eval="[(4,ref('jakh_core.group_financial'))]"/></record>
+  <menuitem id="menu_project_threshold_alerts" name="Project exceptions" parent="jakh_core.menu_reports" action="action_project_threshold_alerts" sequence="14" groups="jakh_core.group_manager,jakh_core.group_project_manager,jakh_core.group_finance"/>
+  <menuitem id="menu_project_threshold_policies" name="Project threshold rules" parent="jakh_core.menu_administration" action="action_project_threshold_policies" sequence="25" groups="jakh_core.group_manager,jakh_core.group_finance"/>
+</odoo>

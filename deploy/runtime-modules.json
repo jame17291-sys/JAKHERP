@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "languages": ["ar_001", "en_US"],
+  "basis": "Preserved operational inventory plus native Saudi accounting dependencies verified in the isolated construction-completion pilot on 2026-10-14. Includes both UAE and KSA foundations; country configuration is not statutory acceptance. Refresh the installed inventory before deploying changes.",
+  "installedModules": [
+    "account", "account_debit_note", "account_edi_ubl_cii", "account_payment", "account_qr_code_sepa",
+    "analytic", "api_doc", "auth_passkey", "auth_passkey_portal", "auth_signup",
+    "auth_totp", "auth_totp_mail", "auth_totp_portal", "barcodes", "barcodes_gs1_nomenclature",
+    "base", "base_address_extended", "base_import", "base_import_module", "base_install_request",
+    "base_report_wkhtmltox", "base_setup", "bus", "calendar", "calendar_sms", "contacts",
+    "crm", "crm_iap_enrich", "crm_iap_mine", "crm_mail_plugin", "crm_sale_project", "crm_sms",
+    "digest", "google_gmail", "html_editor", "http_routing", "iap", "iap_crm", "iap_mail",
+    "jakh_assurance", "jakh_branding", "jakh_core", "jakh_estimate", "jakh_migration",
+    "jakh_operations", "jakh_workflow", "l10n_account_withholding_tax", "l10n_ae", "l10n_gcc_invoice", "l10n_sa",
+    "l10n_gcc_invoice_stock_account", "mail", "mail_bot", "mail_plugin", "microsoft_outlook",
+    "mysubscription", "onboarding", "partner_autocomplete", "payment", "phone_validation",
+    "portal", "portal_discuss", "portal_rating", "privacy_lookup", "product", "project",
+    "project_account", "project_mail_plugin", "project_purchase", "project_purchase_stock",
+    "project_sms", "project_stock", "project_stock_account", "project_todo", "purchase",
+    "purchase_edi_ubl_bis3", "purchase_stock", "rating", "resource", "resource_mail", "rpc",
+    "sale", "sale_crm", "sale_edi_ubl", "sale_management", "sale_margin", "sale_pdf_quote_builder",
+    "sale_project", "sale_project_margin", "sale_project_stock", "sale_project_stock_account",
+    "sale_purchase", "sale_purchase_project", "sale_purchase_stock", "sale_service", "sale_sms",
+    "sale_stock", "sale_stock_margin", "sales_team", "sms", "spreadsheet", "spreadsheet_account",
+    "spreadsheet_dashboard", "spreadsheet_dashboard_account", "spreadsheet_dashboard_sale",
+    "spreadsheet_dashboard_stock_account", "stock", "stock_account", "stock_sms", "uom", "utm",
+    "web", "web_hierarchy", "web_tour", "web_unsplash"
+  ]
+}

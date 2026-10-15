@@ -1,0 +1,1427 @@
+# Arabic translation of JAKH ERP customer-facing modules.
+# Common framework terminology follows the bundled upstream Arabic catalogs.
+# Original component license and copyright notices remain in the source distribution.
+msgid ""
+msgstr ""
+"Project-Id-Version: JAKH ERP 2.0\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/models/crm_presentation.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_branding.crm_professional_empty_help
+msgid "No leads or opportunities match this view"
+msgstr "لا توجد فرص أو عملاء محتملون يطابقون هذا العرض"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/models/crm_presentation.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_branding.crm_professional_empty_help
+msgid ""
+"Create a lead or opportunity with New, import reviewed records, or adjust "
+"your filters."
+msgstr ""
+"أنشئ عميلاً محتملاً أو فرصة باستخدام «جديد»، أو استورد سجلات تمت مراجعتها، "
+"أو عدّل عوامل التصفية."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.crm_professional_empty_help
+msgid "Use the configured team email to record an enquiry:"
+msgstr "استخدم البريد الإلكتروني المهيأ للفريق لتسجيل استفسار:"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/models/lead_generation.py:0
+msgid "Lead generation and external lead enrichment are disabled in JAKH ERP."
+msgstr ""
+"تم تعطيل توليد العملاء المحتملين وإثراء بياناتهم من مصادر خارجية في نظام "
+"JAKH ERP."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.login_brand
+msgid "<span class=\"text-muted\">JAKH Contracting Platform</span>"
+msgstr "<span class=\"text-muted\">منصة JAKH للمقاولات</span>"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.brand_promotion
+msgid "<span>JAKH ERP</span>"
+msgstr "<span>نظام JAKH لإدارة موارد المؤسسة</span>"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.settings_brand
+msgid ""
+"API keys let authorized users access JAKH ERP through external tools when "
+"multi-factor authentication is enabled."
+msgstr ""
+"تتيح مفاتيح واجهة البرمجة للمستخدمين المصرح لهم الوصول إلى نظام JAKH من خلال"
+" أدوات خارجية عند تفعيل المصادقة متعددة العوامل."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.help_page
+msgid "Administration and integrations"
+msgstr "الإدارة والتكاملات"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/models/branding.py:0
+msgid "Brand configuration requires system administration."
+msgstr "تتطلب تهيئة الهوية صلاحية إدارة النظام."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.offline_brand
+msgid ""
+"Check your network connection and come back here. JAKH ERP will load when "
+"you are back online."
+msgstr ""
+"تحقق من اتصال الشبكة ثم عُد إلى هذه الصفحة. سيُحمّل نظام JAKH عند استعادة "
+"الاتصال."
+
+#. module: jakh_branding
+#: model:ir.model.fields,help:jakh_branding.field_res_users__notification_type
+msgid "Choose email delivery or notifications in your JAKH ERP inbox."
+msgstr ""
+"اختر الاستلام عبر البريد الإلكتروني أو الإشعارات في صندوق الوارد بنظام JAKH."
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/backend_branding.xml:0
+msgid "Close"
+msgstr "إغلاق"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/sidebar.js:0
+#: code:addons/jakh_branding/static/src/sidebar.xml:0
+msgid "Close navigation"
+msgstr "إغلاق قائمة التنقل"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/sidebar.js:0
+msgid "Collapse navigation"
+msgstr "طيّ قائمة التنقل"
+
+#. module: jakh_branding
+#: model:ir.model,name:jakh_branding.model_res_company
+msgid "Company"
+msgstr "الشركة"
+
+#. module: jakh_branding
+#: model:ir.model.fields,field_description:jakh_branding.field_res_company__logo
+msgid "Company Logo"
+msgstr "شعار الشركة"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.mail_settings_tooltip
+msgid ""
+"Configure approved incoming and outgoing email servers. Test delivery and "
+"access controls before enabling notifications."
+msgstr ""
+"هيّئ خوادم البريد الوارد والصادر المعتمدة. اختبر الإرسال وضوابط الوصول قبل "
+"تفعيل الإشعارات."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.purchase_portal_connection_guidance
+msgid "Connect your purchasing system"
+msgstr "ربط نظام المشتريات"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.login_brand
+msgid "Construction · Quality · HSE"
+msgstr "الإنشاءات · الجودة · الصحة والسلامة والبيئة"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.help_page
+msgid ""
+"Contact your platform owner for access, process configuration, training or "
+"support. Do not send passwords or private invitation links."
+msgstr ""
+"تواصل مع مالك المنصة لطلب الوصول أو تهيئة الإجراءات أو التدريب أو الدعم. لا "
+"ترسل كلمات المرور أو روابط الدعوة الخاصة."
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/sidebar.xml:0
+msgid "Contracting & construction"
+msgstr "المقاولات والإنشاءات"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.purchase_portal_connection_guidance
+msgid ""
+"Copy this URL to retrieve this purchase document in UBL format. Ask your "
+"integration administrator to validate access and field mapping before "
+"importing it."
+msgstr ""
+"انسخ هذا الرابط لاسترجاع مستند الشراء بصيغة UBL. اطلب من مسؤول التكامل "
+"التحقق من صلاحيات الوصول وربط الحقول قبل الاستيراد."
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/frontend_cleanup.xml:0
+msgid ""
+"Create a quotation, hand over an approved estimate from Tender & BOQ, or "
+"adjust your filters."
+msgstr ""
+"أنشئ عرض سعر، أو سلّم دراسة معتمدة من وحدة العطاءات وجداول الكميات، أو عدّل "
+"عوامل التصفية."
+
+#. module: jakh_branding
+#: model:ir.model.fields,field_description:jakh_branding.field_crm_iap_lead_mining_request__display_name
+#: model:ir.model.fields,field_description:jakh_branding.field_crm_lead__display_name
+#: model:ir.model.fields,field_description:jakh_branding.field_ir_http__display_name
+#: model:ir.model.fields,field_description:jakh_branding.field_ir_ui_menu__display_name
+#: model:ir.model.fields,field_description:jakh_branding.field_mail_template__display_name
+#: model:ir.model.fields,field_description:jakh_branding.field_res_company__display_name
+#: model:ir.model.fields,field_description:jakh_branding.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:jakh_branding.field_res_users__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/sidebar.xml:0
+msgid "ERP navigation"
+msgstr "التنقل في نظام إدارة الموارد"
+
+#. module: jakh_branding
+#: model:ir.model.fields,field_description:jakh_branding.field_res_company__email_secondary_color
+msgid "Email Button Color"
+msgstr "لون زر البريد الإلكتروني"
+
+#. module: jakh_branding
+#: model:ir.model,name:jakh_branding.model_mail_template
+msgid "Email Template"
+msgstr "قالب بريد إلكتروني"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/frontend_cleanup.xml:0
+msgid "Estimated from your recorded lead outcomes and attributes."
+msgstr "تقدير مستند إلى نتائج العملاء المحتملين وخصائصهم المسجلة."
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/sidebar.js:0
+msgid "Expand navigation"
+msgstr "توسيع قائمة التنقل"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.settings_cleanup_crm_service_copy
+msgid "External Lead Enrichment"
+msgstr "إثراء بيانات العملاء المحتملين خارجياً"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.settings_cleanup_crm_service_copy
+msgid "External Prospect Search"
+msgstr "البحث الخارجي عن العملاء المحتملين"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.external_services_label
+msgid "External Services &amp; Credits"
+msgstr "الخدمات والأرصدة الخارجية"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.settings_cleanup_crm_service_copy
+msgid "External Visitor Identification"
+msgstr "التعرّف الخارجي على زوار الموقع"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/models/branding.py:0
+#: code:addons/jakh_branding/models/lead_generation.py:0
+msgid "External-service configuration requires system administration."
+msgstr "تتطلب تهيئة الخدمات الخارجية صلاحية إدارة النظام."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.help_page
+msgid ""
+"Financial reports use posted records. Operational dashboards show only "
+"records you are authorized to access. Review the basis, company, currency "
+"and selected period before using a total."
+msgstr ""
+"تستند التقارير المالية إلى السجلات المرحّلة. تعرض لوحات التشغيل السجلات "
+"المصرح لك بالوصول إليها فقط. راجع أساس الحساب والشركة والعملة والفترة "
+"المحددة قبل استخدام أي إجمالي."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.settings_brand
+msgid ""
+"Find matching companies and review their contact information before saving."
+msgstr "ابحث عن الشركات المطابقة وراجع بيانات التواصل معها قبل الحفظ."
+
+#. module: jakh_branding
+#: model:ir.model,name:jakh_branding.model_ir_http
+msgid "HTTP Routing"
+msgstr "مسار HTTP"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/sidebar.xml:0
+msgid "Help & product information"
+msgstr "المساعدة ومعلومات المنتج"
+
+#. module: jakh_branding
+#: model:ir.model.fields,field_description:jakh_branding.field_crm_iap_lead_mining_request__id
+#: model:ir.model.fields,field_description:jakh_branding.field_crm_lead__id
+#: model:ir.model.fields,field_description:jakh_branding.field_ir_http__id
+#: model:ir.model.fields,field_description:jakh_branding.field_ir_ui_menu__id
+#: model:ir.model.fields,field_description:jakh_branding.field_mail_template__id
+#: model:ir.model.fields,field_description:jakh_branding.field_res_company__id
+#: model:ir.model.fields,field_description:jakh_branding.field_res_config_settings__id
+#: model:ir.model.fields,field_description:jakh_branding.field_res_users__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.help_page
+msgid "Implementation scope"
+msgstr "نطاق التنفيذ"
+
+#. module: jakh_branding
+#: model:ir.model.fields.selection,name:jakh_branding.selection__res_users__notification_type__inbox
+msgid "In JAKH ERP"
+msgstr "داخل نظام JAKH"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/frontend_cleanup.xml:0
+#: code:addons/jakh_branding/static/src/sidebar.xml:0
+msgid "JAKH Contracting Platform"
+msgstr "منصة JAKH للمقاولات"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/backend_branding.xml:0
+msgid "JAKH Contracting Platform ·"
+msgstr "منصة JAKH للمقاولات ·"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/sidebar.xml:0
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+#: model_terms:ir.ui.view,arch_db:jakh_branding.digest_brand
+#: model_terms:ir.ui.view,arch_db:jakh_branding.help_page
+#: model_terms:ir.ui.view,arch_db:jakh_branding.login_brand
+#: model_terms:ir.ui.view,arch_db:jakh_branding.mail_brand
+#: model_terms:ir.ui.view,arch_db:jakh_branding.mail_light_brand
+#: model_terms:ir.ui.view,arch_db:jakh_branding.offline_brand
+#: model_terms:ir.ui.view,arch_db:jakh_branding.portal_brand
+#: model_terms:ir.ui.view,arch_db:jakh_branding.settings_brand
+msgid "JAKH ERP"
+msgstr "JAKH ERP"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/backend_branding.xml:0
+msgid "JAKH ERP 2.0"
+msgstr "JAKH ERP 2.0"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/backend_branding.js:0
+msgid "JAKH ERP Client Error"
+msgstr "خطأ في واجهة نظام JAKH"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/backend_branding.js:0
+msgid "JAKH ERP Error"
+msgstr "خطأ في نظام JAKH"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.help_page
+msgid "JAKH ERP Help"
+msgstr "مساعدة نظام JAKH"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/backend_branding.js:0
+msgid "JAKH ERP Network Error"
+msgstr "خطأ في اتصال نظام JAKH بالشبكة"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/backend_branding.js:0
+msgid "JAKH ERP Server Error"
+msgstr "خطأ في خادم نظام JAKH"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/backend_branding.xml:0
+msgid "JAKH ERP Session Expired"
+msgstr "انتهت جلسة نظام JAKH"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/backend_branding.js:0
+msgid "JAKH ERP Warning"
+msgstr "تنبيه من نظام JAKH"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/backend_branding.js:0
+msgid "JAKH Help"
+msgstr "مساعدة JAKH"
+
+#. module: jakh_branding
+#: model:ir.module.module,shortdesc:base.module_jakh_branding
+msgid "JAKH Platform Branding"
+msgstr "هوية منصة JAKH"
+
+#. module: jakh_branding
+#: model:ir.module.module,summary:base.module_jakh_branding
+msgid "JAKH identity across sign-in, platform UI, portal and notifications"
+msgstr "هوية JAKH في تسجيل الدخول والواجهة والبوابة والإشعارات"
+
+#. module: jakh_branding
+#: model:ir.model,name:jakh_branding.model_ir_ui_menu
+msgid "Menu"
+msgstr "القائمة"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/sidebar.xml:0
+msgid "Modules"
+msgstr "الوحدات"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.settings_brand
+msgid "Name used when JAKH ERP is installed through the browser."
+msgstr "الاسم المستخدم عند تثبيت نظام JAKH من خلال المتصفح."
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/frontend_cleanup.xml:0
+msgid "No sales documents match this view"
+msgstr "لا توجد مستندات مبيعات تطابق هذا العرض"
+
+#. module: jakh_branding
+#: model:ir.model.fields,field_description:jakh_branding.field_res_users__notification_type
+msgid "Notification"
+msgstr "إشعار"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/sidebar.xml:0
+msgid "Open"
+msgstr "فتح"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.digest_brand
+msgid "Open JAKH ERP in your browser to review the contributing records."
+msgstr "افتح نظام JAKH في متصفحك لمراجعة السجلات المكوّنة للمؤشر."
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/sidebar.xml:0
+msgid "Open navigation"
+msgstr "فتح قائمة التنقل"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/backend_branding.xml:0
+#: model_terms:ir.ui.view,arch_db:jakh_branding.help_page
+msgid "Open-source notices"
+msgstr "إشعارات المكونات مفتوحة المصدر"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.help_page
+msgid "Opportunity probability"
+msgstr "احتمالية نجاح الفرصة"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/backend_branding.xml:0
+msgid "Optional feature not included"
+msgstr "ميزة اختيارية غير مشمولة"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.help_page
+msgid ""
+"Probability estimates use recorded lead outcomes and configured attributes. "
+"They are estimates, not promises. Review the available history and adjust a "
+"manual probability when justified."
+msgstr ""
+"تستخدم تقديرات الاحتمالية نتائج العملاء المحتملين المسجلة والخصائص المهيأة. "
+"وهي تقديرات وليست ضمانات. راجع السجل المتاح وعدّل الاحتمالية يدوياً عند وجود"
+" مبرر."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+#: model_terms:ir.ui.view,arch_db:jakh_branding.help_page
+msgid "Return to JAKH ERP"
+msgstr "العودة إلى نظام JAKH"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.settings_cleanup_crm_service_copy
+msgid ""
+"Review an installed external prospect-search service. Provider charges and "
+"customer data-transfer approvals apply."
+msgstr ""
+"راجع خدمة البحث الخارجية المثبتة عن العملاء المحتملين. تسري رسوم المزوّد "
+"ومتطلبات موافقة العميل على نقل البيانات."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.settings_cleanup_crm_service_copy
+msgid ""
+"Review an installed external website-visitor identification service. Enable "
+"only after customer approval of its data-transfer and privacy terms."
+msgstr ""
+"راجع خدمة التعرف الخارجية المثبتة على زوار الموقع. لا تفعّلها إلا بعد موافقة"
+" العميل على شروط نقل البيانات والخصوصية."
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/backend_branding.xml:0
+msgid "Review implementation scope"
+msgstr "مراجعة نطاق التنفيذ"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.external_services_label
+msgid ""
+"Review separately supplied services and their credit balances. These are not"
+" JAKH subscriptions; provider terms and charges apply."
+msgstr ""
+"راجع الخدمات المقدّمة بشكل مستقل وأرصدتها. هذه ليست اشتراكات JAKH؛ وتسري "
+"شروط المزوّد ورسومه."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.settings_cleanup_crm_service_copy
+msgid ""
+"Review the configured external company-data enrichment service. Provider "
+"charges and customer data-transfer approvals apply; existing "
+"automatic/manual choices are unchanged."
+msgstr ""
+"راجع خدمة إثراء بيانات الشركات الخارجية المهيأة. تسري رسوم المزوّد ومتطلبات "
+"موافقة العميل على نقل البيانات؛ ولا تتغير خيارات التشغيل التلقائي أو اليدوي "
+"الحالية."
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/backend_branding.xml:0
+msgid ""
+"Review the implementation scope and licensing requirements before activating"
+" an additional module. This setting does not make the feature available."
+msgstr ""
+"راجع نطاق التنفيذ ومتطلبات الترخيص قبل تفعيل وحدة إضافية. هذا الإعداد لا "
+"يتيح الميزة بحد ذاته."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.digest_brand
+msgid "Sent by JAKH ERP"
+msgstr "أُرسل بواسطة نظام JAKH"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.purchase_portal_connection_guidance
+msgid "Structured document URL"
+msgstr "رابط المستند المهيكل"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/backend_branding.xml:0
+msgid "This feature is not included in the current JAKH ERP installation."
+msgstr "هذه الميزة غير مشمولة في التثبيت الحالي لنظام JAKH."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.help_page
+msgid ""
+"This platform includes open-source components. Their original licenses, "
+"copyright notices and source provenance are retained in the distributed "
+"source package. Obtain the complete source and notices from your platform "
+"owner."
+msgstr ""
+"تتضمن هذه المنصة مكونات مفتوحة المصدر. تُحفظ تراخيصها الأصلية وإشعارات حقوق "
+"النشر ومصادرها في حزمة الشفرة الموزّعة. احصل على الشفرة الكاملة والإشعارات "
+"من مالك المنصة."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.help_page
+msgid ""
+"This staging release includes the foundation and connected contracting "
+"workflows. An optional module or setting does not prove that its "
+"functionality or licensing is included. Review requirements and acceptance "
+"evidence before enabling extensions."
+msgstr ""
+"يتضمن هذا الإصدار التجريبي الأساس وإجراءات المقاولات المترابطة. وجود وحدة أو"
+" إعداد اختياري لا يعني أن الوظائف أو التراخيص مشمولة. راجع المتطلبات وأدلة "
+"القبول قبل تفعيل الإضافات."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.mail_brand
+#: model_terms:ir.ui.view,arch_db:jakh_branding.mail_light_brand
+msgid "Unfollow"
+msgstr "إلغاء المتابعة"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.digest_brand
+msgid "Unsubscribe"
+msgstr "إلغاء الاشتراك"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.help_page
+msgid ""
+"Use Administration to manage authorized users, company configuration and "
+"permissions. Email, SMS, enrichment, external accounts and other "
+"integrations require an explicitly approved provider and tested "
+"configuration. Do not assume a bundled option is configured or included in "
+"your subscription."
+msgstr ""
+"استخدم وحدة الإدارة لإدارة المستخدمين المصرح لهم وتهيئة الشركة والصلاحيات. "
+"تتطلب خدمات البريد والرسائل النصية والإثراء والحسابات الخارجية والتكاملات "
+"الأخرى مزوّداً معتمداً صراحةً وتهيئة مختبرة. لا تفترض أن أي خيار مرفق مهيأ "
+"أو مشمول في اشتراكك."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.help_page
+msgid ""
+"Use the single Modules column or the dashboard to open your work. CRM, "
+"estimating, projects, commercial, procurement, finance, Quality/HSE and "
+"document control are available together according to your permissions. "
+"Reports and My Approvals are always in the same navigation."
+msgstr ""
+"استخدم عمود الوحدات الموحّد أو لوحة المعلومات لفتح أعمالك. تتوفر علاقات "
+"العملاء والتقدير والمشاريع والشؤون التجارية والمشتريات والمالية والجودة "
+"والصحة والسلامة والبيئة وضبط المستندات معاً وفق صلاحياتك. وتبقى التقارير "
+"واعتماداتي في قائمة التنقل نفسها."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.purchase_portal_connection_guidance
+msgid ""
+"Use the structured purchase document below with a compatible UBL "
+"integration. Access is subject to the document's existing permissions."
+msgstr ""
+"استخدم مستند الشراء المهيكل أدناه مع تكامل متوافق مع UBL. يخضع الوصول "
+"لصلاحيات المستند الحالية."
+
+#. module: jakh_branding
+#: model:ir.model,name:jakh_branding.model_res_users
+msgid "User"
+msgstr "المستخدم"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/models/branding.py:0
+msgid "Welcome to JAKH ERP"
+msgstr "مرحباً بك في نظام JAKH"
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/backend_branding.xml:0
+msgid ""
+"Your JAKH ERP session expired. The current page is about to be refreshed."
+msgstr "انتهت جلستك في نظام JAKH. ستُحدّث الصفحة الحالية الآن."
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/crm_guidance.xml:0
+msgid "Probability insights are not available yet."
+msgstr "لا تتوفر تحليلات الاحتمالية بعد."
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/crm_guidance.xml:0
+msgid ""
+"Record won and lost opportunities to build a history for probability "
+"estimates."
+msgstr "سجّل الفرص الرابحة والخاسرة لبناء سجل يُستخدم في تقديرات الاحتمالية."
+
+#. module: jakh_branding
+#. odoo-javascript
+#: code:addons/jakh_branding/static/src/crm_guidance.js:0
+msgid ""
+"Use the breadcrumbs to return to your pipeline. Resolve any validation "
+"messages or unsaved changes before leaving."
+msgstr ""
+"استخدم مسار التنقل للعودة إلى مسار الفرص. عالج رسائل التحقق أو التغييرات غير"
+" المحفوظة قبل المغادرة."
+
+#. module: jakh_branding
+#: model:ir.model,name:jakh_branding.model_crm_iap_lead_mining_request
+msgid "CRM Lead Mining Request"
+msgstr "طلب استخراج عملاء محتملين"
+
+#. module: jakh_branding
+#: model:ir.model,name:jakh_branding.model_res_config_settings
+msgid "Config Settings"
+msgstr "إعدادات النظام"
+
+#. module: jakh_branding
+#: model:ir.model,name:jakh_branding.model_crm_lead
+msgid "Lead"
+msgstr "عميل محتمل"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.crm_neutral_website_placeholder
+msgid "https://example.com"
+msgstr "https://example.com"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "1. Opportunity and estimate"
+msgstr "١. الفرصة والتقدير"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "10. Review a completed project"
+msgstr "١٠. مراجعة مشروع مكتمل"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "2. Project, WBS and buildings"
+msgstr "٢. المشروع وهيكل تجزئة العمل والمباني"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "3. Material demand, purchasing and stock"
+msgstr "٣. طلب المواد والمشتريات والمخزون"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "4. Subcontract work and billing"
+msgstr "٤. أعمال المقاولة الفرعية والفوترة"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "5. Labour, plant, progress and forecast"
+msgstr "٥. العمالة والمعدات والتقدم والتوقعات"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "6. Client certificate, invoice and payment"
+msgstr "٦. مستخلص العميل والفاتورة والدفعة"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "7. Documents, Quality and HSE"
+msgstr "٧. المستندات والجودة والصحة والسلامة والبيئة"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "8. Reports and management review"
+msgstr "٨. التقارير ومراجعة الإدارة"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "9. Try the pending work"
+msgstr "٩. تدرّب بالمعاملات المعلّقة"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid "<span class=\"visually-hidden\"> (opens in a new tab)</span>"
+msgstr "<span class=\"visually-hidden\"> (يفتح في علامة تبويب جديدة)</span>"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid ""
+"A retained report snapshot may expire. Use Reports to create a new snapshot "
+"when required."
+msgstr ""
+"قد تنتهي صلاحية لقطة تقرير محفوظة. استخدم التقارير لإنشاء لقطة جديدة عند "
+"الحاجة."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Active project"
+msgstr "المشروع النشط"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid ""
+"All scenario data is synthetic. It is for training and review, not "
+"production, compliance evidence or statutory localization acceptance. No "
+"external API keys, live Primavera service, banking connection or real "
+"payment is required."
+msgstr ""
+"جميع بيانات السيناريو اصطناعية ومخصصة للتدريب والمراجعة، ولا تمثل بيانات "
+"إنتاج أو أدلة امتثال أو قبولاً للتوطين النظامي. لا يتطلب العرض مفاتيح واجهات"
+" برمجة خارجية أو خدمة Primavera مباشرة أو اتصالاً مصرفياً أو دفعة حقيقية."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Approved forecast"
+msgstr "التوقع المعتمد"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid ""
+"Approved subcontract work is connected to its purchasing and finance "
+"records. Review advance recovery, retention and the bill basis in the native"
+" forms."
+msgstr ""
+"ترتبط أعمال المقاولة الفرعية المعتمدة بسجلات مشترياتها وسجلاتها المالية. "
+"راجع استرداد الدفعة المقدمة والمحتجزات وأساس الفاتورة في النماذج الأصلية."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid "Available demo records"
+msgstr "السجلات التجريبية المتاحة"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Awarded quotation"
+msgstr "عرض السعر الذي تمت ترسيته"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "BOQ and building report"
+msgstr "تقرير جدول الكميات والمباني"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid "Before you start"
+msgstr "قبل البدء"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Building allocation"
+msgstr "توزيع ميزانية المباني"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "CVR"
+msgstr "تقرير التكلفة والقيمة"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid ""
+"CVR, BOQ / building control, cash forecast and posted ledger reports use "
+"different bases. A synthetic result is not production or statutory "
+"acceptance evidence."
+msgstr ""
+"تستند تقارير التكلفة والقيمة وضبط جدول الكميات والمباني والتوقع النقدي "
+"والأستاذ المرحّل إلى أسس مختلفة. لا تمثل النتيجة الاصطناعية دليلاً على قبول "
+"الإنتاج أو القبول النظامي."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Client certificate"
+msgstr "مستخلص العميل"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Client invoice"
+msgstr "فاتورة العميل"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Client payment"
+msgstr "دفعة العميل"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Completed reference contract"
+msgstr "العقد المرجعي المكتمل"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Completed reference project"
+msgstr "المشروع المرجعي المكتمل"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid "Construction demo walkthrough"
+msgstr "دليل العرض التجريبي للمقاولات"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Contract"
+msgstr "العقد"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Controlled document"
+msgstr "المستند المضبوط"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid "Demo boundaries"
+msgstr "حدود العرض التجريبي"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid "Demo stages"
+msgstr "مراحل العرض التجريبي"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid ""
+"Document control and assurance records retain their project links and review"
+" history. Visibility follows the same permissions as the native modules."
+msgstr ""
+"تحتفظ سجلات ضبط المستندات والجودة بروابط المشروع وسجل المراجعة. تتبع صلاحية "
+"العرض أذونات الوحدات الأصلية نفسها."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Document revision"
+msgstr "مراجعة المستند"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Draft BOQ intake"
+msgstr "مسودة استيراد جدول الكميات"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Editable estimate study"
+msgstr "دراسة تقدير قابلة للتعديل"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Estimate"
+msgstr "التقدير"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid "Expected result"
+msgstr "النتيجة المتوقعة"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.help_page
+msgid ""
+"Explore the synthetic construction journey and open the demo records your "
+"role can access. Changes remain available for your next visit."
+msgstr ""
+"استكشف رحلة المقاولات الاصطناعية وافتح السجلات التجريبية التي يسمح بها دورك."
+" تظل التغييرات متاحة لزيارتك التالية."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Final account"
+msgstr "الحساب الختامي"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid ""
+"Follow the completed reference journey, then practise with the pending work."
+" Every record opens in the native JAKH ERP form with your normal "
+"permissions."
+msgstr ""
+"تتبّع المسار المرجعي المكتمل ثم تدرّب بالمعاملات المعلّقة. يُفتح كل سجل في "
+"نموذج JAKH ERP الأصلي وفق صلاحياتك المعتادة."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid "Help &amp; product information"
+msgstr "المساعدة &amp; معلومات المنتج"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid "Keep your work"
+msgstr "احتفظ بعملك"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Labour actual"
+msgstr "تكاليف العمالة الفعلية"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Material issue"
+msgstr "صرف المواد"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Material purchase order"
+msgstr "أمر شراء المواد"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Material requisition"
+msgstr "طلب شراء المواد"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Material return"
+msgstr "إرجاع المواد"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Material vendor bill"
+msgstr "فاتورة مورّد المواد"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "New BOQ and building snapshot"
+msgstr "لقطة جديدة لجدول الكميات والمباني"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "New CVR snapshot"
+msgstr "لقطة جديدة لتقرير التكلفة والقيمة"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "New posted ledger snapshot"
+msgstr "لقطة جديدة للأستاذ المرحّل"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "New project cash snapshot"
+msgstr "لقطة نقدية جديدة للمشروع"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid ""
+"No retained demo records are available to your current role. Ask the "
+"platform owner to review access or prepare the dataset."
+msgstr ""
+"لا توجد سجلات تجريبية محفوظة متاحة لدورك الحالي. اطلب من مالك المنصة مراجعة "
+"الصلاحيات أو إعداد مجموعة البيانات."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Open assurance action"
+msgstr "إجراء جودة مفتوح"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid ""
+"Open each available snapshot and review its company, currency, date and "
+"source basis. A New snapshot button opens native report criteria: select the"
+" active demo project, review the dates and explicitly Generate the report. "
+"For the posted ledger, select the demo company."
+msgstr ""
+"افتح كل لقطة متاحة وراجع شركتها وعملتها وتاريخها وأساس مصادرها. يفتح زر "
+"اللقطة الجديدة معايير التقرير الأصلية: حدد المشروع التجريبي النشط وراجع "
+"التواريخ ثم أنشئ التقرير صراحة. بالنسبة إلى الأستاذ المرحّل، حدد الشركة "
+"التجريبية."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid ""
+"Open site demand, then the requisition, purchase order and receipt. Follow "
+"the issue and return records to review quantities and their source links."
+msgstr ""
+"افتح طلب مواد الموقع ثم طلب الشراء وأمر الشراء والاستلام. تتبّع سجلات الصرف "
+"والإرجاع لمراجعة الكميات وروابط مصادرها."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid ""
+"Open the client certificate and follow its invoice. Inspect the linked "
+"payment in Finance and review the invoice payment status."
+msgstr ""
+"افتح مستخلص العميل وتتبّع فاتورته. راجع الدفعة المرتبطة في المالية وحالة "
+"سداد الفاتورة."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid ""
+"Open the controlled document and revision, then the Quality / HSE case. "
+"Inspect the revision history, responsibility and recorded evidence."
+msgstr ""
+"افتح المستند المضبوط ومراجعته ثم حالة الجودة أو الصحة والسلامة والبيئة. راجع"
+" سجل المراجعات والمسؤولية والأدلة المسجلة."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.help_page
+msgid "Open the demo walkthrough"
+msgstr "فتح دليل العرض التجريبي"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid ""
+"Open the draft estimate to practise editing without changing the awarded "
+"estimate. For approvals, open My Approvals in the Modules column or a "
+"pending record below; review it and use the native action for your assigned "
+"role."
+msgstr ""
+"افتح مسودة التقدير للتدرّب على التعديل دون تغيير التقدير الذي تمت ترسيته. "
+"للاعتمادات، افتح اعتماداتي في عمود الوحدات أو سجلاً معلّقاً أدناه، ثم راجعه "
+"واستخدم الإجراء الأصلي المخصص لدورك."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid ""
+"Open the labour actual and plant allocation. Then inspect the schedule "
+"progress and approved forecast, including their source references and dates."
+msgstr ""
+"افتح تكاليف العمالة الفعلية وتخصيص المعدات. ثم راجع تقدم الجدول الزمني "
+"والتوقع المعتمد، بما يشمل مراجع المصادر والتواريخ."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid ""
+"Open the opportunity, then the estimate. Review the BOQ, resource build-up "
+"and approval history. Use the quotation link to follow the award."
+msgstr ""
+"افتح الفرصة ثم التقدير. راجع جدول الكميات وتفصيل الموارد وسجل الاعتماد. "
+"استخدم رابط عرض السعر لتتبّع الترسية."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid ""
+"Open the project, WBS and Villa 01. Review the eleven building locations. "
+"Financial users can open the contract and approved building allocation."
+msgstr ""
+"افتح المشروع وهيكل تجزئة العمل وفيلا ٠١. راجع مواقع المباني الإحدى عشرة. "
+"يمكن للمستخدمين الماليين فتح العقد وتوزيع ميزانية المباني المعتمد."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid ""
+"Open the separate completed project and its contract or final account when "
+"available. Review the completed history; keep the active project open for "
+"practice."
+msgstr ""
+"افتح المشروع المكتمل المنفصل وعقده أو حسابه الختامي عند توفرهما. راجع السجل "
+"المكتمل، وأبقِ المشروع النشط مفتوحاً للتدريب."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid ""
+"Open the subcontract order and finance agreement, then the service entry, "
+"supplier certificate and vendor bill. Review measured work and the linked "
+"source documents."
+msgstr ""
+"افتح أمر المقاولة الفرعية واتفاقيتها المالية ثم محضر استلام الأعمال ومستخلص "
+"المورّد وفاتورته. راجع الأعمال المقاسة والمستندات المصدرية المرتبطة."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Opportunity"
+msgstr "الفرصة"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Pending client certificate"
+msgstr "مستخلص عميل معلّق"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Pending document revision"
+msgstr "مراجعة مستند معلّقة"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Pending requisition"
+msgstr "طلب شراء معلّق"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Pending service entry"
+msgstr "محضر استلام أعمال معلّق"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Plant allocation"
+msgstr "تخصيص المعدات"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Posted ledger report"
+msgstr "تقرير الأستاذ المرحّل"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Project cash report"
+msgstr "التقرير النقدي للمشروع"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Quality / HSE case"
+msgstr "حالة الجودة أو الصحة والسلامة والبيئة"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Receipt"
+msgstr "الاستلام"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Released WBS"
+msgstr "هيكل تجزئة العمل المُطلق"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Report schedule"
+msgstr "جدول التقارير"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid ""
+"Report schedules and external delivery remain disabled unless separately "
+"reviewed and configured. The native workflow still enforces approval roles "
+"and record access."
+msgstr ""
+"تبقى جداول التقارير والإرسال الخارجي معطلة ما لم تتم مراجعتها وتهيئتها بشكل "
+"منفصل. يواصل مسار العمل الأصلي فرض أدوار الاعتماد وصلاحيات السجلات."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid "Restoring application source alone does not undo database changes."
+msgstr "استعادة ملفات التطبيق وحدها لا تتراجع عن تغييرات قاعدة البيانات."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.help_page
+msgid "Retained construction demo"
+msgstr "عرض مقاولات تجريبي محفوظ"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid "SYNTHETIC DEMO · RETAINED DATA"
+msgstr "عرض تجريبي اصطناعي · بيانات محفوظة"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Saved report workbook"
+msgstr "ملف التقرير المحفوظ"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Schedule progress"
+msgstr "تقدم الجدول الزمني"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid ""
+"Select only the synthetic demo company. Use the single Modules column for "
+"all work and the language selector for English or Arabic. Keep this guide "
+"open while you follow its record links."
+msgstr ""
+"حدد الشركة التجريبية الاصطناعية وحدها. استخدم عمود الوحدات الموحد لجميع "
+"الأعمال ومحدد اللغة للإنجليزية أو العربية. أبقِ هذا الدليل مفتوحاً أثناء "
+"تتبّع روابط السجلات."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Service entry"
+msgstr "محضر استلام الأعمال"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Site demand"
+msgstr "طلب مواد الموقع"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Subcontract finance agreement"
+msgstr "الاتفاقية المالية للمقاولة الفرعية"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Subcontract order"
+msgstr "أمر المقاولة الفرعية"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Subcontract requisition"
+msgstr "طلب شراء المقاولة الفرعية"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Subcontract vendor bill"
+msgstr "فاتورة مورّد المقاولة الفرعية"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Supplier certificate"
+msgstr "مستخلص المورّد"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid ""
+"The active project links to its contract, released WBS and building "
+"allocation. Each cost can be traced to the same project, WBS and BOQ."
+msgstr ""
+"يرتبط المشروع النشط بعقده وهيكل تجزئة العمل المُطلق وتوزيع ميزانية المباني. "
+"يمكن تتبّع كل تكلفة إلى المشروع وهيكل العمل وجدول الكميات نفسها."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid ""
+"The completed reference illustrates closeout without closing the active "
+"demonstration project."
+msgstr "يوضح المرجع المكتمل الإقفال دون إغلاق المشروع التجريبي النشط."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid ""
+"The demo connects recorded labour and plant actuals to project controls. "
+"Schedule progress is a synthetic imported snapshot, not a live Primavera "
+"connection."
+msgstr ""
+"يربط العرض تكاليف العمالة والمعدات الفعلية المسجلة بأدوات ضبط المشروع. يمثل "
+"تقدم الجدول الزمني لقطة اصطناعية مستوردة وليس اتصالاً مباشراً بخدمة "
+"Primavera."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid ""
+"The draft study and pending requisition, service entry, client certificate, "
+"document revision and assurance work are practice items. Your changes "
+"persist and dashboard counts may change."
+msgstr ""
+"تمثل مسودة الدراسة وطلب الشراء ومحضر استلام الأعمال ومستخلص العميل ومراجعة "
+"المستند وأعمال الجودة المعلّقة عناصر للتدريب. تُحفظ تغييراتك وقد تتغير أعداد"
+" لوحة المعلومات."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid ""
+"The guide shows only records your role can read. A missing link can mean "
+"restricted access, an unavailable snapshot or a record changed since "
+"preparation. Ask the platform owner for the appropriate role; do not share "
+"accounts."
+msgstr ""
+"يعرض الدليل السجلات التي يسمح دورك بقراءتها فقط. قد يعني غياب رابط أن الوصول"
+" مقيّد أو اللقطة غير متاحة أو أن السجل تغيّر منذ الإعداد. اطلب الدور المناسب"
+" من مالك المنصة ولا تشارك الحسابات."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid ""
+"The retained chain connects site demand to purchasing, received stock, "
+"project consumption and a material return. The vendor bill is a separate "
+"accounting record."
+msgstr ""
+"يربط المسار المحفوظ طلب مواد الموقع بالمشتريات والمخزون المستلم والاستهلاك "
+"في المشروع وإرجاع المواد. فاتورة المورّد سجل محاسبي منفصل."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid ""
+"The retained client billing chain shows certified work, posted invoicing and"
+" a recorded synthetic payment. It does not connect to a bank."
+msgstr ""
+"يعرض مسار فوترة العميل المحفوظ الأعمال المعتمدة والفوترة المرحّلة ودفعة "
+"اصطناعية مسجلة. ولا يتصل بمصرف."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid ""
+"The retained estimate and quotation show how an approved bid becomes the "
+"awarded project; the history is already completed."
+msgstr ""
+"يوضح التقدير وعرض السعر المحفوظان كيفية تحويل عطاء معتمد إلى مشروع تمت "
+"ترسيته؛ وقد اكتمل هذا السجل مسبقاً."
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid ""
+"This demo is retained. Closing the browser, signing out or restarting the "
+"application does not reset your changes. There is no automatic deletion or "
+"reset."
+msgstr ""
+"هذا العرض التجريبي محفوظ. لا يؤدي إغلاق المتصفح أو تسجيل الخروج أو إعادة "
+"تشغيل التطبيق إلى إعادة ضبط تغييراتك. لا يوجد حذف أو إعادة ضبط تلقائية."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Threshold alert"
+msgstr "تنبيه الحد"
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Threshold policy"
+msgstr "سياسة الحدود"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid ""
+"To start again, ask the platform owner to prepare a separate synthetic "
+"dataset or restore a matched database and filestore backup. Keep the "
+"existing demonstration history until the owner explicitly approves its "
+"replacement."
+msgstr ""
+"للبدء من جديد، اطلب من مالك المنصة إعداد مجموعة بيانات اصطناعية منفصلة أو "
+"استعادة نسخة احتياطية متطابقة من قاعدة البيانات ومخزن الملفات. احتفظ بسجل "
+"العرض الحالي حتى يوافق المالك صراحة على استبداله."
+
+#. module: jakh_branding
+#. odoo-python
+#: code:addons/jakh_branding/controllers/demo.py:0
+msgid "Villa 01"
+msgstr "فيلا ٠١"
+
+#. module: jakh_branding
+#: model_terms:ir.ui.view,arch_db:jakh_branding.demo_page
+msgid "What to click"
+msgstr "ما الذي تنقر عليه؟"

@@ -1,0 +1,71 @@
+<odoo>
+  <record id="paperformat_construction_control" model="report.paperformat"><field name="name">JAKH Construction Control</field><field name="format">A4</field><field name="orientation">Landscape</field><field name="margin_top">32</field><field name="margin_bottom">20</field><field name="margin_left">8</field><field name="margin_right">8</field><field name="header_spacing">20</field></record>
+  <record id="report_construction_control" model="ir.actions.report">
+    <field name="name">JAKH Construction Control</field><field name="model">jakh.construction.report</field><field name="report_type">qweb-pdf</field>
+    <field name="report_name">jakh_operations.construction_control_document</field>
+    <field name="paperformat_id" ref="paperformat_construction_control"/><field name="group_ids" eval="[(4,ref('jakh_core.group_financial'))]"/>
+  </record>
+  <template id="construction_control_document">
+    <t t-call="web.html_container"><t t-foreach="docs" t-as="o"><t t-call="web.external_layout">
+      <t t-set="p" t-value="payloads[o.id]"/>
+      <div class="page" t-att-dir="'rtl' if (o.env.context.get('lang') or o.env.user.lang or '').startswith('ar') else 'ltr'" style="font-size:10px;text-align:start;">
+        <h2>JAKH Construction Control</h2>
+        <h3 t-if="o.report_type == 'cost'">BOQ and building cost</h3><h3 t-else="">Approved unbilled certificates</h3>
+        <p><strong>Project: </strong><span t-out="p['project']"/> · <strong>Company: </strong><span t-out="p['company']"/> · <strong>Currency: </strong><span t-out="p['currency']"/></p>
+        <p><strong>Report date: </strong><span t-out="p['as_of']"/> · <strong>Generated at: </strong><span t-out="p['generated_at']"/> UTC</p>
+        <p t-out="p['basis']"/>
+        <table class="table table-sm" t-if="o.report_type == 'cost'">
+          <thead><tr><th>Physical progress</th><th>Certified financial progress</th><th>Posted billing progress</th><th>Forecast final cost</th><th>Forecast margin</th></tr></thead>
+          <tbody><tr><td t-out="o._display_percent(p['summary']['physical_percent'])"/><td t-out="o._display_percent(p['summary']['financial_percent'])"/><td t-out="o._display_percent(p['summary']['billing_percent'])"/>
+            <td t-out="p['summary']['forecast_final_cost']" t-options="{'widget':'monetary','display_currency':o.currency_id}"/><td t-out="p['summary']['forecast_margin']" t-options="{'widget':'monetary','display_currency':o.currency_id}"/></tr></tbody>
+        </table>
+        <p t-if="p['summary']['matched_receipts'] is not None"><strong>Matched posted receipts (tax-inclusive): </strong><span t-out="p['summary']['matched_receipts']" t-options="{'widget':'monetary','display_currency':o.currency_id}"/> · Payment allocations, not a bank-cleared balance.</p>
+        <p t-else="">Posted receipt details require current accounting-document permissions. No zero balance is implied.</p>
+        <p t-if="o.report_type == 'cost'">Project performance is unfiltered; the following detail uses selected BOQ/location filters.</p>
+        <p t-if="o.report_type == 'cost' and not p['dimension_complete']"><strong>Incomplete allocation: </strong>Unallocated facts remain visible and included. No artificial building split has been applied.</p>
+        <table t-if="o.report_type == 'cost'" class="table table-sm" style="font-size:9px;">
+          <thead><tr><th>WBS</th><th>BOQ item</th><th>Building / location</th><th>Discipline</th><th>Original budget</th><th>Revised budget</th><th>Commitments</th><th>Posted actual cost</th><th>Certified gross</th><th>Posted billing</th></tr></thead>
+          <tbody><tr t-foreach="p['rows']" t-as="row"><td t-out="row['wbs']"/><td t-out="row['boq']"/><td><span t-out="row['building']"/> / <span t-out="row['location']"/></td><td t-out="row['discipline']"/>
+            <td t-foreach="['original_budget','revised_budget','commitments','actual_cost','certified_revenue','billed_revenue']" t-as="key" t-out="row[key]" t-options="{'widget':'monetary','display_currency':o.currency_id}"/>
+          </tr></tbody>
+          <tfoot><tr><th colspan="4">Filtered detail total</th><td t-foreach="['original_budget','revised_budget','commitments','actual_cost','certified_revenue','billed_revenue']" t-as="key" t-out="p['totals'][key]" t-options="{'widget':'monetary','display_currency':o.currency_id}"/></tr></tfoot>
+        </table>
+        <table t-else="" class="table table-sm" style="font-size:10px;">
+          <thead><tr><th>Certificate</th><th>Contract</th><th>Measurement date</th><th>Approval date</th><th>Age (days)</th><th>Approved gross</th><th>Posted gross</th><th>Unbilled gross</th><th>Invoice status</th></tr></thead>
+          <tbody><tr t-foreach="p['unbilled']" t-as="row"><td t-out="row['certificate']"/><td t-out="row['contract']"/><td style="white-space:nowrap;" t-out="row['date']"/><td style="white-space:nowrap;" t-out="row['approved_date']"/><td t-out="row['age_days']"/>
+            <td t-foreach="['approved_gross','posted_gross','unbilled_gross']" t-as="key" t-out="row[key]" t-options="{'widget':'monetary','display_currency':o.currency_id}"/>
+            <td t-out="dict(o.env['jakh.unbilled.report.line']._fields['invoice_status']._description_selection(o.env)).get(row['invoice_status'])"/>
+          </tr></tbody>
+        </table>
+      </div>
+    </t></t></t>
+  </template>
+  <record id="report_project_cash_forecast" model="ir.actions.report"><field name="name">JAKH Project Cash Forecast</field><field name="model">jakh.project.cashflow.report</field><field name="report_type">qweb-pdf</field><field name="report_name">jakh_operations.project_cash_forecast_document</field><field name="paperformat_id" ref="paperformat_construction_control"/><field name="group_ids" eval="[(4,ref('jakh_core.group_financial'))]"/></record>
+  <template id="project_cash_forecast_document"><t t-call="web.html_container"><t t-foreach="docs" t-as="o"><t t-call="web.external_layout"><t t-set="p" t-value="payloads[o.id]"/>
+    <div class="page" t-att-dir="'rtl' if (o.env.context.get('lang') or o.env.user.lang or '').startswith('ar') else 'ltr'" style="text-align:start;font-size:11px;">
+      <h2>JAKH Project Cash Forecast</h2><p><span t-field="o.project_id"/> · <span t-field="o.company_id"/> · <span t-field="o.currency_id"/></p>
+      <p><span t-field="o.date_from"/> — <span t-field="o.date_to"/> · <strong>Generated at: </strong><span t-out="p['generated_at']"/> UTC</p>
+      <p t-out="p['basis']"/><p><strong>Opening project cash assumption: </strong><span t-field="o.opening_cash"/></p>
+      <table class="table table-sm"><thead><tr><th>Month</th><th>Cash in</th><th>Cash out</th><th>Net cash</th><th>Closing cash</th></tr></thead><tbody>
+        <tr t-foreach="p['rows']" t-as="row"><td t-out="row['period']"/>
+          <td t-foreach="['cash_in','cash_out','net_cash','closing_cash']" t-as="key" t-out="row[key]" t-options="{'widget':'monetary','display_currency':o.currency_id}"/>
+        </tr></tbody></table>
+      <p><strong>Closing forecast cash: </strong><span t-out="p['closing_cash']" t-options="{'widget':'monetary','display_currency':o.currency_id}"/></p>
+    </div>
+  </t></t></t></template>
+  <record id="report_financial_control" model="ir.actions.report"><field name="name">JAKH Posted Financial Report</field><field name="model">jakh.financial.report</field><field name="report_type">qweb-pdf</field><field name="report_name">jakh_operations.financial_control_document</field><field name="paperformat_id" ref="paperformat_construction_control"/><field name="group_ids" eval="[(4,ref('jakh_core.group_finance')),(4,ref('jakh_core.group_manager'))]"/></record>
+  <template id="financial_control_document"><t t-call="web.html_container"><t t-foreach="docs" t-as="o"><t t-call="web.external_layout">
+    <div class="page" t-att-dir="'rtl' if (o.env.context.get('lang') or o.env.user.lang or '').startswith('ar') else 'ltr'" style="text-align:start;font-size:10px;">
+      <h2>JAKH Posted Financial Report</h2><h3 t-field="o.name"/><p><span t-field="o.company_id"/> · <span t-field="o.currency_id"/> · <t t-if="o.date_from and o.report_type not in ('balance_sheet','receivable_aging','payable_aging')"><span t-field="o.date_from"/> — </t><span t-field="o.date_to"/></p>
+      <p><strong>Generated at: </strong><span t-out="generated_at"/> UTC</p><p t-field="o.scope_note"/>
+      <t t-if="o.report_type == 'cash_flow'"><table class="table table-sm"><thead><tr><th>Opening cash</th><th>Operating</th><th>Investing</th><th>Financing</th><th>Closing cash</th><th>Unresolved</th></tr></thead><tbody><tr>
+        <td><span t-field="o.cash_opening_balance"/></td><td><span t-field="o.cash_operating"/></td><td><span t-field="o.cash_investing"/></td><td><span t-field="o.cash_financing"/></td><td><span t-field="o.cash_closing_balance"/></td><td><span t-field="o.cash_unresolved"/></td>
+      </tr></tbody></table><p t-if="not o.cash_report_complete"><strong>Incomplete cash classification. </strong>Review unresolved source classifications and the reconciliation residual before accepting this report.</p><p><strong>Reconciliation residual: </strong><span t-field="o.cash_reconciliation_residual"/></p></t>
+      <table class="table table-sm" style="font-size:9px;"><thead><tr><th>Account</th><th>Partner</th><th>Date / due date</th><th>Description</th><th>Opening</th><th>Debit</th><th>Credit</th><th>Signed balance</th><th>Aging bucket / cash category</th><th>Journal</th></tr></thead><tbody>
+        <tr t-foreach="o.line_ids" t-as="line"><td><span t-field="line.account_id"/></td><td><span t-field="line.partner_id"/></td><td style="white-space:nowrap;"><span t-field="line.date"/> / <span t-field="line.due_date"/></td><td><span t-field="line.label"/></td>
+          <td><span t-field="line.opening"/></td><td><span t-field="line.debit"/></td><td><span t-field="line.credit"/></td><td><span t-field="line.balance"/></td><td><span t-field="line.bucket"/> / <span t-field="line.cashflow_category"/></td><td><span t-field="line.move_id"/></td>
+        </tr></tbody><tfoot><tr><th colspan="4">Report total</th><td t-foreach="['opening','debit','credit','balance']" t-as="key" t-out="sum(o.line_ids.mapped(key))" t-options="{'widget':'monetary','display_currency':o.currency_id}"/><td colspan="2"/></tr></tfoot>
+      </table>
+    </div>
+  </t></t></t></template>
+</odoo>

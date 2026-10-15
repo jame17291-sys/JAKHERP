@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- The feature is disabled server-side as well. Retain hidden technical
+         fields and inheritance anchors: provider dependencies still use them,
+         and removing their XML nodes can break unrelated Settings views. -->
+    <record id="settings_without_lead_generation" model="ir.ui.view">
+        <field name="name">JAKH CRM settings without external lead generation</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="crm.res_config_settings_view_form"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@name='convert_visitor_setting_container']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//block[@name='generate_lead_setting_container']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_form_without_lead_enrichment" model="ir.ui.view">
+        <field name="name">JAKH CRM form without external enrichment actions</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm_iap_enrich.crm_lead_view_form"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="(//button[@name='iap_enrich'])[1]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="(//button[@name='iap_enrich'])[2]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Old bookmarks may still open request history. Keep it readable and
+         retain links to existing CRM records, but expose no generation, retry,
+         purchase, duplication or editing controls. Ordinary CRM forms/lists
+         are separate views and keep their native New/import permissions. -->
+    <record id="lead_mining_form_history_only" model="ir.ui.view">
+        <field name="name">JAKH lead mining request history without generation controls</field>
+        <field name="model">crm.iap.lead.mining.request</field>
+        <field name="inherit_id" ref="crm_iap_mine.crm_iap_lead_mining_request_view_form"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="attributes">
+                <attribute name="create">0</attribute>
+                <attribute name="edit">0</attribute>
+                <attribute name="delete">0</attribute>
+                <attribute name="duplicate">0</attribute>
+            </xpath>
+            <xpath expr="(//button[@name='action_submit'])[1]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="(//button[@name='action_submit'])[2]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="(//button[@name='action_submit'])[3]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_buy_credits']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="lead_mining_list_history_only" model="ir.ui.view">
+        <field name="name">JAKH lead mining request history list</field>
+        <field name="model">crm.iap.lead.mining.request</field>
+        <field name="inherit_id" ref="crm_iap_mine.crm_iap_lead_mining_request_view_tree"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//list" position="attributes">
+                <attribute name="create">0</attribute>
+                <attribute name="edit">0</attribute>
+                <attribute name="delete">0</attribute>
+                <attribute name="import">0</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,20 @@
+{
+    'name': 'JAKH Construction Estimates',
+    'version': '20.0.2.0.0',
+    'author': 'JAKH',
+    'summary': 'Controlled BOQ studies, repeated buildings and native sales/project handover',
+    'description': 'Construction estimating with controlled BOQ intake, resource build-ups, repeated-building quantities, reviewed revisions and approved contract/project handover.',
+    'category': 'Construction',
+    'license': 'LGPL-3',
+    'depends': ['jakh_core', 'sale_management', 'sale_crm', 'project', 'mail'],
+    'external_dependencies': {'python': ['openpyxl']},
+    'data': [
+        'security/ir.access.csv',
+        'data/sequences.xml',
+        'views/estimate_views.xml',
+        'views/crm_views.xml',
+        'views/boq_intake_views.xml',
+    ],
+    'application': False,
+    'installable': True,
+}

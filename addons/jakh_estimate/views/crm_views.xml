@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_crm_lead_jakh_estimates" model="ir.ui.view">
+        <field name="name">crm.lead.jakh.estimates</field><field name="model">crm.lead</field><field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside"><button name="action_jakh_new_estimate" type="object" string="Prepare BOQ estimate" invisible="type != 'opportunity'" groups="jakh_core.group_estimator,jakh_core.group_manager"/></xpath>
+            <xpath expr="//div[@name='button_box']" position="inside"><button name="action_jakh_estimates" type="object" class="oe_stat_button" icon="assignment" groups="jakh_core.group_estimator,jakh_core.group_manager,jakh_core.group_project_manager,jakh_core.group_finance"><field name="jakh_estimate_count" widget="statinfo" string="Estimates"/></button></xpath>
+        </field>
+    </record>
+</odoo>

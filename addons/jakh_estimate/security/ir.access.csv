@@ -1,0 +1,46 @@
+id,name,model_id,group_id/id,operation,domain
+estimate_company,Estimate company boundary,jakh.estimate,,crud,"[('company_id', 'in', company_ids)]"
+line_company,BOQ line company boundary,jakh.estimate.line,,crud,"[('company_id', 'in', company_ids)]"
+resource_company,Resource company boundary,jakh.estimate.resource,,crud,"[('company_id', 'in', company_ids)]"
+building_company,Building company boundary,jakh.estimate.building,,crud,"[('company_id', 'in', company_ids)]"
+override_company,Quantity company boundary,jakh.estimate.quantity.override,,crud,"[('company_id', 'in', company_ids)]"
+version_company,Version company boundary,jakh.estimate.version,,crud,"[('company_id', 'in', company_ids)]"
+estimate_manager,Estimate manager,jakh.estimate,jakh_core.group_manager,crud,
+estimate_estimator,Estimate estimator,jakh.estimate,jakh_core.group_estimator,crud,
+estimate_financial_read,Estimate financial read,jakh.estimate,jakh_core.group_financial,r,
+estimate_technical_read,Estimate technical read,jakh.estimate,jakh_core.group_technical,r,
+estimate_quality_read,Estimate quality read,jakh.estimate,jakh_core.group_quality,r,
+line_manager,BOQ line manager,jakh.estimate.line,jakh_core.group_manager,crud,
+line_estimator,BOQ line estimator,jakh.estimate.line,jakh_core.group_estimator,crud,
+line_financial_read,BOQ line financial read,jakh.estimate.line,jakh_core.group_financial,r,
+line_technical_read,BOQ line technical read,jakh.estimate.line,jakh_core.group_technical,r,
+line_quality_read,BOQ line quality read,jakh.estimate.line,jakh_core.group_quality,r,
+resource_manager,Resource manager,jakh.estimate.resource,jakh_core.group_manager,crud,
+resource_estimator,Resource estimator,jakh.estimate.resource,jakh_core.group_estimator,crud,
+resource_financial_read,Resource financial read,jakh.estimate.resource,jakh_core.group_financial,r,
+resource_technical_read,Resource technical read,jakh.estimate.resource,jakh_core.group_technical,r,
+resource_quality_read,Resource quality read,jakh.estimate.resource,jakh_core.group_quality,r,
+building_manager,Building manager,jakh.estimate.building,jakh_core.group_manager,crud,
+building_estimator,Building estimator,jakh.estimate.building,jakh_core.group_estimator,crud,
+building_financial_read,Building financial read,jakh.estimate.building,jakh_core.group_financial,r,
+building_technical_read,Building technical read,jakh.estimate.building,jakh_core.group_technical,r,
+building_quality_read,Building quality read,jakh.estimate.building,jakh_core.group_quality,r,
+override_manager,Quantity override manager,jakh.estimate.quantity.override,jakh_core.group_manager,crud,
+override_estimator,Quantity override estimator,jakh.estimate.quantity.override,jakh_core.group_estimator,crud,
+override_financial_read,Quantity override financial read,jakh.estimate.quantity.override,jakh_core.group_financial,r,
+override_technical_read,Quantity override technical read,jakh.estimate.quantity.override,jakh_core.group_technical,r,
+override_quality_read,Quantity override quality read,jakh.estimate.quantity.override,jakh_core.group_quality,r,
+version_manager,Version manager,jakh.estimate.version,jakh_core.group_manager,cr,
+version_estimator,Version estimator,jakh.estimate.version,jakh_core.group_estimator,cr,
+version_financial_read,Version financial read,jakh.estimate.version,jakh_core.group_financial,r,
+version_technical_read,Version technical read,jakh.estimate.version,jakh_core.group_technical,r,
+version_quality_read,Version quality read,jakh.estimate.version,jakh_core.group_quality,r,
+intake_company,BOQ intake company boundary,jakh.boq.import.batch,,crud,"[('company_id', 'in', company_ids)]"
+intake_file_company,BOQ workbook company boundary,jakh.boq.import.file,,crud,"[('company_id', 'in', company_ids)]"
+intake_row_company,BOQ provenance company boundary,jakh.boq.import.row,,crud,"[('company_id', 'in', company_ids)]"
+intake_manager,BOQ intake manager,jakh.boq.import.batch,jakh_core.group_manager,crud,
+intake_estimator,BOQ intake estimator,jakh.boq.import.batch,jakh_core.group_estimator,crud,
+intake_file_manager,BOQ workbook manager,jakh.boq.import.file,jakh_core.group_manager,crud,
+intake_file_estimator,BOQ workbook estimator,jakh.boq.import.file,jakh_core.group_estimator,crud,
+intake_row_manager,BOQ provenance manager,jakh.boq.import.row,jakh_core.group_manager,crd,
+intake_row_estimator,BOQ provenance estimator,jakh.boq.import.row,jakh_core.group_estimator,crd,

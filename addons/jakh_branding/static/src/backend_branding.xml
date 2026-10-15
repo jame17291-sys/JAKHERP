@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="jakh_branding.SettingsEdition" t-inherit="res_config_edition" t-inherit-mode="extension">
+        <xpath expr="//h3" position="replace">
+            <h3 class="px-0">JAKH ERP 2.0</h3>
+        </xpath>
+        <xpath expr="//small" position="replace">
+            <small>
+                JAKH Contracting Platform ·
+                <a href="/jakh/help#licenses" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Open-source notices</a>
+            </small>
+        </xpath>
+    </t>
+
+    <t t-name="jakh_branding.SessionExpired" t-inherit="web.SessionExpiredDialog" t-inherit-mode="extension">
+        <xpath expr="//Dialog" position="attributes">
+            <attribute name="title.translate">JAKH ERP Session Expired</attribute>
+        </xpath>
+        <xpath expr="//p" position="replace">
+            <p class="text-prewrap">Your JAKH ERP session expired. The current page is about to be refreshed.</p>
+        </xpath>
+    </t>
+
+    <t t-name="jakh_branding.OptionalFeature" t-inherit="web.UpgradeDialog" t-inherit-mode="extension">
+        <xpath expr="//Dialog" position="replace">
+            <Dialog title.translate="Optional feature not included">
+                <div role="status">
+                    <p>This feature is not included in the current JAKH ERP installation.</p>
+                    <p class="mb-0">Review the implementation scope and licensing requirements before activating an additional module. This setting does not make the feature available.</p>
+                </div>
+                <t t-set-slot="footer">
+                    <button class="btn btn-primary" t-on-click="this._confirmUpgrade">Review implementation scope</button>
+                    <button class="btn btn-secondary" t-on-click="this.props.close">Close</button>
+                </t>
+            </Dialog>
+        </xpath>
+    </t>
+</templates>

@@ -1,0 +1,27 @@
+.o_database_list {
+    .jakh-auth-brand { width: 220px; max-width: 100%; height: auto; }
+    .jakh-auth-caption { color: #748891; font-size: 12px; }
+    .btn-primary { background: #146e65; border-color: #146e65; }
+    .btn-primary:hover { background: #10584f; border-color: #10584f; }
+}
+.jakh-help { max-width: 880px; margin: auto; padding: 40px 24px; color: #20333b; }
+.jakh-help h1, .jakh-help h2 { color: #172e39; }
+.jakh-demo { max-width: 960px; }
+.jakh-demo-label { margin-block: 28px 8px; color: #146e65; font-size: 12px; font-weight: 700; letter-spacing: .05em; }
+.jakh-demo-intro { margin-block: 24px; padding: 20px 24px; border-inline-start: 4px solid #146e65; background: #f3f8f7; border-radius: 4px; }
+.jakh-demo-intro h2 { font-size: 20px; }
+.jakh-demo-intro p:last-child { margin-bottom: 0; }
+.jakh-demo-index, .jakh-demo-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.jakh-demo-index { margin-block: 28px; gap: 10px 20px; }
+.jakh-demo-index a { color: #146e65; }
+.jakh-demo-stage { padding-block: 24px; border-top: 1px solid #dbe5e3; scroll-margin-top: 24px; }
+.jakh-demo-stage h2 { margin-bottom: 20px; font-size: 24px; }
+.jakh-demo-stage h3 { color: #47606a; font-size: 14px; font-weight: 700; margin-block: 18px 6px; }
+.jakh-demo-links { margin-top: 16px; }
+.jakh-demo .btn-primary, .jakh-demo-intro .btn-primary { background: #146e65; border-color: #146e65; }
+.jakh-demo .btn-outline-primary { border-color: #146e65; color: #146e65; }
+.jakh-demo .btn-outline-primary:hover { background: #146e65; color: #fff; }
+@media (max-width: 575.98px) {
+    .jakh-demo-intro { padding: 16px; }
+    .jakh-demo-links .btn { width: 100%; text-align: start; }
+}

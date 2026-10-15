@@ -1,0 +1,34 @@
+<odoo>
+  <record id="settings_brand" model="ir.ui.view">
+    <field name="name">JAKH platform settings labels</field>
+    <field name="model">res.config.settings</field>
+    <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//setting[@id='partner_autocomplete']" position="attributes"><attribute name="title">Find matching companies and review their contact information before saving.</attribute></xpath>
+      <xpath expr="//setting[button[@name='%(base.action_apikeys_admin)d']]" position="attributes"><attribute name="help">API keys let authorized users access JAKH ERP through external tools when multi-factor authentication is enabled.</attribute></xpath>
+      <xpath expr="//setting[.//field[@name='web_app_name']]" position="attributes"><attribute name="help">Name used when JAKH ERP is installed through the browser.</attribute></xpath>
+      <xpath expr="//field[@name='web_app_name']" position="attributes"><attribute name="placeholder">JAKH ERP</attribute></xpath>
+    </field>
+  </record>
+  <record id="external_services_label" model="ir.ui.view">
+    <field name="name">JAKH external services label</field>
+    <field name="model">res.config.settings</field>
+    <field name="inherit_id" ref="iap.res_config_settings_view_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//setting[@id='iap_credits_setting']" position="attributes">
+        <attribute name="string">External Services &amp; Credits</attribute>
+        <attribute name="help">Review separately supplied services and their credit balances. These are not JAKH subscriptions; provider terms and charges apply.</attribute>
+      </xpath>
+    </field>
+  </record>
+  <record id="mail_settings_tooltip" model="ir.ui.view">
+    <field name="name">JAKH email configuration guidance</field>
+    <field name="model">res.config.settings</field>
+    <field name="inherit_id" ref="mail.res_config_settings_view_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//setting[@id='email_servers_setting']" position="attributes">
+        <attribute name="title">Configure approved incoming and outgoing email servers. Test delivery and access controls before enabling notifications.</attribute>
+      </xpath>
+    </field>
+  </record>
+</odoo>

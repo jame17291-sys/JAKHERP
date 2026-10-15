@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-10-12",
+  "odoo": {
+    "edition": "Community",
+    "version": "20.0.post20261012",
+    "archiveRoot": "odoo-20.0.post20261012",
+    "url": "https://nightly.odoo.com/20.0/nightly/src/odoo_20.0.20261012.tar.gz",
+    "sha256": "53b2b33a58b9e0f743d2076b01b5a955a867c044de232aed109d838e45018961",
+    "bytes": 421913080,
+    "provenance": "Attached archive independently matched byte size and SHA-256 of the full official HTTPS source download before execution.",
+    "license": "LGPL-3.0",
+    "minimumPython": "3.12",
+    "minimumPostgresql": "16"
+  },
+  "postgresql": {
+    "version": "16.15",
+    "archiveRoot": "postgresql-16.15",
+    "url": "https://ftp.postgresql.org/pub/source/v16.15/postgresql-16.15.tar.gz",
+    "checksumUrl": "https://ftp.postgresql.org/pub/source/v16.15/postgresql-16.15.tar.gz.sha256",
+    "sha256": "4f200ca23dfb120ff9838f13ce06014aad1d3c432d16ee9f93ab2000c0eeef7b",
+    "bytes": 33138496,
+    "license": "PostgreSQL"
+  },
+  "keycloak": {
+    "version": "26.8.0",
+    "image": "quay.io/keycloak/keycloak:26.8.0@sha256:27b3230fbabb8c9ff3c66c864cf09dcd8a41aca82e5100679d109ef0eeb05741",
+    "profile": "sso",
+    "provenance": "Official public Quay OCI manifest fetched over HTTPS and its bytes independently hashed; optional deployment, not required for native Odoo authentication.",
+    "license": "Apache-2.0"
+  },
+  "containerImages": {
+    "python": {
+      "image": "python:3.12.14-slim-bookworm@sha256:392307d22300de8b5986851a12d9176dfc0fc073e65bf6523ebd7dcbeb23564e",
+      "manifestUrl": "https://registry-1.docker.io/v2/library/python/manifests/3.12.14-slim-bookworm",
+      "manifestBytes": 6546
+    },
+    "postgresql": {
+      "image": "postgres:16.15-bookworm@sha256:0ea6700a3b4f0ae6ce746519073558aed4d88a79d8d07622a9a644946c7319c4",
+      "manifestUrl": "https://registry-1.docker.io/v2/library/postgres/manifests/16.15-bookworm",
+      "manifestBytes": 6496
+    },
+    "keycloak": {
+      "image": "quay.io/keycloak/keycloak:26.8.0@sha256:27b3230fbabb8c9ff3c66c864cf09dcd8a41aca82e5100679d109ef0eeb05741",
+      "manifestUrl": "https://quay.io/v2/keycloak/keycloak/manifests/26.8.0",
+      "manifestBytes": 2364
+    },
+    "provenance": "All three official multi-architecture manifests were retrieved on 2026-10-12 over HTTPS, independently SHA-256 hashed, and matched the registry Docker-Content-Digest header. Container build/runtime remains untested on this host."
+  },
+  "references": [
+    "https://nightly.odoo.com/20.0/nightly/src/",
+    "https://raw.githubusercontent.com/odoo/documentation/20.0/content/administration/on_premise/source.rst",
+    "https://www.postgresql.org/docs/16/install-requirements.html",
+    "https://www.keycloak.org/getting-started/getting-started-docker"
+  ]
+}

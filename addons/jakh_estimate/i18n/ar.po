@@ -1,0 +1,3292 @@
+# Arabic translation of JAKH ERP customer-facing modules.
+# Common framework terminology follows the bundled upstream Arabic catalogs.
+# Original component license and copyright notices remain in the source distribution.
+msgid ""
+msgstr ""
+"Project-Id-Version: JAKH ERP 2.0\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "%(label)s is empty, too long or contains control characters."
+msgstr "الحقل %(label)s فارغ أو طويل جداً أو يحتوي على محارف تحكم."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "%(label)s is outside the supported range."
+msgstr "الحقل %(label)s خارج النطاق المدعوم."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "%(label)s must be a decimal number."
+msgstr "يجب أن يكون الحقل %(label)s عدداً عشرياً."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "%(label)s must be a safe dictionary."
+msgstr "يجب أن يكون الحقل %(label)s قاموس بيانات آمناً."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "%(label)s must be text."
+msgstr "يجب أن يكون الحقل %(label)s نصاً."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "%(label)s supports at most six decimal places."
+msgstr "يدعم الحقل %(label)s ست منازل عشرية كحد أقصى."
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "<span>Project</span>"
+msgstr "<span>المشروع</span>"
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "<span>Quotation</span>"
+msgstr "<span>عرض السعر</span>"
+
+#. module: jakh_estimate
+#: model:ir.model.constraint,message:jakh_estimate.constraint_jakh_estimate_quantity_override_unique_line
+msgid "A building can override a BOQ line only once."
+msgstr "يمكن تخصيص كمية بند جدول الكميات لكل مبنى مرة واحدة فقط."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "A building can override each BOQ line only once."
+msgstr "يمكن تخصيص كمية كل بند في جدول الكميات لكل مبنى مرة واحدة فقط."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "A building override must refer to a line in this estimate."
+msgstr "يجب أن يشير تخصيص المبنى إلى بند في هذه الدراسة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "A building quantity basis cannot move between estimates."
+msgstr "لا يمكن نقل أساس كميات المبنى بين دراسات التكاليف."
+
+#. module: jakh_estimate
+#: model:ir.model.constraint,message:jakh_estimate.constraint_sale_order_line_unique_jakh_source
+msgid "A handover quotation can reference each source BOQ line only once."
+msgstr ""
+"يمكن أن يشير عرض السعر الناتج عن التسليم إلى كل بند أصلي من جدول الكميات مرة"
+" واحدة فقط."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "A resource assembly supports up to 100 resources."
+msgstr "يدعم تحليل الموارد 100 مورد كحد أقصى."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "A resource cannot be moved to another BOQ line."
+msgstr "لا يمكن نقل المورد إلى بند آخر في جدول الكميات."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__message_needaction
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__activity_plans_ids
+msgid "Activity Plans"
+msgstr "خطط النشاط"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Add BOQ lines before submitting the estimate."
+msgstr "أضف بنود جدول الكميات قبل تقديم دراسة التكاليف."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__added_count
+msgid "Added Count"
+msgstr "عدد البنود المضافة"
+
+#. module: jakh_estimate
+#: model:ir.model.constraint,message:jakh_estimate.constraint_project_project_unique_jakh_estimate
+msgid "An approved estimate can create only one handover project."
+msgstr "لا يمكن إنشاء أكثر من مشروع واحد عند تسليم دراسة تكاليف معتمدة."
+
+#. module: jakh_estimate
+#: model:ir.model.constraint,message:jakh_estimate.constraint_sale_order_unique_jakh_estimate
+msgid "An approved estimate can create only one handover quotation."
+msgstr "لا يمكن إنشاء أكثر من عرض سعر واحد عند تسليم دراسة تكاليف معتمدة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "An estimate supports up to 1,000 explicit building overrides."
+msgstr "تدعم دراسة التكاليف 1,000 تخصيص صريح لكميات المباني كحد أقصى."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "An estimate supports up to 500 BOQ lines."
+msgstr "تدعم دراسة التكاليف 500 بند في جدول الكميات كحد أقصى."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid ""
+"An estimate with saved versions must be retained; archive a draft instead."
+msgstr ""
+"يجب الاحتفاظ بدراسة التكاليف التي لها إصدارات محفوظة؛ يمكنك أرشفة المسودة "
+"بدلاً من حذفها."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/crm_lead.py:0
+msgid ""
+"An original CRM amount requires its original currency and cannot be "
+"negative."
+msgstr ""
+"يتطلب مبلغ علاقات العملاء الأصلي عملته الأصلية ولا يمكن أن يكون سالباً."
+
+#. module: jakh_estimate
+#: model:ir.model.constraint,message:jakh_estimate.constraint_crm_lead_unique_jakh_source
+msgid "An original CRM reference can be registered only once in the company."
+msgstr "يمكن تسجيل مرجع علاقات العملاء الأصلي مرة واحدة فقط داخل الشركة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "An override cannot move between buildings."
+msgstr "لا يمكن نقل تخصيص الكمية بين المباني."
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Approve & lock"
+msgstr "اعتماد وقفل"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Approve and lock the estimate before handover."
+msgstr "اعتمد دراسة التكاليف واقفلها قبل التسليم."
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Approve this study and lock its BOQ, quantities and pricing?"
+msgstr "هل تريد اعتماد هذه الدراسة وقفل جدول كمياتها وكمياتها وأسعارها؟"
+
+#. module: jakh_estimate
+#: model:ir.model.fields.selection,name:jakh_estimate.selection__jakh_estimate__state__approved
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_search
+msgid "Approved"
+msgstr "معتمد"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Approved %(name)s · %(number)02d"
+msgstr "معتمد %(name)s · %(number)02d"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__approved_at
+msgid "Approved At"
+msgstr "تاريخ الاعتماد"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__approved_by_id
+msgid "Approved By"
+msgstr "المعتمِد"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__approved_version_id
+msgid "Approved Version"
+msgstr "الإصدار المعتمد"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Approved study %s is locked. Further changes require a new revision."
+msgstr "الدراسة المعتمدة %s مقفلة. تتطلب التغييرات اللاحقة مراجعة جديدة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid ""
+"Approved study handed over to draft quotation %s and project %s. WBS budgets"
+" remain draft."
+msgstr ""
+"تم تسليم الدراسة المعتمدة إلى مسودة عرض السعر %s والمشروع %s. تبقى ميزانيات "
+"هيكل تقسيم العمل في حالة مسودة."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__message_attachment_count
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_search
+msgid "Awaiting approval"
+msgstr "بانتظار الاعتماد"
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "BOQ & assemblies"
+msgstr "جدول الكميات وتحليل الموارد"
+
+#. module: jakh_estimate
+#: model:ir.model,name:jakh_estimate.model_jakh_estimate_line
+msgid "BOQ Estimate Line"
+msgstr "بند دراسة جدول الكميات"
+
+#. module: jakh_estimate
+#: model:ir.model,name:jakh_estimate.model_jakh_estimate_resource
+msgid "BOQ Resource Assembly"
+msgstr "تحليل موارد بند جدول الكميات"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "BOQ code"
+msgstr "رمز بند جدول الكميات"
+
+#. module: jakh_estimate
+#: model:ir.model.constraint,message:jakh_estimate.constraint_jakh_estimate_line_unique_code
+msgid "BOQ codes must be unique within the study."
+msgstr "يجب أن تكون رموز بنود جدول الكميات فريدة داخل الدراسة."
+
+#. module: jakh_estimate
+#: model:ir.actions.act_window,name:jakh_estimate.action_estimate
+#: model:ir.ui.menu,name:jakh_estimate.menu_boq_estimates
+msgid "BOQ estimates"
+msgstr "دراسات جداول الكميات"
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "BOQ line"
+msgstr "بند جدول الكميات"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "BOQ line IDs and codes must be unique and non-reserved."
+msgstr "يجب أن تكون معرّفات بنود جدول الكميات ورموزها فريدة وغير محجوزة."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__line_ids
+msgid "BOQ lines"
+msgstr "بنود جدول الكميات"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "BOQ quantity"
+msgstr "كمية جدول الكميات"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_quantity_override__building_id
+msgid "Building"
+msgstr "المبنى"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Building name"
+msgstr "اسم المبنى"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_building__number
+msgid "Building number"
+msgstr "رقم المبنى"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Building numbers must be within the repeated-building count."
+msgstr "يجب أن تقع أرقام المباني ضمن عدد المباني المتكررة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Building override quantity"
+msgstr "الكمية المخصصة للمبنى"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Building override refers to an unknown BOQ line."
+msgstr "يشير تخصيص المبنى إلى بند غير معروف في جدول الكميات."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__building_ids
+msgid "Building overrides"
+msgstr "تخصيصات كميات المباني"
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Building quantities"
+msgstr "كميات المباني"
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Building quantity basis"
+msgstr "أساس كميات المبنى"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Calculated line amounts are assigned by the costing service."
+msgstr "تُحدّد مبالغ البنود المحسوبة من خلال خدمة احتساب التكاليف."
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Calculated totals"
+msgstr "الإجماليات المحسوبة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields.selection,name:jakh_estimate.selection__jakh_estimate__state__cancel
+msgid "Cancelled"
+msgstr "تم الإلغاء"
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_version_form
+msgid "Changes from preceding version"
+msgstr "التغييرات عن الإصدار السابق"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_row__code
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__code
+msgid "Code"
+msgstr "رمز"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__company_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__company_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_row__company_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__company_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_building__company_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__company_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_quantity_override__company_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_resource__company_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: jakh_estimate
+#: model:ir.actions.server,name:jakh_estimate.action_open_estimate_analysis
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_graph
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_pivot
+msgid "Company-currency estimate analysis"
+msgstr "تحليل دراسات التكاليف بعملة الشركة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__comparison_json
+msgid "Comparison Json"
+msgstr "بيانات المقارنة المهيكلة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__comparison_text
+msgid "Comparison Text"
+msgstr "نص المقارنة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Configure a Sales pricelist in the estimate currency before handover."
+msgstr "هيّئ قائمة أسعار مبيعات بعملة دراسة التكاليف قبل التسليم."
+
+#. module: jakh_estimate
+#: model:ir.model,name:jakh_estimate.model_jakh_estimate
+msgid "Construction BOQ Estimate"
+msgstr "دراسة تكاليف جدول كميات الإنشاءات"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/crm_lead.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Construction estimate"
+msgstr "دراسة تكاليف الإنشاءات"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/crm_lead.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_crm_lead__jakh_estimate_ids
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_search
+msgid "Construction estimates"
+msgstr "دراسات تكاليف الإنشاءات"
+
+#. module: jakh_estimate
+#: model:ir.module.module,summary:base.module_jakh_estimate
+msgid ""
+"Controlled BOQ studies, repeated buildings and native sales/project handover"
+msgstr ""
+"دراسات جداول كميات خاضعة للرقابة ومبانٍ متكررة وتسليم مترابط إلى المبيعات "
+"والمشاريع"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Controlled estimate fields can only be changed by workflow actions."
+msgstr ""
+"لا يمكن تغيير حقول دراسة التكاليف الخاضعة للرقابة إلا عبر إجراءات سير العمل."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__cost_amount
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__cost_amount
+msgid "Cost Amount"
+msgstr "مبلغ التكلفة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__cost_code_id
+msgid "Cost Code"
+msgstr "رمز التكلفة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Cost code"
+msgstr "رمز التكلفة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid ""
+"Create a draft estimate; controlled references are assigned by workflow "
+"actions."
+msgstr ""
+"أنشئ مسودة دراسة تكاليف؛ وتُعيَّن المراجع الخاضعة للرقابة عبر إجراءات سير "
+"العمل."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid ""
+"Create a new company estimate rather than moving a study with lines or "
+"history."
+msgstr ""
+"أنشئ دراسة تكاليف جديدة للشركة بدلاً من نقل دراسة تحتوي على بنود أو سجل "
+"سابق."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Create a revision from an approved, handed-over or cancelled estimate."
+msgstr "أنشئ مراجعة من دراسة تكاليف معتمدة أو مسلّمة أو ملغاة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid ""
+"Create an estimate-linked project through the approved estimate handover."
+msgstr "أنشئ مشروعاً مرتبطاً بدراسة التكاليف من خلال تسليم الدراسة المعتمدة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid ""
+"Create an estimate-linked quotation through the approved estimate handover."
+msgstr "أنشئ عرض سعر مرتبطاً بدراسة التكاليف من خلال تسليم الدراسة المعتمدة."
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Create quotation & project"
+msgstr "إنشاء عرض سعر ومشروع"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__created_by_id
+msgid "Created By"
+msgstr "أنشئ بواسطة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__create_uid
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__create_uid
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_row__create_uid
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__create_uid
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_building__create_uid
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__create_uid
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_quantity_override__create_uid
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_resource__create_uid
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__create_date
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__create_date
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_row__create_date
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__create_date
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_building__create_date
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__create_date
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_quantity_override__create_date
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_resource__create_date
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__currency_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__currency_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__currency_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__currency_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_resource__currency_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__currency_id
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_search
+msgid "Currency"
+msgstr "العملة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Currency code"
+msgstr "رمز العملة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Currency precision must be between zero and six."
+msgstr "يجب أن يتراوح عدد المنازل العشرية للعملة بين صفر وستة."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__partner_id
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_search
+msgid "Customer"
+msgstr "العميل"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__name
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_resource__name
+msgid "Description"
+msgstr "الوصف"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__cost_amount
+msgid "Direct cost"
+msgstr "التكلفة المباشرة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__unit_cost
+msgid "Direct unit cost"
+msgstr "تكلفة الوحدة المباشرة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_crm_lead__display_name
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__display_name
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__display_name
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_row__display_name
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__display_name
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_building__display_name
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__display_name
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_quantity_override__display_name
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_resource__display_name
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__display_name
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_wbs__display_name
+#: model:ir.model.fields,field_description:jakh_estimate.field_project_project__display_name
+#: model:ir.model.fields,field_description:jakh_estimate.field_sale_order__display_name
+#: model:ir.model.fields,field_description:jakh_estimate.field_sale_order_line__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: jakh_estimate
+#: model:ir.model.fields.selection,name:jakh_estimate.selection__jakh_estimate__state__draft
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_search
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Draft quotation"
+msgstr "مسودة عرض سعر"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid ""
+"Dual units require a different secondary unit and a positive conversion "
+"factor."
+msgstr "تتطلب الوحدات المزدوجة وحدة ثانوية مختلفة ومعامل تحويل موجباً."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid ""
+"Each building number must be unique and within the repeated-unit count."
+msgstr "يجب أن يكون رقم كل مبنى فريداً وضمن عدد الوحدات المتكررة."
+
+#. module: jakh_estimate
+#: model:ir.model.constraint,message:jakh_estimate.constraint_jakh_estimate_building_unique_number
+msgid "Each building number must be unique within the estimate."
+msgstr "يجب أن يكون رقم كل مبنى فريداً داخل دراسة التكاليف."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__effective_unit_cost
+msgid "Effective Unit Cost"
+msgstr "تكلفة الوحدة الفعلية"
+
+#. module: jakh_estimate
+#: model:ir.model.fields.selection,name:jakh_estimate.selection__jakh_estimate_resource__resource_type__equipment
+msgid "Equipment"
+msgstr "المعدات"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__estimate_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_building__estimate_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__estimate_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_quantity_override__estimate_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_resource__estimate_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__estimate_id
+msgid "Estimate"
+msgstr "دراسة التكاليف"
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_activity
+msgid "Estimate Activities"
+msgstr "أنشطة دراسة التكاليف"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Estimate amount exceeds the supported monetary range."
+msgstr "يتجاوز مبلغ دراسة التكاليف النطاق المالي المدعوم."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Estimate amounts are restricted to financial roles."
+msgstr "تقتصر صلاحية الاطلاع على مبالغ دراسة التكاليف على الأدوار المالية."
+
+#. module: jakh_estimate
+#: model:ir.actions.act_window,name:jakh_estimate.action_estimate_analysis
+#: model:ir.ui.menu,name:jakh_estimate.menu_estimate_analysis
+msgid "Estimate analysis"
+msgstr "تحليل دراسات التكاليف"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Estimate analysis · %s"
+msgstr "تحليل دراسات التكاليف · %s"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Estimate revision"
+msgstr "مراجعة دراسة التكاليف"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Estimate submitted for construction manager review."
+msgstr "قُدّمت دراسة التكاليف لمراجعة مدير الإنشاءات."
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_crm_lead_jakh_estimates
+msgid "Estimates"
+msgstr "دراسات التكاليف"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__estimator_id
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_search
+msgid "Estimator"
+msgstr "مهندس التكاليف والتقدير"
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_version_form
+msgid "Exact approved basis"
+msgstr "الأساس المعتمد الدقيق"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Existing quotation"
+msgstr "عرض السعر الحالي"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__message_follower_ids
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__message_follower_ids
+msgid "Followers"
+msgstr "المتابعين"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__message_partner_ids
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعين (الشركاء)"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid ""
+"For this handover, map each primary BOQ unit to its product unit. Dual-unit "
+"conversions remain recorded in the approved study."
+msgstr ""
+"لهذا التسليم، اربط كل وحدة أساسية في جدول الكميات بوحدة المنتج. تبقى تحويلات"
+" الوحدات المزدوجة مسجلة في الدراسة المعتمدة."
+
+#. module: jakh_estimate
+#: model:ir.model.fields.selection,name:jakh_estimate.selection__jakh_estimate__state__handed_over
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_search
+msgid "Handed over"
+msgstr "تم التسليم"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid ""
+"Handover requires the company currency. Preserve the source currency and "
+"have Finance prepare an explicitly converted company-currency study."
+msgstr ""
+"يتطلب التسليم استخدام عملة الشركة. احتفظ بعملة المصدر واطلب من الإدارة "
+"المالية إعداد دراسة محوّلة صراحةً إلى عملة الشركة."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__has_message
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__has_message
+msgid "Has Message"
+msgstr "يحتوي على رسالة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Header markup"
+msgstr "نسبة إضافة الدراسة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__header_markup_percent
+msgid "Header markup (%)"
+msgstr "نسبة إضافة الدراسة (٪)"
+
+#. module: jakh_estimate
+#: model:ir.model.constraint,message:jakh_estimate.constraint_jakh_estimate_valid_markup
+msgid "Header markup must be between zero and 1,000 percent."
+msgstr "يجب أن تتراوح نسبة إضافة الدراسة بين صفر و1,000 بالمئة."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_crm_lead__id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_row__id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_building__id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_quantity_override__id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_resource__id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_wbs__id
+#: model:ir.model.fields,field_description:jakh_estimate.field_project_project__id
+#: model:ir.model.fields,field_description:jakh_estimate.field_sale_order__id
+#: model:ir.model.fields,field_description:jakh_estimate.field_sale_order_line__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,help:jakh_estimate.field_jakh_estimate__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "الأيقونة للإشارة إلى النشاط المستثنى."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,help:jakh_estimate.field_jakh_boq_import_batch__message_needaction
+#: model:ir.model.fields,help:jakh_estimate.field_jakh_estimate__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة عليك رؤيتها."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,help:jakh_estimate.field_jakh_boq_import_batch__message_has_error
+#: model:ir.model.fields,help:jakh_estimate.field_jakh_boq_import_batch__message_has_sms_error
+#: model:ir.model.fields,help:jakh_estimate.field_jakh_estimate__message_has_error
+#: model:ir.model.fields,help:jakh_estimate.field_jakh_estimate__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: jakh_estimate
+#: model:ir.model,name:jakh_estimate.model_jakh_estimate_version
+msgid "Immutable BOQ Study Version"
+msgstr "إصدار دراسة جدول كميات غير قابل للتعديل"
+
+#. module: jakh_estimate
+#: model:ir.model.fields.selection,name:jakh_estimate.selection__jakh_estimate__state__review
+msgid "In review"
+msgstr "قيد المراجعة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__message_is_follower
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Item markup"
+msgstr "نسبة إضافة البند"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__item_markup_percent
+msgid "Item markup (%)"
+msgstr "نسبة إضافة البند (٪)"
+
+#. module: jakh_estimate
+#: model:ir.module.module,shortdesc:base.module_jakh_estimate
+msgid "JAKH Construction Estimates"
+msgstr "دراسات تكاليف الإنشاءات في JAKH"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_project_project__jakh_estimate_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_sale_order__jakh_estimate_id
+msgid "Jakh Estimate"
+msgstr "دراسة تكاليف JAKH"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_crm_lead__jakh_estimate_count
+msgid "Jakh Estimate Count"
+msgstr "عدد دراسات تكاليف JAKH"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_wbs__jakh_estimate_line_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_sale_order_line__jakh_estimate_line_id
+msgid "Jakh Estimate Line"
+msgstr "بند دراسة تكاليف JAKH"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_wbs__jakh_sale_line_id
+msgid "Jakh Sale Line"
+msgstr "بند مبيعات JAKH"
+
+#. module: jakh_estimate
+#: model:ir.model.fields.selection,name:jakh_estimate.selection__jakh_estimate_resource__resource_type__labour
+msgid "Labour"
+msgstr "العمالة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__write_uid
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__write_uid
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_row__write_uid
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__write_uid
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_building__write_uid
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__write_uid
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_quantity_override__write_uid
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_resource__write_uid
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__write_date
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__write_date
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_row__write_date
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__write_date
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_building__write_date
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__write_date
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_quantity_override__write_date
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_resource__write_date
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: jakh_estimate
+#: model:ir.model,name:jakh_estimate.model_crm_lead
+msgid "Lead"
+msgstr "عميل مهتم"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_quantity_override__line_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_resource__line_id
+msgid "Line"
+msgstr "البند"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Line %(number)s"
+msgstr "البند %(number)s"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_row__line_uuid
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__line_uuid
+msgid "Line Uuid"
+msgstr "المعرّف الثابت للبند"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Line amount exceeds the supported monetary range."
+msgstr "يتجاوز مبلغ البند النطاق المالي المدعوم."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Map every BOQ line to a product and company cost code before approval."
+msgstr ""
+"اربط كل بند في جدول الكميات بمنتج ورمز تكلفة تابع للشركة قبل الاعتماد."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__margin_amount
+msgid "Margin"
+msgstr "الهامش"
+
+#. module: jakh_estimate
+#: model:ir.model.fields.selection,name:jakh_estimate.selection__jakh_estimate_resource__resource_type__material
+msgid "Material"
+msgstr "المواد"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,help:jakh_estimate.field_jakh_estimate__activity_type_icon
+msgid "Material Symbols icon e.g. checklist"
+msgstr "أيقونة من مكتبة الرموز، مثل قائمة التحقق"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__message_has_error
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__message_ids
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__modified_count
+msgid "Modified Count"
+msgstr "عدد البنود المعدّلة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطاتي"
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_search
+msgid "My studies"
+msgstr "دراساتي"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__name
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__name
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_building__name
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid ""
+"Native Sales rounding or price-included taxes differ from the approved "
+"study. Review unit/price precision and tax settings before handover."
+msgstr ""
+"يختلف تقريب المبيعات أو الضرائب المشمولة في السعر عن الدراسة المعتمدة. راجع "
+"دقة الوحدات والأسعار وإعدادات الضرائب قبل التسليم."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "New"
+msgstr "جديد"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "New draft revision of %s. The original remains locked."
+msgstr "مسودة مراجعة جديدة للدراسة %s. يبقى الأصل مقفلاً."
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "New revision"
+msgstr "مراجعة جديدة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "الفعالية التالية في تقويم الأنشطة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__version_label
+msgid "Next study version label"
+msgstr "تسمية الإصدار التالي للدراسة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "No handover project exists yet."
+msgstr "لم يُنشأ مشروع من التسليم بعد."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "No handover quotation exists yet."
+msgstr "لم يُنشأ عرض سعر من التسليم بعد."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__note
+msgid "Note"
+msgstr "الملاحظات"
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Notes"
+msgstr "الملاحظات"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__number
+msgid "Number"
+msgstr "الرقم"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__message_needaction_counter
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__message_has_error_counter
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,help:jakh_estimate.field_jakh_boq_import_batch__message_needaction_counter
+#: model:ir.model.fields,help:jakh_estimate.field_jakh_estimate__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب اتخاذ إجراء"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,help:jakh_estimate.field_jakh_boq_import_batch__message_has_error_counter
+#: model:ir.model.fields,help:jakh_estimate.field_jakh_estimate__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Only a construction manager can approve or hand over an estimate."
+msgstr "يمكن لمدير الإنشاءات فقط اعتماد دراسة التكاليف أو تسليمها."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Only an estimate in review can be returned to draft."
+msgstr "يمكن إعادة دراسة التكاليف قيد المراجعة فقط إلى مسودة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Only an estimator or construction manager can change an estimate."
+msgstr "يمكن لمهندس التكاليف أو مدير الإنشاءات فقط تعديل دراسة التكاليف."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/crm_lead.py:0
+msgid "Only construction estimators/managers can prepare a tender estimate."
+msgstr ""
+"يمكن لمهندسي التكاليف أو مديري الإنشاءات فقط إعداد دراسة تكاليف العطاء."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/crm_lead.py:0
+msgid ""
+"Only construction estimators/managers can register the original CRM source."
+msgstr ""
+"يمكن لمهندسي التكاليف أو مديري الإنشاءات فقط تسجيل المصدر الأصلي لعلاقات "
+"العملاء."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__opportunity_id
+msgid "Opportunity"
+msgstr "الفرصة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__origin_estimate_id
+msgid "Origin Estimate"
+msgstr "دراسة التكاليف الأصلية"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_crm_lead__jakh_source_amount
+msgid "Original CRM amount"
+msgstr "مبلغ علاقات العملاء الأصلي"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_crm_lead__jakh_source_currency_id
+msgid "Original CRM currency"
+msgstr "عملة علاقات العملاء الأصلية"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_crm_lead__jakh_source_payload
+msgid "Original CRM fields"
+msgstr "حقول علاقات العملاء الأصلية"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_crm_lead__jakh_source_id
+msgid "Original CRM reference"
+msgstr "مرجع علاقات العملاء الأصلي"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/crm_lead.py:0
+msgid "Original CRM source data is retained unchanged."
+msgstr "تُحفظ بيانات المصدر الأصلي لعلاقات العملاء دون تغيير."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_crm_lead__jakh_source_system
+msgid "Original CRM system"
+msgstr "نظام علاقات العملاء الأصلي"
+
+#. module: jakh_estimate
+#: model:ir.model.fields.selection,name:jakh_estimate.selection__jakh_estimate_resource__resource_type__other
+msgid "Other"
+msgstr "غير ذلك"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_building__override_ids
+msgid "Override"
+msgstr "تخصيص الكمية"
+
+#. module: jakh_estimate
+#: model:ir.model.constraint,message:jakh_estimate.constraint_jakh_estimate_quantity_override_nonnegative_quantity
+msgid "Override quantities cannot be negative."
+msgstr "لا يمكن أن تكون الكميات المخصصة سالبة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Override quantities must use a BOQ line from the same estimate."
+msgstr "يجب أن تستخدم الكميات المخصصة بنداً من جدول كميات الدراسة نفسها."
+
+#. module: jakh_estimate
+#: model:ir.model,name:jakh_estimate.model_jakh_estimate_quantity_override
+msgid "Per-Building BOQ Quantity Override"
+msgstr "تخصيص كمية بند جدول الكميات لكل مبنى"
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_crm_lead_jakh_estimates
+msgid "Prepare BOQ estimate"
+msgstr "إعداد دراسة جدول الكميات"
+
+#. module: jakh_estimate
+#: model_terms:ir.actions.act_window,help:jakh_estimate.action_estimate
+msgid "Prepare a controlled construction estimate"
+msgstr "إعداد دراسة تكاليف إنشاءات خاضعة للرقابة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__uom_id
+msgid "Primary unit"
+msgstr "الوحدة الأساسية"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Product reference must be a positive integer or absent."
+msgstr "يجب أن يكون مرجع المنتج عدداً صحيحاً موجباً أو غير محدد."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: model:ir.model,name:jakh_estimate.model_project_project
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__project_id
+msgid "Project"
+msgstr "المشروع"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__project_manager_id
+msgid "Project Manager"
+msgstr "مدير المشروع"
+
+#. module: jakh_estimate
+#: model:ir.model,name:jakh_estimate.model_jakh_wbs
+msgid "Project Work Breakdown Structure"
+msgstr "هيكل تقسيم أعمال المشروع"
+
+#. module: jakh_estimate
+#: model:ir.model.constraint,message:jakh_estimate.constraint_jakh_estimate_line_nonnegative_quantity
+msgid ""
+"Quantities and costs must be non-negative; markup cannot exceed 1,000 "
+"percent."
+msgstr ""
+"يجب ألا تكون الكميات والتكاليف سالبة؛ ولا يجوز أن تتجاوز نسبة الإضافة 1,000 "
+"بالمئة."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_resource__quantity
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_quantity_override__quantity
+msgid "Quantity for this building"
+msgstr "الكمية لهذا المبنى"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__quantity
+msgid "Quantity per building"
+msgstr "الكمية لكل مبنى"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Quotation"
+msgstr "عرض سعر"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__rating_ids
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__rating_ids
+msgid "Ratings"
+msgstr "التقييمات"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__removed_count
+msgid "Removed Count"
+msgstr "عدد البنود المحذوفة"
+
+#. module: jakh_estimate
+#: model:ir.model,name:jakh_estimate.model_jakh_estimate_building
+msgid "Repeated Building Quantity Basis"
+msgstr "أساس كميات المباني المتكررة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__unit_count
+msgid "Repeated buildings"
+msgstr "المباني المتكررة"
+
+#. module: jakh_estimate
+#: model:ir.model.constraint,message:jakh_estimate.constraint_jakh_estimate_positive_units
+msgid "Repeated buildings must be between 1 and 100,000."
+msgstr "يجب أن يتراوح عدد المباني المتكررة بين 1 و100,000."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Repeated units must be an integer between 1 and 100,000."
+msgstr "يجب أن يكون عدد الوحدات المتكررة عدداً صحيحاً بين 1 و100,000."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Resource"
+msgstr "المورد"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_resource__resource_type
+msgid "Resource Type"
+msgstr "نوع المورد"
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Resource assembly"
+msgstr "تحليل الموارد"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Resource assembly unit cost exceeds the supported range."
+msgstr "تتجاوز تكلفة وحدة تحليل الموارد النطاق المدعوم."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Resource description"
+msgstr "وصف المورد"
+
+#. module: jakh_estimate
+#: model:ir.model.constraint,message:jakh_estimate.constraint_jakh_estimate_resource_positive_inputs
+msgid "Resource quantities and costs must be non-negative."
+msgstr "يجب ألا تكون كميات الموارد وتكاليفها سالبة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Resource quantity"
+msgstr "كمية المورد"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_resource__uom_id
+msgid "Resource unit"
+msgstr "وحدة المورد"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Resource unit cost"
+msgstr "تكلفة وحدة المورد"
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid ""
+"Resources are quantities per one primary BOQ unit. An assembly determines "
+"the unit cost when resources are present."
+msgstr ""
+"الموارد هي الكميات اللازمة لوحدة أساسية واحدة من بند جدول الكميات. ويحدّد "
+"تحليل الموارد تكلفة الوحدة عند وجود موارد."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__resource_ids
+msgid "Resources per primary unit"
+msgstr "الموارد لكل وحدة أساسية"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid ""
+"Retain estimate-linked projects; archive them when the project is closed."
+msgstr "احتفظ بالمشاريع المرتبطة بدراسات التكاليف؛ وأرشفها عند إغلاق المشروع."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid ""
+"Retain estimate-linked quotations; use the native cancellation workflow."
+msgstr ""
+"احتفظ بعروض الأسعار المرتبطة بدراسات التكاليف؛ واستخدم إجراء الإلغاء الأصلي."
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Return to draft"
+msgstr "إعادة إلى مسودة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__message_has_sms_error
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية القصيرة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__sale_order_id
+msgid "Sale Order"
+msgstr "أمر البيع"
+
+#. module: jakh_estimate
+#: model:ir.model,name:jakh_estimate.model_sale_order
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: jakh_estimate
+#: model:ir.model,name:jakh_estimate.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "بند أمر المبيعات"
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Save study version"
+msgstr "حفظ إصدار الدراسة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Saved estimate versions are immutable."
+msgstr "لا يمكن تعديل إصدارات دراسات التكاليف المحفوظة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Saved estimate versions are retained as audit evidence."
+msgstr "تُحفظ إصدارات دراسات التكاليف كأدلة تدقيق."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__secondary_quantity
+msgid "Secondary Quantity"
+msgstr "الكمية الثانوية"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__secondary_uom_id
+msgid "Secondary unit"
+msgstr "الوحدة الثانوية"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__conversion_factor
+msgid "Secondary units per primary unit"
+msgstr "الوحدات الثانوية لكل وحدة أساسية"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__sell_amount
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__sell_amount
+msgid "Sell Amount"
+msgstr "مبلغ البيع"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__selling_unit_rate
+msgid "Selling Unit Rate"
+msgstr "سعر بيع الوحدة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__sell_amount
+msgid "Selling amount, excluding tax"
+msgstr "مبلغ البيع غير شامل الضريبة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__sequence
+msgid "Sequence"
+msgstr "تسلسل"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__snapshot_json
+msgid "Snapshot Json"
+msgstr "بيانات النسخة المحفوظة المهيكلة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_version__snapshot_text
+msgid "Snapshot Text"
+msgstr "نص النسخة المحفوظة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Stable line ID"
+msgstr "المعرّف الثابت للبند"
+
+#. module: jakh_estimate
+#: model:ir.model.constraint,message:jakh_estimate.constraint_jakh_estimate_line_unique_uuid
+msgid "Stable line IDs must be unique within the study."
+msgstr "يجب أن تكون المعرّفات الثابتة للبنود فريدة داخل الدراسة."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__state
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,help:jakh_estimate.field_jakh_estimate__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الأنشطة المعتمدة على الحالة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Study %02d"
+msgstr "دراسة %02d"
+
+#. module: jakh_estimate
+#: model_terms:ir.actions.act_window,help:jakh_estimate.action_estimate
+msgid ""
+"Study quantities, resources and building differences; approve a version "
+"before creating a quotation and project."
+msgstr ""
+"ادرس الكميات والموارد والفروق بين المباني؛ واعتمد إصداراً قبل إنشاء عرض "
+"السعر والمشروع."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Study version"
+msgstr "إصدار الدراسة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Study version saved: %s"
+msgstr "تم حفظ إصدار الدراسة: %s"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: model:ir.actions.act_window,name:jakh_estimate.action_estimate_versions
+#: model:ir.ui.menu,name:jakh_estimate.menu_estimate_versions
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Study versions"
+msgstr "إصدارات الدراسة"
+
+#. module: jakh_estimate
+#: model:ir.model.fields.selection,name:jakh_estimate.selection__jakh_estimate_resource__resource_type__subcontract
+msgid "Subcontract"
+msgstr "مقاولة من الباطن"
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Submit for approval"
+msgstr "تقديم للاعتماد"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Submit the estimate for review before approval."
+msgstr "قدّم دراسة التكاليف للمراجعة قبل الاعتماد."
+
+#. module: jakh_estimate
+#: model:ir.ui.menu,name:jakh_estimate.menu_estimates
+msgid "Tender & BOQ"
+msgstr "العطاءات وجداول الكميات"
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Tender / scope title"
+msgstr "عنوان العطاء أو نطاق العمل"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "The WBS quotation line and source BOQ line must match."
+msgstr ""
+"يجب أن يتطابق بند عرض السعر في هيكل تقسيم العمل مع البند الأصلي لجدول "
+"الكميات."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "The WBS source handover references cannot be reassigned."
+msgstr "لا يمكن إعادة تعيين مراجع التسليم الأصلية لهيكل تقسيم العمل."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "The approved estimate reference cannot be reassigned."
+msgstr "لا يمكن إعادة تعيين مرجع دراسة التكاليف المعتمدة."
+
+#. module: jakh_estimate
+#: model:ir.model.constraint,message:jakh_estimate.constraint_jakh_estimate_name_company_unique
+msgid "The estimate reference must be unique within the company."
+msgstr "يجب أن يكون مرجع دراسة التكاليف فريداً داخل الشركة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "The line identity, parent and calculated amounts are controlled."
+msgstr "تخضع هوية البند وأصله ومبالغه المحسوبة للرقابة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "The source BOQ line must belong to the quotation’s approved estimate."
+msgstr ""
+"يجب أن يتبع البند الأصلي لجدول الكميات دراسة التكاليف المعتمدة لعرض السعر."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "The source BOQ line must belong to this project’s approved estimate."
+msgstr ""
+"يجب أن يتبع البند الأصلي لجدول الكميات دراسة التكاليف المعتمدة لهذا المشروع."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "The source BOQ line reference is immutable."
+msgstr "لا يمكن تعديل مرجع البند الأصلي لجدول الكميات."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid ""
+"This study is locked. Return a review to draft, or create a revision of an "
+"approved estimate."
+msgstr ""
+"هذه الدراسة مقفلة. أعد الدراسة قيد المراجعة إلى مسودة، أو أنشئ مراجعة "
+"للدراسة المعتمدة."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__title
+msgid "Title"
+msgstr "العنوان"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__total_quantity
+msgid "Total Quantity"
+msgstr "إجمالي الكمية"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Total quantity exceeds the supported range."
+msgstr "تتجاوز الكمية الإجمالية النطاق المدعوم."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,help:jakh_estimate.field_jakh_estimate__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط المستثنى في السجل."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_resource__unit_cost
+msgid "Unit Cost"
+msgstr "تكلفة الوحدة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Unit cost"
+msgstr "تكلفة الوحدة"
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid ""
+"Unlisted buildings use the per-building BOQ quantity. A listed override "
+"replaces that quantity for its building; zero is a valid omitted item."
+msgstr ""
+"تستخدم المباني غير المدرجة كمية جدول الكميات لكل مبنى. ويستبدل التخصيص "
+"المدرج كمية المبنى المعني؛ وتعبّر القيمة صفر عن بند مستبعد."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/services/costing.py:0
+msgid "Unsupported resource type."
+msgstr "نوع المورد غير مدعوم."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Use a version label of up to 100 characters."
+msgstr "استخدم تسمية إصدار لا تتجاوز 100 حرف."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Use the estimate action to create a calculated version."
+msgstr "استخدم إجراء دراسة التكاليف لإنشاء إصدار محسوب."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/crm_lead.py:0
+msgid "Convert the lead to an opportunity before preparing an estimate."
+msgstr "حوّل العميل المحتمل إلى فرصة قبل إعداد دراسة التكاليف."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/crm_lead.py:0
+msgid "Select a customer before preparing an estimate."
+msgstr "اختر عميلاً قبل إعداد دراسة التكاليف."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__version_ids
+msgid "Version"
+msgstr "الإصدار"
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__version_count
+msgid "Version Count"
+msgstr "عدد الإصدارات"
+
+#. module: jakh_estimate
+#: model:ir.model.constraint,message:jakh_estimate.constraint_jakh_estimate_version_unique_number
+msgid "Version numbers must be unique within the estimate."
+msgstr "يجب أن تكون أرقام الإصدارات فريدة داخل دراسة التكاليف."
+
+#. module: jakh_estimate
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Versions"
+msgstr "الإصدارات"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "estimate_id"
+msgstr "دراسة التكاليف"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/crm_lead.py:0
+msgid "opportunity_id"
+msgstr "الفرصة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "A BOQ allocation must reference a top-level group in the same study."
+msgstr "يجب أن يرتبط توزيع بند الكميات ببند رئيسي في الدراسة نفسها."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "A committed intake is retained permanently."
+msgstr "يُحتفظ بدفعة الاستيراد المعتمدة بصورة دائمة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "A percentage allocation requires a parent BOQ group."
+msgstr "يتطلب التوزيع النسبي بنداً رئيسياً في جدول الكميات."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Add XLSX files to a draft intake before previewing."
+msgstr "أضف ملفات إكسل إلى دفعة استيراد مسودة قبل المعاينة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Add reviewed rows to BOQ"
+msgstr "إضافة البنود المراجعة إلى جدول الكميات"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Add source files only to a draft intake."
+msgstr "تُضاف الملفات المصدرية إلى دفعة استيراد مسودة فقط."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Allocate indirect cost only across positive direct-cost BOQ items."
+msgstr ""
+"تُوزّع التكاليف غير المباشرة على البنود ذات التكلفة المباشرة الموجبة فقط."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Approve reviewed intake"
+msgstr "اعتماد دفعة الاستيراد المراجعة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__code_column
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "BOQ code column"
+msgstr "عمود رمز بند الكميات"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "BOQ estimate"
+msgstr "دراسة جدول الكميات"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "BOQ group flag must be a boolean."
+msgstr "يجب أن يكون مؤشر البند الرئيسي قيمة منطقية."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "BOQ intake"
+msgstr "استيراد جدول الكميات"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "BOQ provenance cannot be rewritten."
+msgstr "لا يمكن تغيير بيانات المصدر لبنود الكميات."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "BOQ provenance is assigned by the reviewed preview."
+msgstr "تُسجّل بيانات المصدر من خلال المعاينة المراجعة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "BOQ provenance is retained with its source workbook."
+msgstr "تُحفظ بيانات المصدر مع ملف الإكسل الأصلي."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "BOQ source identity must match its reviewed workbook batch."
+msgstr "يجب أن تطابق هوية مصدر البند دفعة الاستيراد المراجعة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "BOQ source provenance"
+msgstr "بيانات مصدر جدول الكميات"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "BOQ source provenance must contain only reviewed scalar identifiers."
+msgstr "يجب أن تحتوي بيانات المصدر على معرّفات مفردة ومراجعة فقط."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Child direct costs exceed the parent BOQ monetary cap."
+msgstr "تتجاوز التكاليف المباشرة للبنود الفرعية سقف قيمة البند الرئيسي."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Child percentage allocations exceed the parent BOQ value."
+msgstr "تتجاوز نسب البنود الفرعية قيمة البند الرئيسي."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Child selling values exceed the parent BOQ monetary cap."
+msgstr "تتجاوز قيم بيع البنود الفرعية سقف قيمة البند الرئيسي."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Column mapping"
+msgstr "ربط الأعمدة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Column mapping values must be header text."
+msgstr "يجب أن تكون قيم ربط الأعمدة نصوص عناوين الأعمدة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Commit only the unchanged, clean, reviewed workbook batch."
+msgstr "تُرحّل دفعة ملفات مراجعة وخالية من الأخطاء ولم تتغير فقط."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Committed BOQ provenance cannot be deleted."
+msgstr "لا يمكن حذف بيانات مصدر البنود المرحّلة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__cost_code_column
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Cost-code column"
+msgstr "عمود رمز التكلفة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Defaults when optional columns are absent"
+msgstr "القيم الافتراضية عند غياب الأعمدة الاختيارية"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__description_column
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Description column"
+msgstr "عمود الوصف"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__budget_amount
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Direct + allocated indirect cost"
+msgstr "التكلفة المباشرة وغير المباشرة الموزّعة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__unit_cost_column
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Direct unit cost column"
+msgstr "عمود التكلفة المباشرة للوحدة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Duplicate BOQ code in the estimate or workbook batch: %s"
+msgstr "رمز بند مكرر في الدراسة أو دفعة الاستيراد: %s"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Each leaf requires one existing product and company cost code."
+msgstr "يتطلب كل بند تفصيلي منتجاً موجوداً ورمز تكلفة للمنشأة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Expanded workbook exceeds the safe intake limit."
+msgstr "يتجاوز الحجم الموسّع لملف الإكسل حد الاستيراد الآمن."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid ""
+"Formula cells must be reviewed and supplied as values; formulas are never "
+"executed."
+msgstr "يجب مراجعة خلايا الصيغ وتقديمها كقيم؛ لا تُنفّذ الصيغ مطلقاً."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__confirmed
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "I reconciled each file and approve these rows for the draft BOQ"
+msgstr "راجعت مطابقة إجماليات كل ملف وأوافق على إضافة هذه البنود إلى المسودة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Import BOQ workbooks"
+msgstr "استيراد ملفات جدول الكميات"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Imported source references are assigned by reviewed intake."
+msgstr "تُحدّد مراجع المصدر من خلال الاستيراد المراجع."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Indirect cost"
+msgstr "التكلفة غير المباشرة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__indirect_amount
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Indirect cost pool"
+msgstr "إجمالي التكاليف غير المباشرة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Intake identity and workflow are server controlled."
+msgstr "تُضبط هوية الاستيراد ومراحل الاعتماد بواسطة إجراءات النظام."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Intake results and workflow are assigned by reviewed actions."
+msgstr "تُحدّد نتائج الاستيراد ومراحله من خلال إجراءات المراجعة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Keep reviewed workbook evidence and its provenance."
+msgstr "احتفظ بأدلة ملفات الإكسل المراجعة وبيانات مصدرها."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Map code, description, quantity and unit columns before previewing."
+msgstr "اربط أعمدة الرمز والوصف والكمية والوحدة قبل المعاينة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid ""
+"Map column headings exactly. Every leaf must resolve an existing unit, "
+"product reference and company cost code. Parent groups cap child values and "
+"are not counted twice. Formula cells are rejected; supply reviewed values. "
+"All files commit together only after a clean reconciliation."
+msgstr ""
+"اربط عناوين الأعمدة بدقة. يجب أن يرتبط كل بند تفصيلي بوحدة ومنتج ورمز تكلفة "
+"موجود. تحدد البنود الرئيسية سقف القيم الفرعية دون احتساب مزدوج. تُرفض خلايا "
+"الصيغ؛ قدّم قيماً مراجعة. تُرحّل جميع الملفات معاً بعد مطابقة الإجماليات دون"
+" أخطاء."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Map only supported BOQ fields to workbook headers."
+msgstr "اربط حقول جدول الكميات المدعومة فقط بعناوين ملف الإكسل."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Mapped workbook headers must be unique."
+msgstr "يجب ألا تتكرر عناوين الأعمدة المرتبطة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Only a clean reviewed intake can create source-linked BOQ lines."
+msgstr "لا تُنشأ بنود مرتبطة بالمصدر إلا من دفعة مراجعة وخالية من الأخطاء."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Overhead"
+msgstr "المصاريف العامة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__overhead_percent
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Overhead (%)"
+msgstr "المصاريف العامة (%)"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__parent_code_column
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Parent BOQ code column"
+msgstr "عمود رمز البند الرئيسي"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__parent_line_id
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Parent BOQ group"
+msgstr "البند الرئيسي"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__parent_uuid
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Parent BOQ identity"
+msgstr "هوية البند الرئيسي"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Parent allocation"
+msgstr "توزيع البند الرئيسي"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__is_group_column
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Parent group flag column"
+msgstr "عمود مؤشر البند الرئيسي"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__allocation_percent_column
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Parent share column"
+msgstr "عمود نسبة البند الرئيسي"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__is_group
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Parent value cap / summary"
+msgstr "سقف قيمة البند الرئيسي / ملخص"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Percentage allocation rounding exceeds the parent BOQ monetary cap."
+msgstr "يتجاوز تقريب التوزيع النسبي سقف قيمة البند الرئيسي."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid ""
+"Percentage children require a positive quantity and no independent resource "
+"assembly."
+msgstr "تتطلب البنود الفرعية النسبية كمية موجبة ودون تجميع موارد مستقل."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Preview all workbooks"
+msgstr "معاينة جميع الملفات"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__product_column
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Product reference column"
+msgstr "عمود مرجع المنتج"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Profit"
+msgstr "الربح"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__profit_percent
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Profit (%)"
+msgstr "الربح (%)"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__quantity_column
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Quantity column"
+msgstr "عمود الكمية"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Reset an uncommitted preview before editing its inputs."
+msgstr "أعد ضبط المعاينة غير المرحّلة قبل تعديل مدخلاتها."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Reset preview / mapping"
+msgstr "إعادة ضبط المعاينة / ربط الأعمدة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Reset the preview before changing files or mappings."
+msgstr "أعد ضبط المعاينة قبل تغيير الملفات أو ربط الأعمدة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid ""
+"Review a clean, nonempty preview and confirm file reconciliation first."
+msgstr ""
+"راجع معاينة غير فارغة وخالية من الأخطاء وأكّد مطابقة إجماليات الملفات أولاً."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.actions.act_window,name:jakh_estimate.action_boq_intake
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Reviewed BOQ intake"
+msgstr "استيراد جدول الكميات المراجع"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Select a parent BOQ group in the same estimate."
+msgstr "اختر بنداً رئيسياً من الدراسة نفسها."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__allocation_percent
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Share of parent (%)"
+msgstr "النسبة من البند الرئيسي (%)"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__sheet_name
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Sheet (blank = first sheet)"
+msgstr "ورقة العمل (الفراغ يعني الورقة الأولى)"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "The estimate or workbook inputs changed. Reset and preview again."
+msgstr "تغيّرت مدخلات الدراسة أو ملف الإكسل. أعد الضبط والمعاينة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "The unit must match one unique existing ERP unit."
+msgstr "يجب أن تطابق الوحدة وحدة واحدة موجودة في النظام."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__uom_column
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Unit column"
+msgstr "عمود الوحدة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Unknown parent BOQ code: %s"
+msgstr "رمز بند رئيسي غير معروف: %s"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid ""
+"Use a controlled BOQ revision on the existing contract after award; do not "
+"hand over a second project."
+msgstr ""
+"استخدم إصداراً معتمداً لجدول الكميات في العقد الحالي بعد الترسية؛ لا تُنشئ "
+"مشروعاً ثانياً."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Use an XLSX file no larger than 20 MiB."
+msgstr "استخدم ملف إكسل بحجم لا يتجاوز 20 ميغابايت."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Use yes/no for the parent group flag."
+msgstr "استخدم نعم/لا لتحديد البند الرئيسي."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Workbook dimensions or header row exceed the supported limits."
+msgstr "تتجاوز أبعاد ملف الإكسل أو صف العنوان الحدود المدعومة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Workbook direct-cost total does not reconcile to the expected amount."
+msgstr "لا يطابق إجمالي التكلفة المباشرة في ملف الإكسل القيمة المتوقعة."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Workbook source cannot move to another intake."
+msgstr "لا يمكن نقل ملف المصدر إلى دفعة استيراد أخرى."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__reconcile_zero_total
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Expected total is explicitly zero"
+msgstr "الإجمالي المتوقع صفر صراحةً"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid ""
+"Imported unit must match the product primary unit; review conversions "
+"separately before handover."
+msgstr ""
+"يجب أن تطابق الوحدة المستوردة الوحدة الأساسية للمنتج؛ راجع التحويلات بصورة "
+"مستقلة قبل التسليم."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields.selection,name:jakh_estimate.selection__jakh_boq_import_batch__state__draft
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Draft mapping"
+msgstr "ربط أعمدة مسودة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields.selection,name:jakh_estimate.selection__jakh_boq_import_batch__state__preview
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Previewed"
+msgstr "تمت المعاينة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields.selection,name:jakh_estimate.selection__jakh_boq_import_batch__state__reviewed
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Reviewed"
+msgstr "تمت المراجعة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields.selection,name:jakh_estimate.selection__jakh_boq_import_batch__state__committed
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Committed"
+msgstr "تمت الإضافة إلى الجدول"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model,name:jakh_estimate.model_jakh_boq_import_batch
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Reviewed BOQ Workbook Intake"
+msgstr "استيراد ملفات جدول الكميات المراجع"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model,name:jakh_estimate.model_jakh_boq_import_file
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "BOQ Workbook Source"
+msgstr "ملف مصدر جدول الكميات"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model,name:jakh_estimate.model_jakh_boq_import_row
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Immutable BOQ Import Provenance"
+msgstr "بيانات مصدر استيراد جدول الكميات الثابتة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "indirect_amount"
+msgstr "التكلفة غير المباشرة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "overhead_percent"
+msgstr "نسبة المصاريف العامة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "profit_percent"
+msgstr "نسبة الربح"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "allocation_percent"
+msgstr "نسبة التوزيع"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__upload
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Upload"
+msgstr "رفع الملف"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__filename
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Filename"
+msgstr "اسم الملف"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__header_row
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Header Row"
+msgstr "صف العنوان"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__error_count
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Error Count"
+msgstr "عدد الأخطاء"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__fingerprint
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Fingerprint"
+msgstr "بصمة المصدر"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__reviewed_by
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Reviewed By"
+msgstr "راجعه"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__reviewed_at
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Reviewed At"
+msgstr "تاريخ المراجعة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__committed_at
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Committed At"
+msgstr "تاريخ الإضافة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__preview_text
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Preview Text"
+msgstr "نتيجة المعاينة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__file_ids
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_row__file_id
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "File"
+msgstr "ملف المصدر"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Files"
+msgstr "الملفات"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Rows"
+msgstr "البنود"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__row_ids
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Row"
+msgstr "البند"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_row__source_sheet
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Source Sheet"
+msgstr "ورقة المصدر"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_row__source_row
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Source Row"
+msgstr "صف المصدر"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_row__payload_json
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Payload Json"
+msgstr "بيانات المعاينة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_row__values_json
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Values Json"
+msgstr "بيانات البند"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__default_product_id
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Default Product"
+msgstr "المنتج الافتراضي"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__default_cost_code_id
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Default Cost Code"
+msgstr "رمز التكلفة الافتراضي"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__expected_direct_total
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Expected Direct Total"
+msgstr "إجمالي التكلفة المباشرة المتوقع"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__indirect_allocated
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Indirect Allocated"
+msgstr "التكلفة غير المباشرة الموزّعة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__budget_total
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Budget Total"
+msgstr "إجمالي موازنة التكلفة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__pricing_basis
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Pricing Basis"
+msgstr "أساس التسعير"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate_line__import_row_id
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Import Row"
+msgstr "مرجع صف الاستيراد"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_file__batch_id
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_row__batch_id
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Batch"
+msgstr "دفعة الاستيراد"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.ui.menu,name:jakh_estimate.menu_boq_intake
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "BOQ workbook intake"
+msgstr "استيراد ملفات جدول الكميات"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Company currency: %s"
+msgstr "عملة المنشأة: %s"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid ""
+"Workbook %(file)s · %(rows)s rows · %(errors)s errors · quantity "
+"%(quantity)s · direct cost %(direct)s"
+msgstr ""
+"الملف %(file)s · عدد البنود %(rows)s · الأخطاء %(errors)s · الكمية "
+"%(quantity)s · التكلفة المباشرة %(direct)s"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid ""
+"Combined BOQ: direct cost %(direct)s · cost budget %(budget)s · selling "
+"value %(selling)s"
+msgstr ""
+"إجمالي جدول الكميات: التكلفة المباشرة %(direct)s · موازنة التكلفة %(budget)s"
+" · قيمة البيع %(selling)s"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "%(file)s / %(sheet)s / row %(row)s: %(error)s"
+msgstr "%(file)s / %(sheet)s / الصف %(row)s: %(error)s"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid ""
+"Direct + proportional indirect; overhead then profit then legacy item/header"
+" markup"
+msgstr ""
+"التكلفة المباشرة والتكلفة غير المباشرة الموزعة نسبياً؛ ثم المصاريف العامة "
+"والربح وهوامش البند والدراسة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+#: code:addons/jakh_estimate/models/estimate.py:0
+#: code:addons/jakh_estimate/services/costing.py:0
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_boq_import_batch__preview_json
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_form
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.boq_intake_list
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Preview Json"
+msgstr "بيانات المعاينة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid "Fully allocate every parent BOQ value before submitting the estimate."
+msgstr "وزّع قيمة كل بند رئيسي بالكامل قبل تقديم الدراسة للاعتماد."
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/estimate.py:0
+msgid ""
+"Remove or reassign child BOQ allocations before deleting a parent group."
+msgstr "احذف توزيعات البنود الفرعية أو أعد ربطها قبل حذف البند الرئيسي."
+
+#. module: jakh_estimate
+#: model:ir.model.fields,field_description:jakh_estimate.field_jakh_estimate__unallocated_indirect_amount
+#: model_terms:ir.ui.view,arch_db:jakh_estimate.view_estimate_form
+msgid "Unallocated indirect cost"
+msgstr "التكلفة غير المباشرة غير الموزّعة"
+
+#. module: jakh_estimate
+#. odoo-python
+#: code:addons/jakh_estimate/models/boq_intake.py:0
+msgid "A reviewed intake supports up to 20 files and 50 MiB in total."
+msgstr ""
+"تدعم دفعة الاستيراد المراجعة حتى 20 ملفاً وبحجم إجمالي لا يتجاوز 50 "
+"ميغابايت."
+
+#. module: jakh_estimate
+#: model:ir.model.constraint,message:jakh_estimate.constraint_jakh_boq_import_row_unique_source
+msgid "A source workbook row can appear only once in an intake."
+msgstr "يمكن أن يظهر صف واحد من ملف المصدر مرة واحدة فقط في عملية الاستيراد."
+
+#. module: jakh_estimate
+#: model:ir.module.module,description:base.module_jakh_estimate
+msgid ""
+"Construction estimating with controlled BOQ intake, resource build-ups, "
+"repeated-building quantities, reviewed revisions and approved "
+"contract/project handover."
+msgstr ""
+"تقدير تكاليف الإنشاءات مع استيراد جداول الكميات المضبوط، وتحليل الموارد، "
+"وكميات المباني المتكررة، والإصدارات المراجعة، وتسليم العقد والمشروع بعد "
+"الاعتماد."

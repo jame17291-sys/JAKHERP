@@ -1,0 +1,212 @@
+[
+  {
+    "name": "picocolors",
+    "version": "1.0.0",
+    "repository": "alexeyraspopov/picocolors",
+    "tag": "v1.0.0",
+    "files": [
+      {
+        "file": "package.json",
+        "url": "https://raw.githubusercontent.com/alexeyraspopov/picocolors/v1.0.0/package.json",
+        "bytes": 1051,
+        "sha256": "20186d5eb05c80ac9107ec633f4fb8ff418f952b960d2bd184aa3d764a7deca3",
+        "sha512": "e6rWa54PpeBm/tIi+A/affsj/hozHh6h6kbBan8VhUmG4rlEI39NpGKtvC3mlUUsQYqmJtx4K45m5a/zQa+u8g=="
+      },
+      {
+        "file": "LICENSE",
+        "url": "https://raw.githubusercontent.com/alexeyraspopov/picocolors/v1.0.0/LICENSE",
+        "bytes": 781,
+        "sha256": "800a78e2d6fa0af131b5ed2547504b4db64a10123f5df37161d15e2015023a8f",
+        "sha512": "k59IbZl9rAFtPrBAsgxZJC8F+JsUDhY0XgkEuXuvorBGfGH7BTf+TkzSiJqCIrHnU5KenefkCeKt47z+HdngDA=="
+      },
+      {
+        "file": "README.md",
+        "url": "https://raw.githubusercontent.com/alexeyraspopov/picocolors/v1.0.0/README.md",
+        "bytes": 4703,
+        "sha256": "977ef84c69b3102da69abc04e1f17e84d247f593b638bef149e13f3fa7b9b62d",
+        "sha512": "cph9mZAIpkH0+aB2GfZURKOjY+h+HakE/j1X9yoVdt9VGJ+XqvNrYMUx+4S6cWRNgoyCeKXjjcvAxfk9TN2mFg=="
+      },
+      {
+        "file": "picocolors.js",
+        "url": "https://raw.githubusercontent.com/alexeyraspopov/picocolors/v1.0.0/picocolors.js",
+        "bytes": 2594,
+        "sha256": "9ef8785acb25d88c74ecc7ed6e42ae8b3c6215f3e897645cb5b55262170ee27d",
+        "sha512": "SZN40to/xocYgjDnZp4aC7oKaBYfaLHXQBFt7uZxe8cxPJ91+MhExxi0aiaQC5VfGcXVj/D1BynA2b8C6sxzKA=="
+      },
+      {
+        "file": "picocolors.browser.js",
+        "url": "https://raw.githubusercontent.com/alexeyraspopov/picocolors/v1.0.0/picocolors.browser.js",
+        "bytes": 360,
+        "sha256": "0c94d2b0491c05541062d9a13ca72a148ae7961d3c31dab7f44e387c6d46b7b3",
+        "sha512": "jPnLVor0zKyhM+71QWxB+kk91A09MISFOutWgSiVwRdDhQK3utF5hXtmDpCW0tZ6+9/B2GCULYACk8wJuzIC8Q=="
+      },
+      {
+        "file": "picocolors.d.ts",
+        "url": "https://raw.githubusercontent.com/alexeyraspopov/picocolors/v1.0.0/picocolors.d.ts",
+        "bytes": 138,
+        "sha256": "8c5f0739f00f89f89b03a1fe6658c6d78000d7ebd7f556f0f8d6908fa679de35",
+        "sha512": "xV29Juoidmh2MN6Uk1R8AFQEBuDrfRXXYCqPV4LBeaOyjpo8xoPmVpAtFHrCkQP7rNibMZAzCgPQ8cjCO2sMrQ=="
+      },
+      {
+        "file": "types.ts",
+        "url": "https://raw.githubusercontent.com/alexeyraspopov/picocolors/v1.0.0/types.ts",
+        "bytes": 610,
+        "sha256": "576d63ef3a0408e9044ab3855ea0877b5f0c674752d4a339d79b8ed6bb88b02a",
+        "sha512": "dDYm9qbPHutO7NVhTTNRUdRH0BiQGpuvDRB1MIRSVpq94eYEh2TXES9r0/E/D8O+4/h+qVaq+1x/a6b/TQMTsg=="
+      }
+    ]
+  },
+  {
+    "name": "strip-json-comments",
+    "version": "3.1.1",
+    "repository": "sindresorhus/strip-json-comments",
+    "tag": "v3.1.1",
+    "files": [
+      {
+        "file": "package.json",
+        "url": "https://raw.githubusercontent.com/sindresorhus/strip-json-comments/v3.1.1/package.json",
+        "bytes": 855,
+        "sha256": "92b83192db22eb46049920e4b750555193d10eafe609cf2adc4f14125c951ed4",
+        "sha512": "Dp1nqizmc52z/5rCfovaOzkulO/V4RCU8WbgMT+y3iR5B5yfyufXixssHvzPo+EV+q9BeMm2lId1B2so8RknOQ=="
+      },
+      {
+        "file": "license",
+        "url": "https://raw.githubusercontent.com/sindresorhus/strip-json-comments/v3.1.1/license",
+        "bytes": 1117,
+        "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+        "sha512": "0fM2/ycrxrltyaBKfQ748Ck23VlPUUBgNAR47ldf4B1V/HoXTfWBSk+vcshGKwEpmOynu4mOP5o+hyBfuRNa8g=="
+      },
+      {
+        "file": "readme.md",
+        "url": "https://raw.githubusercontent.com/sindresorhus/strip-json-comments/v3.1.1/readme.md",
+        "bytes": 1961,
+        "sha256": "0bdbc4063db0dfbd60d8b47c931a37bfa8bbdd1caa86842ba5ea43896c4a0f8f",
+        "sha512": "Htk8wdrqM5tYiFcDdKzFvukm9aYdwkR9KxLeDgISBZi3x5ZQQyVppcDnThoJbEuLa+SYwdZS+tj+VsHOYL4/Dg=="
+      },
+      {
+        "file": "index.js",
+        "url": "https://raw.githubusercontent.com/sindresorhus/strip-json-comments/v3.1.1/index.js",
+        "bytes": 2219,
+        "sha256": "ecdf1fe892b9e2373a30f230c3701fb005a89821c59527438e705e5efa3d447f",
+        "sha512": "vMPwASFQ4n6VlVL4YxD8j3y5CzK2sf+mEnr/CHQj7agb1Dnn7meIFLPMglHM2fBJtBA6WeYZMOEGDp4d6Jr9lg=="
+      },
+      {
+        "file": "index.d.ts",
+        "url": "https://raw.githubusercontent.com/sindresorhus/strip-json-comments/v3.1.1/index.d.ts",
+        "bytes": 807,
+        "sha256": "86f29585ea328bb5877ed912a4f064f772fa3f20a7ccc0f63b8ae48e333769b1",
+        "sha512": "tE/OhcYj+VuSmH1RypRHbcoabCPfVHD6NJf/A6b5tKfh8DOVTV+eFCDvC1gej9Aw0iYipXEUkQrE6xx3o4/ZTQ=="
+      }
+    ]
+  },
+  {
+    "name": "escalade",
+    "version": "3.1.1",
+    "repository": "lukeed/escalade",
+    "tag": "v3.1.1",
+    "files": [
+      {
+        "file": "package.json",
+        "url": "https://raw.githubusercontent.com/lukeed/escalade/v3.1.1/package.json",
+        "bytes": 1162,
+        "sha256": "f523f04179cd797ea54b225b6b33a8ff9ea2a44c5258358307c2a377a047bbdd",
+        "sha512": "g7yqlk05vzaHHK/bDJS9dbjHfeTXzGVjxQidXKqfjNVgrsSgtSaBmyO/g8s2YvrDu1SMBy73OCGxQ/p0ORE/7g=="
+      },
+      {
+        "file": "license",
+        "url": "https://raw.githubusercontent.com/lukeed/escalade/v3.1.1/license",
+        "bytes": 1104,
+        "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97",
+        "sha512": "i6YIwLi6LAoHlfXiVTw43Q0ZiRcQCv1FNCkjUPIILCoCba1PT0oTfRnGgTrRQOWMjj2ip9gQjPNEajOmCbYNyQ=="
+      },
+      {
+        "file": "readme.md",
+        "url": "https://raw.githubusercontent.com/lukeed/escalade/v3.1.1/readme.md",
+        "bytes": 6907,
+        "sha256": "d970345920120a2bd27b4341f8b47afc5e9cd929e6a18a5ba53dbe5557b73b3f",
+        "sha512": "2qeiMno+SDkHYnqw4vglFrSYtrWQ5+PFa18LIPXQsmzAHfjDGrOeWQqP8t0h/NMmcJHWDhl7gVdfQUPaiSUtsw=="
+      },
+      {
+        "file": "src/async.js",
+        "url": "https://raw.githubusercontent.com/lukeed/escalade/v3.1.1/src/async.js",
+        "bytes": 517,
+        "sha256": "436c778b45b4f46cf906bff4c38962219b349d5e42a2c62696c689417ab582a5",
+        "sha512": "vTqBeadcgN8mUUaaICxIaJuCD50YgXzF6tjUhSjE8b4CUznrxloGnSHOV5tL7mQtr005r3uUr132phPPR/OQSQ=="
+      },
+      {
+        "file": "src/sync.js",
+        "url": "https://raw.githubusercontent.com/lukeed/escalade/v3.1.1/src/sync.js",
+        "bytes": 404,
+        "sha256": "8262677f39b0e4f3c085c04a38b66626913b980237da67496a4f8ebd8d1e5507",
+        "sha512": "6tclL+N/9Jd5HkVvP7gCQ8pPDa5nYsRdnPGyO54oEh/nDjul7OiMjRqajFp6/mESrj/jEgGfUdFJwXtjHdPNpg=="
+      },
+      {
+        "file": "index.d.ts",
+        "url": "https://raw.githubusercontent.com/lukeed/escalade/v3.1.1/index.d.ts",
+        "error": "curl: (56) The requested URL returned error: 404\n"
+      },
+      {
+        "file": "sync/index.d.ts",
+        "url": "https://raw.githubusercontent.com/lukeed/escalade/v3.1.1/sync/index.d.ts",
+        "error": "curl: (56) The requested URL returned error: 404\n"
+      }
+    ]
+  },
+  {
+    "name": "picocolors",
+    "version": "1.1.1",
+    "repository": "alexeyraspopov/picocolors",
+    "tag": "v1.1.1",
+    "files": [
+      {
+        "file": "package.json",
+        "url": "https://raw.githubusercontent.com/alexeyraspopov/picocolors/v1.1.1/package.json",
+        "bytes": 1107,
+        "sha256": "cc90329588edc5d4ab6fc56a62fbc7caef17144881dc5e8afbe6f5a94f322432",
+        "sha512": "Y5+7oYnpnLdhgYGaTuOiFQT1mLDaYWPUNpGF8MuOVbm5+Ki7r4yLWQ3mnZMQh/tgN5Hy/dSLRDeXDDe1XFE93Q=="
+      },
+      {
+        "file": "LICENSE",
+        "url": "https://raw.githubusercontent.com/alexeyraspopov/picocolors/v1.1.1/LICENSE",
+        "bytes": 787,
+        "sha256": "6582629e2979466878f6014313dcc2f3756c9616148682227ce3063dde310750",
+        "sha512": "siCC877DY+L4WNDjCgZllV/Xo55Q0BQPC4FE7VNRXj6IrShxhiIbUbw19qHfyDM1aaaYJkiWYaNiwtXeLM4MGg=="
+      },
+      {
+        "file": "README.md",
+        "url": "https://raw.githubusercontent.com/alexeyraspopov/picocolors/v1.1.1/README.md",
+        "bytes": 4995,
+        "sha256": "34367841182335f5b8029c9dbbe45c092e172f1f226be34343540aaf0e2bd034",
+        "sha512": "07blaelVxMFkdGaHh0oOyi/chqeifczfzzfbslK0/ryEdXyaiGV6PLl+vgaXrB21qydkgaSoR1Joy1XGXjWYMA=="
+      },
+      {
+        "file": "picocolors.js",
+        "url": "https://raw.githubusercontent.com/alexeyraspopov/picocolors/v1.1.1/picocolors.js",
+        "bytes": 2663,
+        "sha256": "213bb870fcaad4def0215fe34fbb0f529836cc4d2462e02f14f1a49d09781625",
+        "sha512": "HJIYuAyIcMWcA1I9jMn9EuRMXIH8a7u2X9uzStLuwNIStE2KJdVTtRIB4wBV7KTiCAtI3tHPML7evv7sIhdLPQ=="
+      },
+      {
+        "file": "picocolors.browser.js",
+        "url": "https://raw.githubusercontent.com/alexeyraspopov/picocolors/v1.1.1/picocolors.browser.js",
+        "bytes": 598,
+        "sha256": "a2e045ba16013e35c7045797ae940e3ea1c0e0ada13467bc73f7538690ea091a",
+        "sha512": "9zayIH/B9JIa7Wo79fhXioQS3j/titr3ckvRwiNRLDN8brQU1flpVh2COaJj2jzoG0yBdA5/PPC1qpGM8RbZjw=="
+      },
+      {
+        "file": "picocolors.d.ts",
+        "url": "https://raw.githubusercontent.com/alexeyraspopov/picocolors/v1.1.1/picocolors.d.ts",
+        "bytes": 138,
+        "sha256": "8c5f0739f00f89f89b03a1fe6658c6d78000d7ebd7f556f0f8d6908fa679de35",
+        "sha512": "xV29Juoidmh2MN6Uk1R8AFQEBuDrfRXXYCqPV4LBeaOyjpo8xoPmVpAtFHrCkQP7rNibMZAzCgPQ8cjCO2sMrQ=="
+      },
+      {
+        "file": "types.d.ts",
+        "url": "https://raw.githubusercontent.com/alexeyraspopov/picocolors/v1.1.1/types.d.ts",
+        "bytes": 1013,
+        "sha256": "590595c1230ebb7c43ebac51b2b2da956a719b213355b4358e2a6b16a8b5936c",
+        "sha512": "Ko8xkCcJuAVtcZbp0niSNCSHqSIa0MLMg03ft4DJzCSi1pFOR8B5lutyOhQZ8lraBstmsS4tuqA0CTcdLGezJg=="
+      }
+    ]
+  }
+]

@@ -1,0 +1,1059 @@
+# Arabic translation of JAKH ERP customer-facing modules.
+# Common framework terminology follows the bundled upstream Arabic catalogs.
+# Original component license and copyright notices remain in the source distribution.
+msgid ""
+msgstr ""
+"Project-Id-Version: JAKH ERP 2.0\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/assurance.py:0
+msgid "A permit requires a start and end time."
+msgstr "يتطلب التصريح وقت بداية ونهاية."
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_case_form
+msgid "Accept / Start"
+msgstr "قبول أو بدء"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__message_needaction
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__message_needaction
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__activity_ids
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__activity_ids
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__activity_exception_decoration
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__activity_exception_decoration
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__activity_plans_ids
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__activity_plans_ids
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__activity_plans_ids
+msgid "Activity Plans"
+msgstr "خطط النشاط"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__activity_state
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__activity_state
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__activity_type_icon
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__activity_type_icon
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_case_form
+msgid ""
+"Add verification files using the attachment control in the chatter. "
+"Standards references require project approval and do not establish statutory"
+" compliance."
+msgstr ""
+"أضف ملفات التحقق باستخدام أداة المرفقات في سجل التواصل. تتطلب مراجع المعايير"
+" اعتماد المشروع ولا تثبت الامتثال النظامي بحد ذاتها."
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/assurance.py:0
+msgid "An expired permit cannot be started."
+msgstr "لا يمكن بدء تصريح منتهي الصلاحية."
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/assurance.py:0
+msgid "An independent reviewer must verify this action."
+msgstr "يجب أن يتحقق مراجع مستقل من هذا الإجراء."
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_revision_form
+msgid "Approve"
+msgstr "اعتماد"
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_document_revision__state__approved
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_revision_search
+msgid "Approved"
+msgstr "معتمد"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__approved_by_id
+msgid "Approved By"
+msgstr "المعتمِد"
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/documents.py:0
+msgid ""
+"Approved document identity is locked; create a new document for a changed "
+"identity."
+msgstr "هوية المستند المعتمد مقفلة؛ أنشئ مستنداً جديداً عند تغيير الهوية."
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/documents.py:0
+msgid "Assign an independent reviewer."
+msgstr "عيّن مراجعاً مستقلاً."
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_case_search
+msgid "Assigned to Me"
+msgstr "مسندة إليّ"
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/documents.py:0
+msgid ""
+"Attach new files from the controlled record instead of relinking files."
+msgstr ""
+"أرفق الملفات الجديدة من السجل الخاضع للرقابة بدلاً من إعادة ربط الملفات."
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/documents.py:0
+msgid "Attach the document before submitting this revision."
+msgstr "أرفق المستند قبل تقديم هذه المراجعة."
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_revision_form
+msgid ""
+"Attach the revision file before submission. Submitted files and revision "
+"metadata are locked; changes require a new revision."
+msgstr ""
+"أرفق ملف المراجعة قبل التقديم. تُقفل الملفات المقدّمة وبيانات المراجعة؛ "
+"وتتطلب التغييرات مراجعة جديدة."
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/assurance.py:0
+msgid "Attach verification evidence before closing."
+msgstr "أرفق أدلة التحقق قبل الإغلاق."
+
+#. module: jakh_assurance
+#: model:ir.model,name:jakh_assurance.model_ir_attachment
+msgid "Attachment"
+msgstr "مرفق"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__message_attachment_count
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__message_attachment_count
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__authority
+msgid "Authority"
+msgstr "الجهة المختصة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__authority_reference
+msgid "Authority Reference"
+msgstr "مرجع الجهة المختصة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_assurance_case__state__submitted
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_document_revision__state__submitted
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_revision_search
+msgid "Awaiting Review"
+msgstr "بانتظار المراجعة"
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_case_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_assurance_case__state__cancelled
+msgid "Cancelled"
+msgstr "تم الإلغاء"
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/documents.py:0
+msgid "Cannot add files to a locked record."
+msgstr "لا يمكن إضافة ملفات إلى سجل مقفل."
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__closed_at
+msgid "Closed At"
+msgstr "تاريخ الإغلاق"
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/assurance.py:0
+msgid ""
+"Closed or cancelled actions are immutable. Create a linked follow-up "
+"instead."
+msgstr ""
+"لا يمكن تعديل الإجراءات المغلقة أو الملغاة. أنشئ إجراء متابعة مرتبطاً بدلاً "
+"من ذلك."
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/documents.py:0
+msgid "Closed verification evidence is immutable."
+msgstr "لا يمكن تعديل أدلة التحقق المغلقة."
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__code
+msgid "Code"
+msgstr "رمز"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__company_id
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__company_id
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__completed_at
+msgid "Completed At"
+msgstr "وقت إتمام المراجعة"
+
+#. module: jakh_assurance
+#: model:ir.actions.act_window,name:jakh_assurance.action_document_turnaround
+msgid "Completed Review Turnaround"
+msgstr "مدة المراجعة المكتملة"
+
+#. module: jakh_assurance
+#: model:ir.model,name:jakh_assurance.model_jakh_document_revision
+msgid "Controlled Document Revision"
+msgstr "مراجعة مستند خاضعة للرقابة"
+
+#. module: jakh_assurance
+#: model:ir.model,name:jakh_assurance.model_jakh_document
+msgid "Controlled Project Document"
+msgstr "مستند مشروع خاضع للرقابة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__revision_ids
+msgid "Controlled Revisions"
+msgstr "المراجعات الخاضعة للرقابة"
+
+#. module: jakh_assurance
+#: model:ir.module.module,summary:base.module_jakh_assurance
+msgid ""
+"Controlled documents, inspections, NCRs, permits and corrective actions"
+msgstr ""
+"ضبط المستندات والفحوصات وحالات عدم المطابقة والتصاريح والإجراءات التصحيحية"
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/documents.py:0
+msgid "Controlled files cannot be made public."
+msgstr "لا يمكن إتاحة الملفات الخاضعة للرقابة للعامة."
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_assurance_case__kind__corrective
+msgid "Corrective Action"
+msgstr "إجراء تصحيحي"
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_document__kind__correspondence
+msgid "Correspondence"
+msgstr "المراسلات"
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/documents.py:0
+msgid "Create a draft revision; lifecycle values are server-controlled."
+msgstr "أنشئ مسودة مراجعة؛ تخضع قيم دورة الحياة للتحكم من الخادم."
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/assurance.py:0
+msgid "Create draft actions; workflow timestamps are server-controlled."
+msgstr "أنشئ مسودات إجراءات؛ تخضع أوقاتها المسجلة للتحكم من الخادم."
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__create_uid
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__create_uid
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__create_date
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__create_date
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_assurance_case__severity__critical
+msgid "Critical"
+msgstr "حرج"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__cycle_days
+msgid "Cycle Days"
+msgstr "مدة الدورة بالأيام"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_case_form
+msgid "Details & Hazards"
+msgstr "التفاصيل والمخاطر"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_ir_attachment__display_name
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__display_name
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__display_name
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__document_id
+msgid "Document"
+msgstr "المستند"
+
+#. module: jakh_assurance
+#: model:ir.ui.menu,name:jakh_assurance.menu_documents
+msgid "Document Control & Specifications"
+msgstr "ضبط المستندات والمواصفات"
+
+#. module: jakh_assurance
+#: model:ir.actions.act_window,name:jakh_assurance.action_revisions
+msgid "Document Lifecycle & Turnaround"
+msgstr "دورة حياة المستندات ومدد الإنجاز"
+
+#. module: jakh_assurance
+#: model:ir.ui.menu,name:jakh_assurance.menu_document_reports
+msgid "Document Lifecycle Reporting"
+msgstr "تقارير دورة حياة المستندات"
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_revision_pivot
+msgid "Document Turnaround"
+msgstr "مدة إنجاز المستندات"
+
+#. module: jakh_assurance
+#: model:ir.model.constraint,message:jakh_assurance.constraint_jakh_document_code_unique
+msgid "Document code must be unique within its project."
+msgstr "يجب أن يكون رمز المستند فريداً داخل المشروع."
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/documents.py:0
+msgid "Document, legal entity and WBS must belong to the same project."
+msgstr "يجب أن يتبع المستند والكيان القانوني وهيكل تقسيم العمل المشروع نفسه."
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/documents.py:0
+msgid "Documents with submitted revisions cannot be deleted."
+msgstr "لا يمكن حذف المستندات التي تتضمن مراجعات مقدّمة."
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_assurance_case__state__draft
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_document_revision__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_document__kind__drawing
+msgid "Drawing"
+msgstr "مخطط"
+
+#. module: jakh_assurance
+#: model:ir.actions.act_window,name:jakh_assurance.action_documents
+msgid "Drawings, Submittals & Specifications"
+msgstr "المخططات وطلبات الاعتماد والمواصفات"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__due_date
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__due_date
+msgid "Due Date"
+msgstr "تاريخ الاستحقاق"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__effective_date
+msgid "Effective Date"
+msgstr "تاريخ السريان"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__attachment_ids
+msgid "Evidence"
+msgstr "الأدلة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__attachment_ids
+msgid "Files"
+msgstr "الملفات"
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/documents.py:0
+msgid "Files in submitted or approved revisions are immutable."
+msgstr "لا يمكن تعديل الملفات في المراجعات المقدّمة أو المعتمدة."
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__message_follower_ids
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__message_follower_ids
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__message_follower_ids
+msgid "Followers"
+msgstr "المتابعين"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__message_partner_ids
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__message_partner_ids
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعين (الشركاء)"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__has_message
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__has_message
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__has_message
+msgid "Has Message"
+msgstr "يحتوي على رسالة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_assurance_case__severity__high
+msgid "High"
+msgstr "مرتفع"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_ir_attachment__id
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__id
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__id
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__activity_exception_icon
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__activity_exception_icon
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_assurance_case__activity_exception_icon
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_document__activity_exception_icon
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_document_revision__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "الأيقونة للإشارة إلى النشاط المستثنى."
+
+#. module: jakh_assurance
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_assurance_case__message_needaction
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_document__message_needaction
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_document_revision__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة عليك رؤيتها."
+
+#. module: jakh_assurance
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_assurance_case__message_has_error
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_assurance_case__message_has_sms_error
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_document__message_has_error
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_document__message_has_sms_error
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_document_revision__message_has_error
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_document_revision__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_assurance_case__state__in_progress
+msgid "In Progress"
+msgstr "قيد التنفيذ"
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_assurance_case__kind__incident
+msgid "Incident"
+msgstr "حادث"
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_assurance_case__kind__inspection
+msgid "Inspection"
+msgstr "فحص"
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_case_calendar
+msgid "Inspection / Action Calendar"
+msgstr "تقويم الفحوصات والإجراءات"
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_document__kind__itp
+msgid "Inspection / Test Plan"
+msgstr "خطة الفحص والاختبار"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__message_is_follower
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__message_is_follower
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__is_overdue
+msgid "Is Overdue"
+msgstr "متأخر عن الموعد"
+
+#. module: jakh_assurance
+#: model:ir.module.module,shortdesc:base.module_jakh_assurance
+msgid "JAKH Quality, HSE and Document Control"
+msgstr "الجودة والصحة والسلامة والبيئة وضبط المستندات في JAKH"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__jurisdiction
+msgid "Jurisdiction"
+msgstr "الاختصاص الجغرافي"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__kind
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__kind
+msgid "Kind"
+msgstr "النوع"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__write_uid
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__write_uid
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__write_date
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__write_date
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_case_form
+msgid "Lifecycle"
+msgstr "دورة الحياة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_assurance_case__severity__low
+msgid "Low"
+msgstr "منخفض"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_assurance_case__activity_type_icon
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_document__activity_type_icon
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_document_revision__activity_type_icon
+msgid "Material Symbols icon e.g. checklist"
+msgstr "أيقونة من مكتبة الرموز، مثل قائمة التحقق"
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_assurance_case__severity__medium
+msgid "Medium"
+msgstr "متوسط"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__message_has_error
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__message_has_error
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__message_ids
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__message_ids
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_document__kind__method
+msgid "Method Statement"
+msgstr "بيان طريقة التنفيذ"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__my_activity_date_deadline
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__my_activity_date_deadline
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطاتي"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__name
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__activity_calendar_event_id
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__activity_calendar_event_id
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "الفعالية التالية في تقويم الأنشطة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__activity_date_deadline
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__activity_date_deadline
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__activity_summary
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__activity_summary
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__activity_type_id
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__activity_type_id
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_assurance_case__kind__ncr
+msgid "Non-conformance"
+msgstr "عدم مطابقة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__message_needaction_counter
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__message_needaction_counter
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__message_has_error_counter
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__message_has_error_counter
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_assurance_case__message_needaction_counter
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_document__message_needaction_counter
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_document_revision__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب اتخاذ إجراء"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_assurance_case__message_has_error_counter
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_document__message_has_error_counter
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_document_revision__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/documents.py:0
+msgid "Only the assigned reviewer or construction manager may review."
+msgstr "يمكن للمراجع المعيّن أو مدير الإنشاءات فقط إجراء المراجعة."
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_case_search
+msgid "Open"
+msgstr "فتح"
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_case_search
+msgid "Overdue"
+msgstr "متأخر"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__permit_end
+msgid "Permit End"
+msgstr "نهاية التصريح"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__permit_start
+msgid "Permit Start"
+msgstr "بداية التصريح"
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/assurance.py:0
+msgid "Permit end must be later than its start."
+msgstr "يجب أن تكون نهاية التصريح بعد بدايته."
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_assurance_case__kind__permit
+msgid "Permit to Work"
+msgstr "تصريح عمل"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__project_id
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__project_id
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__project_id
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_case_search
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_revision_search
+msgid "Project"
+msgstr "المشروع"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_assurance_case__authority_reference
+msgid ""
+"Project-approved authority/code reference; not a compliance certification."
+msgstr "مرجع جهة أو كود معتمد للمشروع؛ وليس شهادة امتثال."
+
+#. module: jakh_assurance
+#: model:ir.actions.act_window,name:jakh_assurance.action_cases
+#: model:ir.ui.menu,name:jakh_assurance.menu_cases
+msgid "Quality & HSE Actions"
+msgstr "إجراءات الجودة والصحة والسلامة والبيئة"
+
+#. module: jakh_assurance
+#: model:ir.model,name:jakh_assurance.model_jakh_assurance_case
+msgid "Quality / HSE Action"
+msgstr "إجراء جودة أو صحة وسلامة وبيئة"
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_case_pivot
+msgid "Quality / HSE Actions"
+msgstr "إجراءات الجودة والصحة والسلامة والبيئة"
+
+#. module: jakh_assurance
+#: model:ir.ui.menu,name:jakh_assurance.menu_quality_reports
+msgid "Quality / HSE Reporting"
+msgstr "تقارير الجودة والصحة والسلامة والبيئة"
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/assurance.py:0
+msgid "Quality/HSE reviewer access is required."
+msgstr "يلزم امتلاك صلاحية مراجع الجودة والصحة والسلامة والبيئة."
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__rating_ids
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__rating_ids
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__rating_ids
+msgid "Ratings"
+msgstr "التقييمات"
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/assurance.py:0
+msgid "Record the inspection result or corrective action before resolving."
+msgstr "سجّل نتيجة الفحص أو الإجراء التصحيحي قبل إعلان المعالجة."
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_revision_form
+msgid "Reject"
+msgstr "رفض"
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_document_revision__state__rejected
+msgid "Rejected"
+msgstr "تم الرفض"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__resolution
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_case_form
+msgid "Resolution"
+msgstr "المعالجة"
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_case_form
+msgid "Resolve"
+msgstr "إتمام المعالجة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_assurance_case__state__resolved
+msgid "Resolved"
+msgstr "تمت المعالجة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__resolved_at
+msgid "Resolved At"
+msgstr "تاريخ المعالجة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__responsible_id
+msgid "Responsible"
+msgstr "المسؤول"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__activity_user_id
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__activity_user_id
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__reviewer_id
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_revision_search
+msgid "Reviewer"
+msgstr "المراجع"
+
+#. module: jakh_assurance
+#: model:ir.ui.menu,name:jakh_assurance.menu_revisions
+msgid "Reviews & Turnaround"
+msgstr "المراجعات ومدد الإنجاز"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__name
+msgid "Revision"
+msgstr "مراجعة"
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_document_form
+msgid "Revision Register"
+msgstr "سجل المراجعات"
+
+#. module: jakh_assurance
+#: model:ir.model.constraint,message:jakh_assurance.constraint_jakh_document_revision_revision_unique
+msgid "Revision must be unique within a document."
+msgstr "يجب أن تكون تسمية المراجعة فريدة داخل المستند."
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/documents.py:0
+msgid "Revision state changed. Refresh before continuing."
+msgstr "تغيرت حالة المراجعة. حدّث الصفحة قبل المتابعة."
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_assurance_case__kind__risk
+msgid "Risk Assessment"
+msgstr "تقييم المخاطر"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__message_has_sms_error
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__message_has_sms_error
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية القصيرة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_document__jurisdiction__sa
+msgid "Saudi Arabia"
+msgstr "المملكة العربية السعودية"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__severity
+msgid "Severity"
+msgstr "درجة الخطورة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_document__kind__specification
+msgid "Specification"
+msgstr "مواصفة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__standard_edition
+msgid "Standard Edition"
+msgstr "إصدار المعيار"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__state
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_case_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_assurance_case__activity_state
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_document__activity_state
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_document_revision__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الأنشطة المعتمدة على الحالة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_case_form
+msgid "Submit"
+msgstr "تقديم"
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_revision_form
+msgid "Submit Revision"
+msgstr "تقديم المراجعة"
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_document__kind__submittal
+msgid "Submittal"
+msgstr "طلب اعتماد"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__submitted_at
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__submitted_at
+msgid "Submitted At"
+msgstr "وقت التقديم"
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/assurance.py:0
+msgid ""
+"Submitted action scope is locked; create a new action for a changed work "
+"scope."
+msgstr "نطاق الإجراء المقدّم مقفل؛ أنشئ إجراءً جديداً عند تغيير نطاق العمل."
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/assurance.py:0
+msgid "Submitted actions cannot be deleted."
+msgstr "لا يمكن حذف الإجراءات المقدّمة."
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/documents.py:0
+msgid "Submitted revisions are locked. Create the next revision instead."
+msgstr "المراجعات المقدّمة مقفلة. أنشئ المراجعة التالية بدلاً من تعديلها."
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/documents.py:0
+msgid "Submitted revisions cannot be deleted."
+msgstr "لا يمكن حذف المراجعات المقدّمة."
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__summary
+msgid "Summary"
+msgstr "الملخص"
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/documents.py:0
+msgid "The controlled attachment requires an existing record."
+msgstr "يتطلب المرفق الخاضع للرقابة سجلاً موجوداً."
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/assurance.py:0
+msgid "The project must have a legal entity."
+msgstr "يجب أن يتبع المشروع كياناً قانونياً."
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/documents.py:0
+msgid "The revision author cannot approve their own submission."
+msgstr "لا يمكن لمُعدّ المراجعة اعتماد ما قدّمه بنفسه."
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/assurance.py:0
+msgid "This action is not valid in the current workflow state."
+msgstr "هذا الإجراء غير صالح في حالة سير العمل الحالية."
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_case_search
+msgid "Type"
+msgstr "النوع"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_assurance_case__activity_exception_decoration
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_document__activity_exception_decoration
+#: model:ir.model.fields,help:jakh_assurance.field_jakh_document_revision__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط المستثنى في السجل."
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_document__jurisdiction__ae
+msgid "United Arab Emirates"
+msgstr "الإمارات العربية المتحدة"
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/documents.py:0
+msgid "Use document revision actions."
+msgstr "استخدم إجراءات مراجعة المستندات."
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/assurance.py:0
+msgid "Use the Quality/HSE workflow actions."
+msgstr "استخدم إجراءات سير عمل الجودة والصحة والسلامة والبيئة."
+
+#. module: jakh_assurance
+#: model:ir.model.fields.selection,name:jakh_assurance.selection__jakh_assurance_case__state__closed
+msgid "Verified / Closed"
+msgstr "تم التحقق والإغلاق"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__verified_by_id
+msgid "Verified By"
+msgstr "مَن أجرى التحقق"
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.view_case_form
+msgid "Verify & Close"
+msgstr "تحقق وإغلاق"
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/assurance.py:0
+msgid "WBS must belong to the selected project."
+msgstr "يجب أن يتبع هيكل تقسيم العمل المشروع المحدد."
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_assurance_case__wbs_id
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__wbs_id
+msgid "Wbs"
+msgstr "هيكل تقسيم العمل"
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/construction_context.py:0
+msgid ""
+"Approved drawing context is immutable. Create a new controlled document "
+"instead."
+msgstr ""
+"بيانات سياق المخطط المعتمد ثابتة. أنشئ مستنداً مضبوطاً جديداً بدلاً من "
+"تعديلها."
+
+#. module: jakh_assurance
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.drawing_revision_context_search
+msgid "Building / floor"
+msgstr "المبنى / الطابق"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__discipline_id
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__discipline_id
+#: model_terms:ir.ui.view,arch_db:jakh_assurance.drawing_revision_context_search
+msgid "Discipline"
+msgstr "التخصص"
+
+#. module: jakh_assurance
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document__location_id
+#: model:ir.model.fields,field_description:jakh_assurance.field_jakh_document_revision__location_id
+msgid "Location"
+msgstr "الموقع"
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/construction_context.py:0
+msgid "The drawing discipline must belong to its legal entity."
+msgstr "يجب أن يتبع تخصص المخطط كيانه القانوني."
+
+#. module: jakh_assurance
+#. odoo-python
+#: code:addons/jakh_assurance/models/construction_context.py:0
+msgid "The drawing location must belong to its project."
+msgstr "يجب أن يتبع موقع المخطط مشروعه."

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="jakh_branding.LanguageSwitch">
+        <div t-if="this.state.targetCode" class="jakh_language_switch d-flex align-items-center">
+            <button type="button" class="jakh_language_button" t-on-click="this.switchLanguage"
+                t-att-disabled="this.state.busy" t-att-aria-busy="this.state.busy ? 'true' : 'false'"
+                t-att-title="this.isArabic ? 'Switch to English' : 'التبديل إلى العربية'"
+                t-att-aria-label="this.isArabic ? 'Switch to English' : 'التبديل إلى العربية'">
+                <i class="oi" data-icon="language" aria-hidden="true"/>
+                <span t-att-lang="this.isArabic ? 'en' : 'ar'" t-att-dir="this.isArabic ? 'ltr' : 'rtl'"
+                    t-translation="off"><t t-out="this.isArabic ? 'English' : 'العربية'"/></span>
+            </button>
+        </div>
+    </t>
+</templates>

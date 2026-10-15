@@ -1,0 +1,1306 @@
+# Arabic translation of JAKH ERP customer-facing modules.
+# Common framework terminology follows the bundled upstream Arabic catalogs.
+# Original component license and copyright notices remain in the source distribution.
+msgid ""
+msgstr ""
+"Project-Id-Version: JAKH ERP 2.0\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/construction_setup.py:0
+#: code:addons/jakh_core/models/foundation.py:0
+msgid "A construction manager must release the WBS."
+msgstr "يجب أن يعتمد مدير الإنشاءات هيكل تقسيم العمل."
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/foundation.py:0
+msgid ""
+"A released WBS is locked. Budget changes require a later controlled "
+"revision."
+msgstr ""
+"هيكل تقسيم العمل المعتمد مقفل. تتطلب تغييرات الميزانية إصدار مراجعة لاحقة "
+"خاضعة للرقابة."
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__message_needaction
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__message_needaction
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__active
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_discipline__active
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/dashboard.py:0
+msgid "Active projects"
+msgstr "المشاريع النشطة"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__activity_plans_ids
+msgid "Activity Plans"
+msgstr "خطط النشاط"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_audit_event__actor_id
+msgid "Actor"
+msgstr "منفّذ الإجراء"
+
+#. module: jakh_core
+#: model:ir.ui.menu,name:jakh_core.menu_administration
+msgid "Administration"
+msgstr "الإدارة"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/dashboard.py:0
+msgid "An internal account is required."
+msgstr "يلزم استخدام حساب داخلي."
+
+#. module: jakh_core
+#: model:res.groups,comment:jakh_core.group_platform_owner
+msgid ""
+"Assigned only through verified platform provisioning; grants full customer "
+"application administration, not operating-system credentials."
+msgstr ""
+"يُمنح فقط من خلال تهيئة معتمدة للمنصة؛ ويتيح الإدارة الكاملة لتطبيق العميل، "
+"دون منح بيانات دخول نظام التشغيل."
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__message_attachment_count
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__message_attachment_count
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/foundation.py:0
+msgid "Audit events are immutable."
+msgstr "لا يمكن تعديل أحداث سجل التدقيق."
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/foundation.py:0
+msgid "Audit events cannot be deleted."
+msgstr "لا يمكن حذف أحداث سجل التدقيق."
+
+#. module: jakh_core
+#: model_terms:ir.ui.view,arch_db:jakh_core.view_wbs_list
+msgid "Budget"
+msgstr "الميزانية"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__budget_amount
+msgid "Budget Amount"
+msgstr "مبلغ الميزانية"
+
+#. module: jakh_core
+#: model:ir.model.constraint,message:jakh_core.constraint_jakh_wbs_budget_nonnegative
+msgid "Budget and forecast cannot be negative."
+msgstr "لا يمكن أن تكون الميزانية أو القيمة المتوقعة سالبة."
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "Business & project overview"
+msgstr "نظرة عامة على الأعمال والمشاريع"
+
+#. module: jakh_core
+#: model:ir.actions.act_window,name:jakh_core.action_audit
+#: model:ir.ui.menu,name:jakh_core.menu_audit
+msgid "Business Audit"
+msgstr "سجل تدقيق الأعمال"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/foundation.py:0
+msgid "Business events are created by controlled server actions."
+msgstr "تُنشأ أحداث الأعمال من خلال إجراءات خادم خاضعة للرقابة."
+
+#. module: jakh_core
+#: model:ir.ui.menu,name:crm.crm_menu_root
+#: model:ir.ui.menu,name:jakh_core.menu_crm
+msgid "CRM"
+msgstr "علاقات العملاء"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/dashboard.py:0
+msgid "Certificates awaiting approval"
+msgstr "المستخلصات بانتظار الاعتماد"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__code
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_discipline__code
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__code
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__code
+msgid "Code"
+msgstr "الرمز"
+
+#. module: jakh_core
+#: model:ir.model,name:jakh_core.model_res_company
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_audit_event__company_id
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__company_id
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_discipline__company_id
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__company_id
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: jakh_core
+#: model:ir.model,name:jakh_core.model_jakh_cost_code
+msgid "Construction Cost Code"
+msgstr "رمز تكلفة الإنشاءات"
+
+#. module: jakh_core
+#: model:res.groups,name:jakh_core.group_manager
+msgid "Construction Director"
+msgstr "مدير الإنشاءات"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/foundation.py:0
+msgid "Construction projects must belong to a legal entity."
+msgstr "يجب أن تتبع مشاريع الإنشاءات كياناً قانونياً."
+
+#. module: jakh_core
+#: model:ir.ui.menu,name:contacts.menu_contacts
+msgid "Contacts & Masters"
+msgstr "جهات الاتصال والبيانات الأساسية"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__cost_code_id
+#: model_terms:ir.ui.view,arch_db:jakh_core.view_wbs_search
+msgid "Cost Code"
+msgstr "رمز التكلفة"
+
+#. module: jakh_core
+#: model:ir.ui.menu,name:jakh_core.menu_cost_codes
+msgid "Cost Codes"
+msgstr "رموز التكلفة"
+
+#. module: jakh_core
+#: model:ir.model.constraint,message:jakh_core.constraint_jakh_cost_code_code_unique
+msgid "Cost code must be unique within its company."
+msgstr "يجب أن يكون رمز التكلفة فريداً داخل الشركة."
+
+#. module: jakh_core
+#: model:ir.actions.act_window,name:jakh_core.action_cost_codes
+msgid "Cost-Code Master"
+msgstr "دليل رموز التكلفة"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/dashboard.py:0
+msgid "Priced variations awaiting approval"
+msgstr "التغييرات المسعّرة بانتظار الاعتماد"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/dashboard.py:0
+msgid "Budget revisions awaiting approval"
+msgstr "تعديلات الميزانية بانتظار الاعتماد"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/dashboard.py:0
+msgid "Forecasts awaiting approval"
+msgstr "التوقعات بانتظار الاعتماد"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/foundation.py:0
+msgid "Cost-code hierarchy cannot contain a cycle."
+msgstr "لا يمكن أن يتضمن تسلسل رموز التكلفة حلقة دائرية."
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/foundation.py:0
+msgid "Create a draft WBS and release it through its action."
+msgstr "أنشئ مسودة لهيكل تقسيم العمل ثم اعتمدها من خلال الإجراء المخصص."
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_audit_event__create_uid
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__create_uid
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_discipline__create_uid
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__create_uid
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_audit_event__create_date
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__create_date
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_discipline__create_date
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__create_date
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+#: model:ir.ui.menu,name:jakh_core.menu_dashboard
+msgid "Dashboard"
+msgstr "لوحة المعلومات"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.js:0
+msgid "Dashboard could not be loaded."
+msgstr "تعذّر تحميل لوحة المعلومات."
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_audit_event__details
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_base_language_install__display_name
+#: model:ir.model.fields,field_description:jakh_core.field_ir_ui_menu__display_name
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_audit_event__display_name
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_audit_mixin__display_name
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__display_name
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_dashboard__display_name
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_discipline__display_name
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__display_name
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__display_name
+#: model:ir.model.fields,field_description:jakh_core.field_project_project__display_name
+#: model:ir.model.fields,field_description:jakh_core.field_res_company__display_name
+#: model:ir.model.fields,field_description:jakh_core.field_res_lang__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/dashboard.py:0
+msgid "Documents awaiting approval"
+msgstr "المستندات بانتظار الاعتماد"
+
+#. module: jakh_core
+#: model:ir.model.fields.selection,name:jakh_core.selection__jakh_wbs__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: jakh_core
+#: model:ir.model.fields.selection,name:jakh_core.selection__jakh_cost_code__resource_type__equipment
+msgid "Equipment"
+msgstr "المعدات"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/dashboard.py:0
+msgid "Estimates awaiting approval"
+msgstr "دراسات التكاليف بانتظار الاعتماد"
+
+#. module: jakh_core
+#: model:res.groups,name:jakh_core.group_estimator
+msgid "Estimator"
+msgstr "مهندس التكاليف والتقدير"
+
+#. module: jakh_core
+#: model:ir.ui.menu,name:account.menu_finance
+#: model:res.groups,name:jakh_core.group_finance
+msgid "Finance"
+msgstr "المالية"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__message_follower_ids
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__message_follower_ids
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__message_follower_ids
+msgid "Followers"
+msgstr "المتابعين"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__message_partner_ids
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__message_partner_ids
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعين (الشركاء)"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__forecast_amount
+msgid "Forecast Amount"
+msgstr "المبلغ المتوقع"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "Generated"
+msgstr "تم التحديث في"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__has_message
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__has_message
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__has_message
+msgid "Has Message"
+msgstr "يحتوي على رسالة"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_base_language_install__id
+#: model:ir.model.fields,field_description:jakh_core.field_ir_ui_menu__id
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_audit_event__id
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_audit_mixin__id
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__id
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_dashboard__id
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_discipline__id
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__id
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__id
+#: model:ir.model.fields,field_description:jakh_core.field_project_project__id
+#: model:ir.model.fields,field_description:jakh_core.field_res_company__id
+#: model:ir.model.fields,field_description:jakh_core.field_res_lang__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: jakh_core
+#: model:ir.model.fields,help:jakh_core.field_jakh_wbs__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "الأيقونة للإشارة إلى النشاط المستثنى."
+
+#. module: jakh_core
+#: model:ir.model.fields,help:jakh_core.field_jakh_cost_code__message_needaction
+#: model:ir.model.fields,help:jakh_core.field_jakh_project_location__message_needaction
+#: model:ir.model.fields,help:jakh_core.field_jakh_wbs__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة عليك رؤيتها."
+
+#. module: jakh_core
+#: model:ir.model.fields,help:jakh_core.field_jakh_cost_code__message_has_error
+#: model:ir.model.fields,help:jakh_core.field_jakh_cost_code__message_has_sms_error
+#: model:ir.model.fields,help:jakh_core.field_jakh_project_location__message_has_error
+#: model:ir.model.fields,help:jakh_core.field_jakh_project_location__message_has_sms_error
+#: model:ir.model.fields,help:jakh_core.field_jakh_wbs__message_has_error
+#: model:ir.model.fields,help:jakh_core.field_jakh_wbs__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: jakh_core
+#: model:ir.model,name:jakh_core.model_jakh_audit_event
+msgid "Immutable JAKH Business Event"
+msgstr "حدث أعمال JAKH غير قابل للتعديل"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__message_is_follower
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__message_is_follower
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: jakh_core
+#: model:ir.actions.act_window,name:jakh_core.action_crm
+msgid "JAKH CRM"
+msgstr "إدارة علاقات العملاء JAKH"
+
+#. module: jakh_core
+#: model:res.groups.privilege,name:jakh_core.privilege_construction
+msgid "JAKH Construction"
+msgstr "إنشاءات JAKH"
+
+#. module: jakh_core
+#: model:ir.module.module,shortdesc:base.module_jakh_core
+msgid "JAKH Construction Foundation"
+msgstr "أساس نظام JAKH للإنشاءات"
+
+#. module: jakh_core
+#: model:ir.actions.client,name:jakh_core.action_dashboard
+msgid "JAKH Dashboard"
+msgstr "لوحة معلومات JAKH"
+
+#. module: jakh_core
+#: model:ir.ui.menu,name:jakh_core.menu_construction
+msgid "JAKH ERP"
+msgstr "JAKH ERP"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/language.py:0
+msgid "JAKH ERP supports English and Arabic only."
+msgstr "يدعم نظام JAKH اللغتين العربية والإنجليزية فقط."
+
+#. module: jakh_core
+#: model:res.groups,name:jakh_core.group_financial
+msgid "JAKH Financial Data"
+msgstr "البيانات المالية لنظام JAKH"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "JAKH · Contracting & Construction"
+msgstr "JAKH · المقاولات والإنشاءات"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_project_project__jakh_source_ref
+msgid "Jakh Source Ref"
+msgstr "مرجع المصدر في JAKH"
+
+#. module: jakh_core
+#: model:ir.model.fields.selection,name:jakh_core.selection__jakh_cost_code__resource_type__labour
+msgid "Labour"
+msgstr "العمالة"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_audit_event__write_uid
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__write_uid
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_discipline__write_uid
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__write_uid
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_audit_event__write_date
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__write_date
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_discipline__write_date
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__write_date
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: jakh_core
+#: model:ir.model.fields.selection,name:jakh_core.selection__jakh_cost_code__resource_type__material
+msgid "Material"
+msgstr "المواد"
+
+#. module: jakh_core
+#: model:ir.model.fields,help:jakh_core.field_jakh_wbs__activity_type_icon
+msgid "Material Symbols icon e.g. checklist"
+msgstr "أيقونة من مكتبة الرموز، مثل قائمة التحقق"
+
+#. module: jakh_core
+#: model:ir.model,name:jakh_core.model_ir_ui_menu
+msgid "Menu"
+msgstr "القائمة"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__message_has_error
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__message_has_error
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__message_ids
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__message_ids
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/foundation.py:0
+msgid "Module menu configuration requires system administration."
+msgstr "تتطلب تهيئة قائمة الوحدات صلاحية إدارة النظام."
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "Modules"
+msgstr "الوحدات"
+
+#. module: jakh_core
+#: model:ir.actions.act_window,name:jakh_core.action_my_activities
+msgid "My Activities & Approvals"
+msgstr "أنشطتي واعتماداتي"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطاتي"
+
+#. module: jakh_core
+#: model:ir.ui.menu,name:jakh_core.menu_activities
+msgid "My Approvals & Activities"
+msgstr "اعتماداتي وأنشطتي"
+
+#. module: jakh_core
+#: model:ir.ui.menu,name:project_todo.menu_todo_todos
+msgid "My Tasks"
+msgstr "مهامي"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__name
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_discipline__name
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__name
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "الفعالية التالية في تقويم الأنشطة"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: jakh_core
+#: model:res.groups.privilege,placeholder:jakh_core.privilege_construction
+msgid "No"
+msgstr "لا"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "No overview records are available for your current access."
+msgstr "لا توجد سجلات للملخص ضمن صلاحياتك الحالية."
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.js:0
+msgid "No records match this indicator for your selected companies."
+msgstr "لا توجد سجلات تطابق هذا المؤشر للشركات المحددة."
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__message_needaction_counter
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__message_needaction_counter
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__message_has_error_counter
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__message_has_error_counter
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: jakh_core
+#: model:ir.model.fields,help:jakh_core.field_jakh_cost_code__message_needaction_counter
+#: model:ir.model.fields,help:jakh_core.field_jakh_project_location__message_needaction_counter
+#: model:ir.model.fields,help:jakh_core.field_jakh_wbs__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب اتخاذ إجراء"
+
+#. module: jakh_core
+#: model:ir.model.fields,help:jakh_core.field_jakh_cost_code__message_has_error_counter
+#: model:ir.model.fields,help:jakh_core.field_jakh_project_location__message_has_error_counter
+#: model:ir.model.fields,help:jakh_core.field_jakh_wbs__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "Open a count to see the records behind it."
+msgstr "اضغط على أي عدد لعرض السجلات التي يتكوّن منها."
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "Open contributing records"
+msgstr "عرض السجلات المكوّنة للمؤشر"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/dashboard.py:0
+msgid "Open opportunities"
+msgstr "الفرص المفتوحة"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/dashboard.py:0
+msgid "Open quality / HSE actions"
+msgstr "إجراءات الجودة والصحة والسلامة والبيئة المفتوحة"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_project_project__jakh_country
+msgid "Operating jurisdiction"
+msgstr "الاختصاص الجغرافي للتشغيل"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_audit_event__operation
+msgid "Operation"
+msgstr "العملية"
+
+#. module: jakh_core
+#: model:ir.model.fields.selection,name:jakh_core.selection__jakh_cost_code__resource_type__other
+msgid "Other"
+msgstr "غير ذلك"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/dashboard.py:0
+msgid "Overdue customer invoices"
+msgstr "فواتير العملاء المتأخرة"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/dashboard.py:0
+msgid "Overdue vendor bills"
+msgstr "فواتير الموردين المتأخرة"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__parent_id
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__parent_id
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__parent_id
+msgid "Parent"
+msgstr "العنصر الرئيسي"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/foundation.py:0
+msgid "Parent WBS must belong to the same project."
+msgstr "يجب أن يتبع العنصر الأب في هيكل تقسيم العمل المشروع نفسه."
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/dashboard.py:0
+msgid "Pending receipts"
+msgstr "استلامات معلّقة"
+
+#. module: jakh_core
+#: model:ir.model,name:jakh_core.model_jakh_dashboard
+msgid "Permission-aware JAKH Dashboard"
+msgstr "لوحة معلومات JAKH وفق الصلاحيات"
+
+#. module: jakh_core
+#: model:res.groups,name:jakh_core.group_platform_owner
+msgid "Platform Owner"
+msgstr "مالك المنصة"
+
+#. module: jakh_core
+#: model:ir.actions.act_window,name:jakh_core.action_journals
+msgid "Posted Journal Entries"
+msgstr "قيود اليومية المُرحّلة"
+
+#. module: jakh_core
+#: model:ir.ui.menu,name:jakh_core.menu_journals
+msgid "Posted Ledger"
+msgstr "دفتر الأستاذ المرحّل"
+
+#. module: jakh_core
+#: model:res.groups,name:jakh_core.group_procurement
+msgid "Procurement"
+msgstr "الشراء"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+#: model:ir.model,name:jakh_core.model_project_project
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__project_id
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__project_id
+#: model_terms:ir.ui.view,arch_db:jakh_core.view_wbs_search
+msgid "Project"
+msgstr "المشروع"
+
+#. module: jakh_core
+#: model:res.groups,name:jakh_core.group_project_manager
+msgid "Project Manager"
+msgstr "مدير المشروع"
+
+#. module: jakh_core
+#: model:ir.model,name:jakh_core.model_jakh_wbs
+msgid "Project Work Breakdown Structure"
+msgstr "هيكل تقسيم أعمال المشروع"
+
+#. module: jakh_core
+#: model:ir.actions.act_window,name:jakh_core.action_projects
+#: model:ir.ui.menu,name:jakh_core.menu_projects
+#: model:ir.ui.menu,name:project.menu_main_pm
+msgid "Projects"
+msgstr "المشاريع"
+
+#. module: jakh_core
+#: model:ir.actions.act_window,name:jakh_core.action_purchase_orders
+msgid "Purchase Orders"
+msgstr "أوامر الشراء"
+
+#. module: jakh_core
+#: model:ir.ui.menu,name:jakh_core.menu_purchase
+#: model:ir.ui.menu,name:purchase.menu_purchase_root
+msgid "Purchasing"
+msgstr "المشتريات"
+
+#. module: jakh_core
+#: model:res.groups,name:jakh_core.group_quality
+msgid "Quality / HSE"
+msgstr "الجودة والصحة والسلامة والبيئة"
+
+#. module: jakh_core
+#: model:ir.ui.menu,name:jakh_core.menu_assurance
+msgid "Quality, HSE & Specifications"
+msgstr "الجودة والصحة والسلامة والبيئة والمواصفات"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__rating_ids
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__rating_ids
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__rating_ids
+msgid "Ratings"
+msgstr "التقييمات"
+
+#. module: jakh_core
+#: model:ir.actions.act_window,name:jakh_core.action_stock
+msgid "Receipts & Stores"
+msgstr "الاستلام والمخازن"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/dashboard.py:0
+msgid ""
+"Record counts for your selected companies and access rights. Overdue "
+"invoices and bills include only posted, unpaid or partially paid documents "
+"past their due date; payments in progress are excluded. Pending receipts "
+"exclude drafts and completed or cancelled transfers. No currency amounts are"
+" combined."
+msgstr ""
+"تعرض الأعداد سجلات الشركات المحددة وفق صلاحياتك. تشمل فواتير العملاء "
+"والموردين المتأخرة المستندات المرحّلة غير المدفوعة أو المدفوعة جزئياً التي "
+"تجاوزت تاريخ الاستحقاق فقط؛ وتُستثنى المدفوعات قيد المعالجة. وتستثني "
+"الاستلامات المعلّقة المسودات والتحويلات المكتملة أو الملغاة. لا تُجمع مبالغ "
+"بعملات مختلفة."
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "Refresh"
+msgstr "تحديث"
+
+#. module: jakh_core
+#: model_terms:ir.ui.view,arch_db:jakh_core.view_wbs_form
+msgid "Release WBS"
+msgstr "اعتماد هيكل تقسيم العمل"
+
+#. module: jakh_core
+#: model:ir.model.fields.selection,name:jakh_core.selection__jakh_wbs__state__released
+#: model_terms:ir.ui.view,arch_db:jakh_core.view_wbs_search
+msgid "Released"
+msgstr "معتمد للتنفيذ"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/foundation.py:0
+msgid "Released WBS records cannot be deleted."
+msgstr "لا يمكن حذف سجلات هيكل تقسيم العمل المعتمدة للتنفيذ."
+
+#. module: jakh_core
+#: model:ir.ui.menu,name:jakh_core.menu_reports
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/dashboard.py:0
+msgid "Requisitions awaiting approval"
+msgstr "طلبات الشراء بانتظار الاعتماد"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_audit_event__resource_id
+msgid "Resource"
+msgstr "المورد"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_audit_event__resource_model
+msgid "Resource Model"
+msgstr "نموذج الموارد"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__resource_type
+msgid "Resource Type"
+msgstr "نوع المورد"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_cost_code__message_has_sms_error
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__message_has_sms_error
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية القصيرة"
+
+#. module: jakh_core
+#: model:ir.ui.menu,name:sale.sale_menu_root
+msgid "Sales & Quotations"
+msgstr "المبيعات وعروض الأسعار"
+
+#. module: jakh_core
+#: model:ir.model.fields.selection,name:jakh_core.selection__project_project__jakh_country__sa
+msgid "Saudi Arabia"
+msgstr "المملكة العربية السعودية"
+
+#. module: jakh_core
+#: model:ir.ui.menu,name:spreadsheet_dashboard.spreadsheet_dashboard_menu_root
+msgid "Saved Dashboards"
+msgstr "لوحات المعلومات المحفوظة"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__sequence
+msgid "Sequence"
+msgstr "تسلسل"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: jakh_core
+#: model:ir.model.fields,help:jakh_core.field_jakh_wbs__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الأنشطة المعتمدة على الحالة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: jakh_core
+#: model:ir.ui.menu,name:jakh_core.menu_stores
+#: model:ir.ui.menu,name:stock.menu_stock_root
+msgid "Stores & Receipts"
+msgstr "المخازن والاستلام"
+
+#. module: jakh_core
+#: model:ir.model.fields.selection,name:jakh_core.selection__jakh_cost_code__resource_type__subcontract
+msgid "Subcontract"
+msgstr "مقاولة من الباطن"
+
+#. module: jakh_core
+#: model:ir.ui.menu,name:mail.menu_root_discuss
+msgid "Team Discussions"
+msgstr "مناقشات الفريق"
+
+#. module: jakh_core
+#: model:res.groups,name:jakh_core.group_technical
+msgid "Technical Office — No Prices"
+msgstr "المكتب الفني — دون أسعار"
+
+#. module: jakh_core
+#: model:ir.model.fields,help:jakh_core.field_jakh_wbs__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط المستثنى في السجل."
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "UTC · Selected companies"
+msgstr "بالتوقيت العالمي · الشركات المحددة"
+
+#. module: jakh_core
+#: model:ir.module.module,summary:base.module_jakh_core
+msgid ""
+"Unified contracting ERP, typed WBS and cost codes, shared module navigation"
+msgstr ""
+"نظام موحّد لإدارة موارد شركات المقاولات، مع هيكل تقسيم العمل ورموز التكلفة "
+"والتنقل الموحّد بين الوحدات"
+
+#. module: jakh_core
+#: model:ir.model.fields.selection,name:jakh_core.selection__project_project__jakh_country__ae
+msgid "United Arab Emirates"
+msgstr "الإمارات العربية المتحدة"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "Updating your overview…"
+msgstr "جارٍ تحديث الملخص…"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/foundation.py:0
+msgid "Use the WBS release action to change its state."
+msgstr "استخدم إجراء اعتماد هيكل تقسيم العمل لتغيير حالته."
+
+#. module: jakh_core
+#: model:ir.actions.act_window,name:jakh_core.action_wbs
+#: model:ir.ui.menu,name:jakh_core.menu_wbs
+msgid "WBS & Budgets"
+msgstr "هيكل تقسيم العمل والميزانيات"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_project_project__jakh_wbs_ids
+msgid "WBS / Cost Control"
+msgstr "هيكل تقسيم العمل وضبط التكاليف"
+
+#. module: jakh_core
+#: model:ir.model.constraint,message:jakh_core.constraint_jakh_wbs_code_unique
+msgid "WBS code must be unique within its project."
+msgstr "يجب أن يكون رمز هيكل تقسيم العمل فريداً داخل المشروع."
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/foundation.py:0
+msgid "WBS hierarchy cannot contain a cycle."
+msgstr "لا يمكن أن يتضمن هيكل تقسيم العمل حلقة دائرية."
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "Your business, projects and site controls in one place."
+msgstr "أعمالك ومشاريعك وضوابط الموقع في مكان واحد."
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/dashboard.py:0
+msgid "active"
+msgstr "نشط"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/dashboard.py:0
+msgid "picking_type_code"
+msgstr "نوع عملية المخزون"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/dashboard.py:0
+msgid "state"
+msgstr "الحالة"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/dashboard.py:0
+msgid "type"
+msgstr "النوع"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/construction_setup.py:0
+msgid "A building is a top-level project location."
+msgstr "المبنى هو المستوى الرئيسي لمواقع المشروع."
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/construction_setup.py:0
+msgid "A construction director must prepare project accounting cost centres."
+msgstr "يجب أن يُعدّ مدير الإنشاءات مراكز التكلفة المحاسبية للمشاريع."
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/construction_setup.py:0
+msgid ""
+"A construction project accounting cost centre cannot be replaced after its "
+"hierarchy is established."
+msgstr ""
+"لا يمكن استبدال مركز التكلفة المحاسبي للمشروع الإنشائي بعد إنشاء هيكله."
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/construction_setup.py:0
+msgid "A floor must belong to a building."
+msgstr "يجب أن يتبع الطابق مبنى."
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/construction_setup.py:0
+msgid "A location parent must belong to the same project."
+msgstr "يجب أن يتبع الموقع الرئيسي المشروع نفسه."
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/construction_setup.py:0
+msgid ""
+"A project legal entity cannot change after its construction hierarchy is "
+"established."
+msgstr "لا يمكن تغيير الكيان القانوني للمشروع بعد إنشاء هيكله الإنشائي."
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/construction_setup.py:0
+msgid "An execution location requires a project legal entity."
+msgstr "يتطلب موقع التنفيذ كياناً قانونياً للمشروع."
+
+#. module: jakh_core
+#: model:ir.model.fields.selection,name:jakh_core.selection__jakh_project_location__kind__building
+msgid "Building"
+msgstr "المبنى"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_project_project__jakh_location_ids
+msgid "Buildings / Floors / Zones"
+msgstr "المباني / الطوابق / المناطق"
+
+#. module: jakh_core
+#: model:ir.actions.act_window,name:jakh_core.action_locations
+#: model:ir.ui.menu,name:jakh_core.menu_locations
+msgid "Buildings, floors & zones"
+msgstr "المباني والطوابق والمناطق"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "CPI"
+msgstr "مؤشر أداء التكلفة"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "Certified financial progress"
+msgstr "نسبة الإنجاز المالي المعتمد"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.js:0
+msgid "Construction control"
+msgstr "رقابة المشروع الإنشائي"
+
+#. module: jakh_core
+#: model:ir.model,name:jakh_core.model_jakh_discipline
+msgid "Construction discipline"
+msgstr "التخصص الإنشائي"
+
+#. module: jakh_core
+#: model:ir.actions.act_window,name:jakh_core.action_disciplines
+#: model:ir.ui.menu,name:jakh_core.menu_disciplines
+msgid "Construction disciplines"
+msgstr "التخصصات الإنشائية"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "Construction project control"
+msgstr "الرقابة على المشاريع الإنشائية"
+
+#. module: jakh_core
+#: model_terms:ir.ui.view,arch_db:jakh_core.project_setup_form
+msgid "Construction setup"
+msgstr "إعدادات المشروع الإنشائي"
+
+#. module: jakh_core
+#: model:ir.model.constraint,message:jakh_core.constraint_jakh_discipline_code_unique
+msgid "Discipline code must be unique within its legal entity."
+msgstr "يجب أن يكون رمز التخصص فريداً داخل الكيان القانوني."
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/construction_setup.py:0
+msgid ""
+"Discipline identity is permanent. Archive and create a new discipline "
+"instead."
+msgstr "هوية التخصص ثابتة. أرشفه وأنشئ تخصصاً جديداً بدلاً من تغيير هويته."
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/construction_setup.py:0
+msgid "Execution locations cannot contain a cycle."
+msgstr "لا يجوز أن تحتوي مستويات مواقع التنفيذ على ارتباط دائري."
+
+#. module: jakh_core
+#: model:ir.model.fields.selection,name:jakh_core.selection__jakh_project_location__kind__floor
+msgid "Floor"
+msgstr "الطابق"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "Forecast final cost"
+msgstr "التكلفة النهائية المتوقعة"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "Forecast margin"
+msgstr "هامش الربح المتوقع"
+
+#. module: jakh_core
+#: model:ir.model,name:jakh_core.model_base_language_install
+msgid "Install Language"
+msgstr "تثبيت اللغة"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_project_location__kind
+msgid "Kind"
+msgstr "النوع"
+
+#. module: jakh_core
+#: model:ir.model,name:jakh_core.model_res_lang
+msgid "Language"
+msgstr "اللغة"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_base_language_install__lang_ids
+msgid "Languages"
+msgstr "اللغات"
+
+#. module: jakh_core
+#: model:ir.model.constraint,message:jakh_core.constraint_jakh_project_location_code_unique
+msgid "Location code must be unique within its project."
+msgstr "يجب أن يكون رمز الموقع فريداً داخل المشروع."
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/construction_setup.py:0
+msgid ""
+"Location identity is permanent. Create a new location rather than moving "
+"historical work."
+msgstr "هوية الموقع ثابتة. أنشئ موقعاً جديداً بدلاً من نقل الأعمال التاريخية."
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "Open control report"
+msgstr "فتح تقرير الرقابة"
+
+#. module: jakh_core
+#: model:ir.model,name:jakh_core.model_jakh_audit_mixin
+msgid "Permission-safe before / after business-document evidence"
+msgstr "سجل قبل تعديل مستند الأعمال وبعده وفق الصلاحيات"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "Physical progress"
+msgstr "نسبة الإنجاز الفعلي"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid ""
+"Physical progress is weighted by original WBS budget; missing approved "
+"progress is Undefined. Financial progress is certified gross divided by "
+"revised contract value. CPI/SPI use earned value, not billing. Each company "
+"and currency remains separate."
+msgstr ""
+"يُرجّح الإنجاز الفعلي بالموازنة الأصلية لبنود هيكل العمل؛ ويُعرض «غير محدد» "
+"عند غياب بيانات إنجاز معتمدة. الإنجاز المالي هو إجمالي المستخلصات المعتمدة "
+"مقسوماً على قيمة العقد المعدّلة. يُحسب مؤشرا أداء التكلفة والجدول بالقيمة "
+"المكتسبة، وليس بالفوترة. تُعرض كل شركة وعملتها بصورة مستقلة."
+
+#. module: jakh_core
+#: model_terms:ir.ui.view,arch_db:jakh_core.project_setup_form
+msgid "Prepare accounting cost centre"
+msgstr "إعداد مركز التكلفة المحاسبي"
+
+#. module: jakh_core
+#: model:ir.model.fields,field_description:jakh_core.field_jakh_wbs__analytic_account_id
+msgid "Project accounting cost centre"
+msgstr "مركز التكلفة المحاسبي للمشروع"
+
+#. module: jakh_core
+#: model:ir.model,name:jakh_core.model_jakh_project_location
+msgid "Project building / floor / zone"
+msgstr "مبنى / طابق / منطقة المشروع"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.js:0
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "Project exceptions"
+msgstr "استثناءات المشاريع"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "Project performance table"
+msgstr "جدول أداء المشاريع"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "Revised budget"
+msgstr "الموازنة المعدّلة"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "SPI"
+msgstr "مؤشر أداء الجدول الزمني"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/construction_setup.py:0
+msgid "Select the project legal entity before preparing its cost centre."
+msgstr "حدد الكيان القانوني للمشروع قبل إعداد مركز التكلفة."
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/construction_setup.py:0
+msgid "The accounting cost centre must belong to the project legal entity."
+msgstr "يجب أن يتبع مركز التكلفة المحاسبي الكيان القانوني للمشروع."
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.js:0
+msgid "Undefined"
+msgstr "غير محدد"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/construction_setup.py:0
+msgid "WBS accounting and legal-entity links are derived from the project."
+msgstr "تُستمد روابط هيكل العمل بالمحاسبة والكيان القانوني من المشروع."
+
+#. module: jakh_core
+#: model:ir.model.fields.selection,name:jakh_core.selection__jakh_project_location__kind__zone
+msgid "Zone"
+msgstr "المنطقة"
+
+#. module: jakh_core
+#. odoo-javascript
+#: code:addons/jakh_core/static/src/dashboard.xml:0
+msgid "· Company-currency posted and approved records ·"
+msgstr "· السجلات المعتمدة والمُرحّلة بعملة الشركة ·"
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/construction_setup.py:0
+msgid "Select each legal entity before changing its currency."
+msgstr "حدد كل كيان قانوني قبل تغيير عملته."
+
+#. module: jakh_core
+#. odoo-python
+#: code:addons/jakh_core/models/construction_setup.py:0
+msgid ""
+"The legal entity currency cannot change after a construction budget is "
+"released or project-control facts exist."
+msgstr ""
+"لا يمكن تغيير عملة الكيان القانوني بعد إصدار موازنة إنشائية أو تسجيل وقائع "
+"رقابة المشروع."

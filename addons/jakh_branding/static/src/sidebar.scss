@@ -1,0 +1,243 @@
+:root {
+    --jakh-sidebar-width: 256px;
+    --jakh-sidebar-rail: 70px;
+    --jakh-sidebar: #172e39;
+    --jakh-sidebar-active: #31514f;
+    --jakh-teal: #146e65;
+    --jakh-ink: #20333b;
+    --jakh-line: #e0e7e6;
+    --jakh-page: #f6f8f7;
+}
+
+body.o_web_client.jakh-sidebar-enabled {
+    padding-inline-start: var(--jakh-sidebar-width);
+    background: var(--jakh-page);
+    color: var(--jakh-ink);
+    min-width: 0;
+    > .o_action_manager { min-width: 0; }
+    > .o_navbar { flex: 0 0 auto; }
+    .o_main_navbar {
+        background: #fff !important;
+        color: var(--jakh-ink);
+        border-bottom: 1px solid var(--jakh-line);
+        height: 48px;
+        min-height: 48px;
+        padding-inline: 20px;
+        .o_navbar_apps_menu, .o_menu_toggle, .o_menu_brand, .o_menu_sections { display: none !important; }
+        .o_menu_systray { color: var(--jakh-ink); background: #fff !important; }
+        .o_menu_systray > button {
+            color: var(--jakh-ink) !important;
+            background: transparent !important;
+        }
+        .o_menu_systray .oe_topbar_name { color: var(--jakh-ink); }
+        .o_menu_systray > div > button,
+        .o_menu_systray > .dropdown > button,
+        .o_menu_systray .o-dropdown > button {
+            color: var(--jakh-ink);
+            background: transparent;
+        }
+        .o_menu_systray button:hover { background: var(--jakh-page); }
+    }
+    .o_control_panel { background: #fff; border-color: var(--jakh-line); }
+    .o_form_view .o_form_sheet_bg, .o_kanban_renderer { background: var(--jakh-page); }
+    .o_form_view .o_form_sheet { border-color: var(--jakh-line); }
+    // Native label wrappers carry Bootstrap's emergency text-break utility.
+    // Only interface labels should wrap at word boundaries; inputs, URLs and
+    // record content retain their native wrapping and mobile field layout.
+    .o_form_view .o_wrap_label {
+        overflow-wrap: normal !important;
+        word-break: normal !important;
+        hyphens: none;
+    }
+    // Invoice/bill total rows must not compress a label into its amount.
+    // Move the amount to the next line when necessary; never alter its value.
+    .o_form_view .oe_subtotal_footer .o_cell_custom > .d-flex:has(> .o_form_label) {
+        flex-wrap: wrap;
+        row-gap: 4px !important;
+        > .o_form_label {
+            flex-shrink: 0;
+            white-space: normal;
+            max-width: 100%;
+        }
+    }
+    // Small Settings boxes cannot fit a quarter-width label beside a full
+    // input. Stack these native grid labels instead of clipping their words.
+    .o_form_view .o_setting_box .row > .o_form_label.col-3 {
+        flex-basis: 100%;
+        width: 100%;
+        white-space: normal !important;
+        margin-inline: 0 !important;
+    }
+    .o_list_renderer .o_list_table thead { background: #f5f7f5; color: #637d7b; }
+    .o_list_renderer .o_list_table tbody tr:hover { background: #f2f7f5; }
+    .o_searchview { border-color: var(--jakh-line); }
+}
+
+body.o_web_client.jakh-sidebar-collapsed { padding-inline-start: var(--jakh-sidebar-rail); }
+
+.jakh_sidebar {
+    position: fixed;
+    inset-block: 0;
+    inset-inline-start: 0;
+    width: var(--jakh-sidebar-width);
+    display: flex;
+    flex-direction: column;
+    background: var(--jakh-sidebar);
+    color: #d0dedf;
+    z-index: 1040;
+    min-height: 0;
+    border-inline-end: 1px solid #243f49;
+    .oi { font-size: 18px; flex: 0 0 20px; text-align: center; color: #96afb6; }
+    button { font-family: inherit; }
+    button:focus-visible, a:focus-visible {
+        outline: 2px solid #98c8bb;
+        outline-offset: -2px;
+    }
+}
+
+.jakh_sidebar_brand {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 18px 20px;
+    gap: 8px;
+    color: #fff;
+    a, button { color: inherit; }
+    strong { display: block; font-size: 18px; font-weight: 700; letter-spacing: -.3px; }
+    small { display: block; color: #9bb2b9; font-size: 11px; margin-top: 4px; }
+    > button { border: 0; padding: 6px; background: transparent; border-radius: 5px; }
+}
+
+.jakh_sidebar_section_label {
+    display: block;
+    color: #9cb5bc;
+    font-size: 10px;
+    font-weight: 650;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    margin: 0;
+}
+.jakh_sidebar_navigation { flex: 1 1 auto; min-height: 0; overflow-y: auto; overflow-x: hidden; padding: 0 12px 16px; scrollbar-width: thin; scrollbar-color: #47636b transparent; }
+.jakh_sidebar_navigation ul { padding: 0; margin: 0; list-style: none; }
+.jakh_sidebar_item { margin: 3px 0; }
+.jakh_sidebar_link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    min-height: 42px;
+    gap: 10px;
+    color: #bcced2;
+    border: 0;
+    border-inline-start: 3px solid transparent;
+    background: transparent;
+    border-radius: 7px;
+    padding: 9px 10px;
+    text-align: start;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.45;
+    text-decoration: none;
+    .jakh_sidebar_label {
+        flex: 1 1 auto;
+        min-width: 0;
+        white-space: normal;
+        overflow-wrap: normal;
+        word-break: normal;
+        hyphens: none;
+    }
+    .jakh_sidebar_chevron { margin-inline-start: auto; flex: 0 0 16px; font-size: 16px; }
+    &:hover { background: #24424b; color: #fff; }
+    &.is-active { background: var(--jakh-sidebar-active); color: #fff; border-inline-start-color: #91c8b6; }
+    &.is-active .oi, &.is-ancestor > .oi { color: #b7d7d1; }
+    &.is-ancestor { color: #fff; }
+}
+.jakh_sidebar_children {
+    margin-inline-start: 8px !important;
+    padding-inline-start: 4px !important;
+    border-inline-start: 1px solid #35515a;
+    .jakh_sidebar_link { font-size: 12px; min-height: 36px; padding-block: 7px; gap: 7px; }
+    .oi { font-size: 15px; flex-basis: 17px; }
+}
+// Keep enough space for full words in deep native menu trees. Their DOM tree,
+// branch controls and expanded state still express every level of hierarchy.
+.jakh_sidebar_children .jakh_sidebar_children {
+    margin-inline-start: 6px !important;
+}
+.jakh_sidebar_children .jakh_sidebar_children .jakh_sidebar_children {
+    margin-inline-start: 0 !important;
+    padding-inline-start: 0 !important;
+    border-inline-start: 0;
+}
+.jakh_sidebar_footer {
+    flex-shrink: 0;
+    border-top: 1px solid #314b55;
+    padding: 12px 18px 18px;
+    color: #98b1b8;
+    font-size: 11px;
+    a { color: #bbd3d5; }
+}
+
+.jakh_sidebar.is-collapsed {
+    width: var(--jakh-sidebar-rail);
+    .jakh_sidebar_brand { padding: 20px 12px; justify-content: center; }
+    .jakh_sidebar_brand strong, .jakh_sidebar_brand small,
+    .jakh_sidebar_brand_label, .jakh_sidebar_label, .jakh_sidebar_chevron,
+    .jakh_sidebar_section_label, .jakh_sidebar_children,
+    .jakh_sidebar_footer { display: none; }
+    .jakh_sidebar_navigation { padding-inline: 10px; }
+    .jakh_sidebar_link { justify-content: center; padding-inline: 8px; }
+}
+
+.jakh_sidebar_mobile_toggle, .jakh_sidebar_backdrop { display: none; }
+
+@media (max-width: 767px) {
+    body.o_web_client.jakh-sidebar-enabled, body.o_web_client.jakh-sidebar-collapsed { padding-inline-start: 0; }
+    body.o_web_client.jakh-sidebar-enabled .o_main_navbar { padding-inline-start: 60px; padding-inline-end: 8px; }
+    .jakh_sidebar, .jakh_sidebar.is-collapsed {
+        width: 280px;
+        max-width: calc(100vw - 40px);
+        transform: translateX(-100%);
+        transition: transform .18s ease;
+        z-index: 1050;
+        &.is-open { transform: translateX(0); }
+        .jakh_sidebar_brand_label, .jakh_sidebar_label, .jakh_sidebar_chevron,
+        .jakh_sidebar_section_label, .jakh_sidebar_footer { display: revert; }
+        .jakh_sidebar_brand strong, .jakh_sidebar_brand small { display: block; }
+        .jakh_sidebar_brand { padding: 24px 18px 18px; justify-content: space-between; }
+        .jakh_sidebar_navigation { padding-inline: 12px; }
+        .jakh_sidebar_link { justify-content: flex-start; padding-inline: 10px; }
+    }
+    .jakh_sidebar_mobile_toggle {
+        display: inline-flex;
+        position: fixed;
+        inset-block-start: 4px;
+        inset-inline-start: 8px;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--jakh-line);
+        border-radius: 7px;
+        background: #fff;
+        color: var(--jakh-ink);
+        z-index: 1041;
+        .oi { font-size: 22px; }
+    }
+    .jakh_sidebar_backdrop.is-open {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: #172e3973;
+        border: 0;
+        z-index: 1045;
+    }
+    body.jakh-sidebar-mobile-open { overflow: hidden; }
+}
+@media (prefers-reduced-motion: reduce) { .jakh_sidebar { transition: none; } }
+@media print {
+    body.o_web_client.jakh-sidebar-enabled { padding: 0; }
+    .jakh_sidebar_shell, .jakh_sidebar, .jakh_sidebar_mobile_toggle, .jakh_sidebar_backdrop { display: none !important; }
+}

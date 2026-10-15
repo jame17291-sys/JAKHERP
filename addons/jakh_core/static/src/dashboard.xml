@@ -1,0 +1,33 @@
+<templates xml:space="preserve">
+  <t t-name="jakh_core.Dashboard">
+    <main class="jakh-dashboard o_action" tabindex="-1">
+      <header class="jakh-dashboard-heading"><div><p class="jakh-dashboard-eyebrow">JAKH · Contracting &amp; Construction</p><h1>Dashboard</h1><p t-if="this.state.data.companies.length" t-out="this.state.data.companies.join(' · ')"/></div><button class="btn btn-outline-primary" t-on-click="() => this.refresh()" t-att-disabled="this.state.loading"><i class="oi me-2" data-icon="refresh" aria-hidden="true"/>Refresh</button></header>
+      <section class="jakh-module-directory" aria-labelledby="jakh-modules-heading">
+        <div class="jakh-section-heading"><h2 id="jakh-modules-heading">Modules</h2><p>Your business, projects and site controls in one place.</p></div>
+        <div class="jakh-module-grid">
+          <button t-foreach="this.modules" t-as="module" t-key="module.id" class="jakh-module" t-on-click="() => this.openModule(module)"><span t-out="module.name"/><small t-if="module.summary" t-out="module.summary"/><i class="oi" data-icon="arrow_forward" aria-hidden="true"/></button>
+        </div>
+      </section>
+      <div t-if="this.state.error" class="alert alert-danger" role="alert" t-out="this.state.error"/>
+      <p t-if="this.state.loading" role="status">Updating your overview…</p>
+      <t t-elif="!this.state.error">
+        <section t-foreach="this.state.data.portfolio || []" t-as="company" t-key="company.company_id" class="jakh-portfolio" aria-label="Construction project control">
+          <div class="jakh-section-heading jakh-portfolio-heading"><div><h2 t-out="company.company"/><p><span t-out="company.currency"/> · Company-currency posted and approved records · <span t-out="company.as_of"/></p></div><button class="btn btn-outline-primary" t-on-click="() => this.openProjectAlerts(company)"><span t-out="company.alerts"/> Project exceptions</button></div>
+          <div class="jakh-kpi-grid"><button t-foreach="company.cards" t-as="card" t-key="card.label" class="jakh-kpi" t-on-click="() => this.openCard(card)"><strong><bdi t-out="this.formatAmount(card.amount, company.currency)"/></strong><span t-out="card.label"/><small>Open contributing records</small></button></div>
+          <div class="jakh-project-control-table" tabindex="0" role="region" aria-label="Project performance table">
+            <table class="table align-middle"><thead><tr><th>Project</th><th>Revised budget</th><th>Forecast final cost</th><th>Forecast margin</th><th>Physical progress</th><th>Certified financial progress</th><th>CPI</th><th>SPI</th><th/></tr></thead>
+              <tbody><tr t-foreach="company.projects" t-as="project" t-key="project.id"><th scope="row" t-out="project.name"/><td><bdi t-out="this.formatAmount(project.revised_budget, company.currency)"/></td><td><bdi t-out="this.formatAmount(project.forecast_final_cost, company.currency)"/></td><td><bdi t-out="this.formatAmount(project.forecast_margin, company.currency)"/></td><td><bdi t-out="this.formatIndex(project.physical_percent, true)"/></td><td><bdi t-out="this.formatIndex(project.financial_percent, true)"/></td><td><bdi t-out="this.formatIndex(project.cost_performance_index)"/></td><td><bdi t-out="this.formatIndex(project.schedule_performance_index)"/></td><td><button class="btn btn-link" t-on-click="() => this.openConstruction(project, company)">Open control report</button></td></tr></tbody>
+            </table>
+          </div>
+          <p class="text-muted">Physical progress is weighted by original WBS budget; missing approved progress is Undefined. Financial progress is certified gross divided by revised contract value. CPI/SPI use earned value, not billing. Each company and currency remains separate.</p>
+        </section>
+        <section aria-labelledby="jakh-overview-heading">
+          <div class="jakh-section-heading"><h2 id="jakh-overview-heading">Business &amp; project overview</h2><p>Open a count to see the records behind it.</p></div>
+          <div class="jakh-kpi-grid"><button t-foreach="this.state.data.cards" t-as="card" t-key="card.action" class="jakh-kpi" t-on-click="() => this.openCard(card)"><strong t-out="card.count"/><span t-out="card.label"/><small>Open contributing records <i class="oi" data-icon="arrow_forward" aria-hidden="true"/></small></button></div>
+          <p t-if="!this.state.data.cards.length" class="text-muted">No overview records are available for your current access.</p>
+        </section>
+        <footer class="jakh-dashboard-footer"><p t-out="this.state.data.notice"/><small>Generated <span t-out="this.state.data.generated_at"/> UTC · Selected companies</small></footer>
+      </t>
+    </main>
+  </t>
+</templates>

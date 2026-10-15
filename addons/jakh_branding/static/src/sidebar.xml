@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="jakh_branding.WebClientSidebar" t-inherit="web.WebClient" t-inherit-mode="extension">
+        <xpath expr="//NavBar" position="before">
+            <JakhSidebar/>
+        </xpath>
+    </t>
+
+    <t t-name="jakh_branding.Sidebar">
+        <div class="jakh_sidebar_shell d-print-none">
+            <button type="button" class="jakh_sidebar_mobile_toggle" aria-label="Open navigation" aria-controls="jakh-sidebar"
+                t-att-aria-expanded="this.state.mobileOpen ? 'true' : 'false'" t-ref="this.mobileToggle" t-on-click="this.openMobile">
+                <i class="oi" data-icon="menu" aria-hidden="true"/>
+            </button>
+            <button t-if="this.state.mobileOpen" type="button" class="jakh_sidebar_backdrop is-open" aria-label="Close navigation" tabindex="-1" t-on-click="() => this.closeMobile()"/>
+            <aside id="jakh-sidebar" class="jakh_sidebar" t-ref="this.root" aria-label="ERP navigation"
+                t-att-class="{ 'is-collapsed': this.state.collapsed and !this.state.isMobile, 'is-open': this.state.mobileOpen }"
+                t-att-aria-hidden="this.state.isMobile and !this.state.mobileOpen ? 'true' : undefined"
+                t-att-inert="this.state.isMobile and !this.state.mobileOpen" t-on-keydown="this.onDrawerKeydown">
+                <div class="jakh_sidebar_brand">
+                    <div class="jakh_sidebar_brand_label"><strong>JAKH ERP</strong><small>Contracting &amp; construction</small></div>
+                    <button type="button" aria-controls="jakh-sidebar-navigation"
+                        t-att-aria-label="this.toggleLabel"
+                        t-att-title="this.toggleLabel"
+                        t-att-aria-expanded="(this.state.isMobile ? this.state.mobileOpen : !this.state.collapsed) ? 'true' : 'false'" t-on-click="this.toggleSidebar">
+                        <i class="oi" t-att-data-icon="this.state.isMobile ? 'close' : (this.state.collapsed ? 'chevron_forward' : 'chevron_backward')" aria-hidden="true"/>
+                    </button>
+                </div>
+                <nav id="jakh-sidebar-navigation" class="jakh_sidebar_navigation" aria-label="Modules" t-att-aria-busy="this.state.navigating ? 'true' : 'false'">
+                    <p class="jakh_sidebar_section_label">Modules</p>
+                    <ul>
+                        <t t-foreach="this.entries" t-as="menu" t-key="menu.id">
+                            <t t-call="jakh_branding.SidebarItem" menu="menu"/>
+                        </t>
+                    </ul>
+                </nav>
+                <div class="jakh_sidebar_footer"><span>JAKH Contracting Platform</span><br/><a href="/jakh/help" target="_blank" rel="noopener noreferrer">Help &amp; product information</a></div>
+            </aside>
+        </div>
+    </t>
+
+    <t t-name="jakh_branding.SidebarItem">
+        <li class="jakh_sidebar_item" t-att-data-menu-xmlid="menu.xmlid" t-att-data-menu-id="menu.id">
+            <button t-if="menu.childrenTree.length" type="button" class="jakh_sidebar_link"
+                t-att-class="{ 'is-active': this.isActive(menu), 'is-ancestor': this.isAncestor(menu) }"
+                t-att-title="menu.name" t-att-aria-label="menu.name" t-att-aria-expanded="this.isExpanded(menu) ? 'true' : 'false'"
+                t-att-aria-controls="'jakh-menu-' + menu.id" t-on-click="() => this.toggleBranch(menu)">
+                <i class="oi" t-att-data-icon="this.iconFor(menu)" aria-hidden="true"/>
+                <span class="jakh_sidebar_label" t-out="menu.name"/>
+                <i class="oi jakh_sidebar_chevron" t-att-data-icon="this.isExpanded(menu) ? 'expand_more' : 'chevron_forward'" aria-hidden="true"/>
+            </button>
+            <button t-else="" type="button" class="jakh_sidebar_link"
+                t-att-class="{ 'is-active': this.isActive(menu) }" t-att-title="menu.name" t-att-aria-label="menu.name"
+                t-att-aria-current="this.isActive(menu) ? 'page' : undefined" t-att-disabled="!menu.actionID or this.state.navigating"
+                t-on-click="() => this.selectMenu(menu)">
+                <i class="oi" t-att-data-icon="this.iconFor(menu)" aria-hidden="true"/>
+                <span class="jakh_sidebar_label" t-out="menu.name"/>
+            </button>
+            <ul t-if="menu.childrenTree.length and this.isExpanded(menu)" class="jakh_sidebar_children" t-att-id="'jakh-menu-' + menu.id">
+                <li t-if="this.hasUniqueBranchAction(menu)" class="jakh_sidebar_item">
+                    <button type="button" class="jakh_sidebar_link" t-att-class="{ 'is-active': this.isActive(menu) }"
+                        t-att-aria-current="this.isActive(menu) ? 'page' : undefined" t-att-disabled="this.state.navigating"
+                        t-on-click="() => this.selectMenu(menu)">
+                        <i class="oi" data-icon="open_in_new" aria-hidden="true"/>
+                        <span class="jakh_sidebar_label">Open <t t-out="menu.name"/></span>
+                    </button>
+                </li>
+                <t t-foreach="menu.childrenTree" t-as="child" t-key="child.id">
+                    <t t-call="jakh_branding.SidebarItem" menu="child"/>
+                </t>
+            </ul>
+        </li>
+    </t>
+</templates>

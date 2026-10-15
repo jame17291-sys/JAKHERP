@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Empty CRM views must remain empty. Native sample rows/charts are
+         illustrations, not business records. Retain view types, measures,
+         domains, create/import controls and all existing access rules. -->
+    <record id="crm_lead_list_without_sample" model="ir.ui.view">
+        <field name="name">JAKH crm_case_tree_view_leads shows actual records</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_leads"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//list" position="attributes">
+                <attribute name="sample">0</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_lead_kanban_without_sample" model="ir.ui.view">
+        <field name="name">JAKH view_crm_lead_kanban shows actual records</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_lead_kanban"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban" position="attributes">
+                <attribute name="sample">0</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_pipeline_kanban_without_sample" model="ir.ui.view">
+        <field name="name">JAKH crm_case_kanban_view_leads shows actual records</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_kanban_view_leads"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban" position="attributes">
+                <attribute name="sample">0</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_opportunity_list_without_sample" model="ir.ui.view">
+        <field name="name">JAKH crm_case_tree_view_oppor shows actual records</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//list" position="attributes">
+                <attribute name="sample">0</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_opportunity_graph_without_sample" model="ir.ui.view">
+        <field name="name">JAKH crm_lead_view_graph shows actual records</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_graph"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//graph" position="attributes">
+                <attribute name="sample">0</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_forecast_graph_without_sample" model="ir.ui.view">
+        <field name="name">JAKH crm_lead_view_graph_forecast shows actual records</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_graph_forecast"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//graph" position="attributes">
+                <attribute name="sample">0</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_pipeline_pivot_without_sample" model="ir.ui.view">
+        <field name="name">JAKH crm_lead_view_pivot shows actual records</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_pivot"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//pivot" position="attributes">
+                <attribute name="sample">0</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_forecast_pivot_without_sample" model="ir.ui.view">
+        <field name="name">JAKH crm_lead_view_pivot_forecast shows actual records</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_pivot_forecast"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//pivot" position="attributes">
+                <attribute name="sample">0</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_pipeline_report_pivot_without_sample" model="ir.ui.view">
+        <field name="name">JAKH crm_opportunity_report_view_pivot shows actual records</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_opportunity_report_view_pivot"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//pivot" position="attributes">
+                <attribute name="sample">0</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_lead_report_pivot_without_sample" model="ir.ui.view">
+        <field name="name">JAKH crm_opportunity_report_view_pivot_lead shows actual records</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_opportunity_report_view_pivot_lead"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//pivot" position="attributes">
+                <attribute name="sample">0</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_pipeline_report_graph_without_sample" model="ir.ui.view">
+        <field name="name">JAKH crm_opportunity_report_view_graph shows actual records</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_opportunity_report_view_graph"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//graph" position="attributes">
+                <attribute name="sample">0</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_lead_report_graph_without_sample" model="ir.ui.view">
+        <field name="name">JAKH crm_opportunity_report_view_graph_lead shows actual records</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_opportunity_report_view_graph_lead"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//graph" position="attributes">
+                <attribute name="sample">0</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_activity_graph_without_sample" model="ir.ui.view">
+        <field name="name">JAKH crm_activity_report_view_graph shows actual records</field>
+        <field name="model">crm.activity.report</field>
+        <field name="inherit_id" ref="crm.crm_activity_report_view_graph"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//graph" position="attributes">
+                <attribute name="sample">0</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_activity_pivot_without_sample" model="ir.ui.view">
+        <field name="name">JAKH crm_activity_report_view_pivot shows actual records</field>
+        <field name="model">crm.activity.report</field>
+        <field name="inherit_id" ref="crm.crm_activity_report_view_pivot"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//pivot" position="attributes">
+                <attribute name="sample">0</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_neutral_website_placeholder" model="ir.ui.view">
+        <field name="name">JAKH CRM neutral website example</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='website']" position="attributes">
+                <attribute name="placeholder">https://example.com</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Native sales-team actions render this helper. Keep their configured
+         mail alias usable, without suggesting that live CRM is a playground
+         or that the email gateway should be tested with business records. -->
+    <template id="crm_professional_empty_help" inherit_id="crm.crm_action_helper" priority="99">
+        <xpath expr="//t[@t-if='team.alias_email']" position="replace">
+            <t t-if="team.alias_email">
+                <p class="o_view_nocontent_smiling_face">No leads or opportunities match this view</p>
+                <p>Create a lead or opportunity with New, import reviewed records, or adjust your filters.</p>
+                <p>Use the configured team email to record an enquiry:
+                    <a t-attf-href="mailto:#{team.alias_email}"><t t-out="team.alias_email"/></a>
+                </p>
+            </t>
+        </xpath>
+        <xpath expr="//t[@t-else]" position="replace">
+            <t t-else="">
+                <p class="o_view_nocontent_smiling_face">No leads or opportunities match this view</p>
+                <p>Create a lead or opportunity with New, import reviewed records, or adjust your filters.</p>
+            </t>
+        </xpath>
+    </template>
+</odoo>

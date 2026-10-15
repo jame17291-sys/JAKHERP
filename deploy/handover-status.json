@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "preparedOn": "2026-10-15",
+  "repository": "https://github.com/jame17291-sys/JAKHERP",
+  "requestedVisibility": "private",
+  "sourceScope": "Standalone current ERP source: seven operational JAKH addons, required dependency profile, security/audit/migration helpers, tests, deployment definitions and bilingual demo guide.",
+  "notPublished": ["Runtime databases", "Filestores and customer attachments", "Private configurations and passwords", "API keys, tokens and invitation links", "Local environments and compiled binaries", "Generated caches/node_modules", "Retired legacy applications", "Superseded unreferenced translation fragment"],
+  "githubHistoryPolicy": "Preserve the existing initial README commit; append reviewed source without force-push or history deletion. Review the staged publication tree separately from history.",
+  "dataTransferRequested": true,
+  "privateHostingDestinationConfirmed": false,
+  "dataTransferCompleted": false,
+  "destinationRestoreAccepted": false,
+  "originalLaptopRetired": false,
+  "localInstallationPolicy": "Keep the original running preview and private data recoverable until destination state and recovery are verified. No deletion or uninstall performed.",
+  "portabilityChange": "Native staging defaults to repository-local work/ for a standalone checkout, while the legacy outputs layout preserves its original work directory. Existing private runtime metadata/binaries are not portable state.",
+  "nativeEngineeringBaseline": "193 native tests per synthetic market: exact r5 Saudi runtime and maintained-source UAE fixture, with retained-demo recovery proof. Historical evidence paths are not included local files or new-host acceptance.",
+  "handoverSourceChecks": {"structuralDeploymentLayoutAndSafety": 146, "passed": 146, "skipped": 0, "failed": 0, "actualNativeRtlCompilerUsed": true, "frontendAssertions": 97, "crmGuidance": "passed", "publicationSafety": "270 candidate source files; no errors, one preserved upstream README historical-path warning; no credential content printed", "existingHistoryReview": "One initial commit containing only the repository-title README; inspected before appending source"},
+  "containerBuildAccepted": false,
+  "productionAccepted": false,
+  "customerUatSigned": false,
+  "remainingGates": ["Select authorized encrypted hosting/storage and residency per customer", "Snapshot and transfer matched databases plus filestores through a private channel", "Build/run the exact container and validate restored-state enrollment without bypass", "Reconcile roles, attachments, posted balances and retained demo workflows", "Verify independent backup/recovery and owner access on the destination", "Approve production identity, TLS, localization, security and customer acceptance", "Authorize traffic cutover and only then decide original-machine retirement"]
+}

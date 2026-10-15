@@ -1,0 +1,44 @@
+name: Source handover checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-checks:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out exact source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4, verified official tag
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5, verified official tag
+        with:
+          python-version: '3.12'
+      - name: Set up Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4, verified official tag
+        with:
+          node-version: '22'
+      - name: Check publication safety
+        run: python -B scripts/verify_publish_tree.py --root . --json
+      - name: Check addon structure
+        run: python -B -m unittest discover -s tests -p test_addon_static.py
+      - name: Check portable native path guards
+        run: python -B -m unittest discover -s tests -p test_portable_paths.py
+      - name: Check publication safeguards
+        run: python -B -m unittest discover -s tests -p test_publish_tree.py
+      - name: Check native navigation and language behavior
+        run: |
+          node tests/test_navigation_frontend.mjs
+          node tests/test_dashboard_frontend.mjs
+          node tests/test_language_switch_frontend.mjs
+          node tests/test_routes_frontend.mjs
+          node tests/test_crm_guidance_frontend.mjs
+      - name: Record scope
+        run: echo 'Source checks only. Native database/RTL, container build, data migration, hosting and production acceptance remain separate.'

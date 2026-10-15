@@ -1,0 +1,195 @@
+{
+  "name": "postcss",
+  "version": "8.5.6",
+  "repository": "https://github.com/postcss/postcss",
+  "ref": "8.5.6",
+  "license": "MIT",
+  "files": [
+    {
+      "path": "LICENSE",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/LICENSE",
+      "bytes": 1095,
+      "sha256": "c4630ac8b89cb317ac5bdd60ac5e4e185eab9bd5151a0c7b3afa41aa83d7ec9b"
+    },
+    {
+      "path": "lib/at-rule.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/at-rule.js",
+      "bytes": 471,
+      "sha256": "33b932bda8f304e9838a70232673326b6c0fd5fa030df35071bf36c127042a0b"
+    },
+    {
+      "path": "lib/comment.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/comment.js",
+      "bytes": 203,
+      "sha256": "674385438f42526f2c05c19dfb66fcc521f5cf180ccc85b3215ad5c07ac21a40"
+    },
+    {
+      "path": "lib/container.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/container.js",
+      "bytes": 10647,
+      "sha256": "0f8aaa013a910e142be706c3d6f54a3ce04751a08df3f17ed3a61bb91f863c39"
+    },
+    {
+      "path": "lib/css-syntax-error.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/css-syntax-error.js",
+      "bytes": 3402,
+      "sha256": "904b4bb371539a6303e4e211f0a8991fde7bc94d8674253d627389ff291d0ec1"
+    },
+    {
+      "path": "lib/declaration.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/declaration.js",
+      "bytes": 495,
+      "sha256": "2ccb78406c7a45aab26fc463a0fe5e3e855caf3ab1ba283616ae867046aa3b54"
+    },
+    {
+      "path": "lib/document.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/document.js",
+      "bytes": 654,
+      "sha256": "f66f02fde48389fe1a361a8f71da7ee0236a49c94cf22378e70ba6a2e9f4fab1"
+    },
+    {
+      "path": "lib/fromJSON.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/fromJSON.js",
+      "bytes": 1506,
+      "sha256": "5087cfda6c555ac560cfec7f6c5904c07835da403e398e6b03f078f8107c129f"
+    },
+    {
+      "path": "lib/input.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/input.js",
+      "bytes": 6752,
+      "sha256": "4442c5ccd2c9e03ca36dc4d03cbe3144415fea7b4b055de1bf76b0127aa913b2"
+    },
+    {
+      "path": "lib/lazy-result.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/lazy-result.js",
+      "bytes": 13562,
+      "sha256": "299821a7481d314dafccf1a19919130a6c9592f560fa16911b4a8d024c06dfa3"
+    },
+    {
+      "path": "lib/list.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/list.js",
+      "bytes": 1227,
+      "sha256": "6df35bac40d4c449ae8e9078776e5c17c529337830a01472761902a546032f52"
+    },
+    {
+      "path": "lib/map-generator.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/map-generator.js",
+      "bytes": 9721,
+      "sha256": "8e85d9c76706a860b0aa59d52cab53e92b7ee38e86a80772e5c7168c197d48d0"
+    },
+    {
+      "path": "lib/no-work-result.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/no-work-result.js",
+      "bytes": 2624,
+      "sha256": "f49f7aabebd8f4dc74fdf70cc7f018e190c95f84908befad48201d96b15b0599"
+    },
+    {
+      "path": "lib/node.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/node.js",
+      "bytes": 10719,
+      "sha256": "a4cfc9d293a44d9d2a7966731532d39f65f3ef4ea232032b250fe272730eb098"
+    },
+    {
+      "path": "lib/parse.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/parse.js",
+      "bytes": 1147,
+      "sha256": "7662c5ad1fd5f97a7c1615f0e5e7bc268e762916bcf6fb7bf9dda45537493764"
+    },
+    {
+      "path": "lib/parser.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/parser.js",
+      "bytes": 14852,
+      "sha256": "407fe4f1ca3ebb51a6df9632286109fa47b89a2cb241647470f6de25aea72d55"
+    },
+    {
+      "path": "lib/postcss.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/postcss.js",
+      "bytes": 2898,
+      "sha256": "8314c843f5dfa922e6f3fb9b8d8bf3e4b0be0d94b08075e1b4f3599f4276fb67"
+    },
+    {
+      "path": "lib/postcss.mjs",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/postcss.mjs",
+      "bytes": 980,
+      "sha256": "986ebc2d661a3e93b6e026dd2e1925e18167efdcc963f4043a65e1859974664f"
+    },
+    {
+      "path": "lib/previous-map.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/previous-map.js",
+      "bytes": 3984,
+      "sha256": "c65f892497d017eb21b0956e5feb5c3d11cbcd083307e57c908e59109d6bed32"
+    },
+    {
+      "path": "lib/processor.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/processor.js",
+      "bytes": 1738,
+      "sha256": "809c06d851ab53f691eff43a1802c239e896439c51f5959a339177802c42344d"
+    },
+    {
+      "path": "lib/result.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/result.js",
+      "bytes": 738,
+      "sha256": "b4239438538d41187fc9a572c83bb89b09524301764ebd4f46c71fe31edd04dd"
+    },
+    {
+      "path": "lib/root.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/root.js",
+      "bytes": 1239,
+      "sha256": "66bf461dbd984702272d737e8dc86a254b0481ae7934162f4ce0b32d9a19ec76"
+    },
+    {
+      "path": "lib/rule.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/rule.js",
+      "bytes": 569,
+      "sha256": "216ca23a33b1a0145c7925daa442a34e33a9ea41c6f3bb58fca7c4fb355e0166"
+    },
+    {
+      "path": "lib/stringifier.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/stringifier.js",
+      "bytes": 8220,
+      "sha256": "c29cb2393a49240b06b710a626120ce9097236e289adc9d876c5421f6e8b9fcb"
+    },
+    {
+      "path": "lib/stringify.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/stringify.js",
+      "bytes": 213,
+      "sha256": "99229cdda200513f88f7fee46004d5c39c1492a73451509e66164d26dff34abc"
+    },
+    {
+      "path": "lib/symbols.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/symbols.js",
+      "bytes": 91,
+      "sha256": "eb8ab8b9648d400ec3e8e37e75dc159734b97ba21137f12da11b4afc2547a1b4"
+    },
+    {
+      "path": "lib/terminal-highlight.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/terminal-highlight.js",
+      "bytes": 1399,
+      "sha256": "27f1eb6cc633f3947e053c96f16b1754bcffcda2742ecc9a1e11cc2a75d70d9b"
+    },
+    {
+      "path": "lib/tokenize.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/tokenize.js",
+      "bytes": 6538,
+      "sha256": "fb29fa5e5432989bdba2b153952763356c0cb7ffeacc2ae14c3cabfb414afb4d"
+    },
+    {
+      "path": "lib/warn-once.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/warn-once.js",
+      "bytes": 256,
+      "sha256": "5683ff69eeb8e77373a4bd0e0b9da611c7575ee434ba3c458c0552ab4806464a"
+    },
+    {
+      "path": "lib/warning.js",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/lib/warning.js",
+      "bytes": 739,
+      "sha256": "a969d1ec8a5025c028278ee037cc21c5c7b8129e80269ea3bd8d831a957474fa"
+    },
+    {
+      "path": "package.json",
+      "source": "https://raw.githubusercontent.com/postcss/postcss/8.5.6/package.json",
+      "bytes": 4083,
+      "sha256": "3fad3cb823245c3da4ba1c81e40ef78087227d3cbc39abba34a5bc119a99a0c0"
+    }
+  ]
+}

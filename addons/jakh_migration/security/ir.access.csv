@@ -1,0 +1,3 @@
+id,name,model_id,group_id/id,operation,domain
+crm_import_manager,Reviewed CRM import,jakh.crm.import,jakh_core.group_manager,crud,
+crm_import_company,CRM import company scope,jakh.crm.import,,crud,"[('company_id', 'in', company_ids)]"

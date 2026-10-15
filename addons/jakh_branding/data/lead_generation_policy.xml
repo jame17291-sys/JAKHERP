@@ -1,0 +1,4 @@
+<odoo>
+    <!-- Enforce the approved product removal on fresh installs and upgrades. -->
+    <function model="res.users" name="_jakh_disable_lead_generation"/>
+</odoo>

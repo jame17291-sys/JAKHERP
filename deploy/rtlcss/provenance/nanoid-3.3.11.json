@@ -1,0 +1,117 @@
+{
+  "name": "nanoid",
+  "version": "3.3.11",
+  "repository": "https://github.com/ai/nanoid",
+  "ref": "3.3.11",
+  "license": "MIT",
+  "files": [
+    {
+      "path": "LICENSE",
+      "source": "https://raw.githubusercontent.com/ai/nanoid/3.3.11/LICENSE",
+      "bytes": 1095,
+      "sha256": "da4db1480d9beea3483a2eda5c53b22238d0827d57da162b48f122e04d2d9987"
+    },
+    {
+      "path": "async/index.browser.js",
+      "source": "https://raw.githubusercontent.com/ai/nanoid/3.3.11/async/index.browser.js",
+      "bytes": 2682,
+      "sha256": "7247527f80a9c00ee20592fe8f163c900d0936c0048483cd2dff25fb30b1a196"
+    },
+    {
+      "path": "async/index.cjs",
+      "source": "https://raw.githubusercontent.com/ai/nanoid/3.3.11/async/index.cjs",
+      "bytes": 2870,
+      "sha256": "9afee3c53e2a7ebbc233166397a26f7ff98acb6d746ab5fa487859fad0c3ca54"
+    },
+    {
+      "path": "async/index.js",
+      "source": "https://raw.githubusercontent.com/ai/nanoid/3.3.11/async/index.js",
+      "bytes": 2853,
+      "sha256": "62c3d9d02f0fea7b43adc0c38bedc164d616d5bfbf597e51b017181af461f25d"
+    },
+    {
+      "path": "async/package.json",
+      "source": "https://raw.githubusercontent.com/ai/nanoid/3.3.11/async/package.json",
+      "bytes": 233,
+      "sha256": "0e02b9178f3638eba65e96c8643f3bf08ea192dcef7faadaf3c38c50a829b301"
+    },
+    {
+      "path": "bin/nanoid.cjs",
+      "source": "https://raw.githubusercontent.com/ai/nanoid/3.3.11/bin/nanoid.cjs",
+      "bytes": 1129,
+      "sha256": "e4eb9be1a3e3feb3f8979ef08c3bf3ef8430f4f22df9c4e427353a1577accbe8"
+    },
+    {
+      "path": "index.browser.js",
+      "source": "https://raw.githubusercontent.com/ai/nanoid/3.3.11/index.browser.js",
+      "bytes": 2820,
+      "sha256": "fa2a873b1080469f3dba6d01f61b755dfe9955e6254c706f4316c4e645b75cbc"
+    },
+    {
+      "path": "index.cjs",
+      "source": "https://raw.githubusercontent.com/ai/nanoid/3.3.11/index.cjs",
+      "bytes": 3359,
+      "sha256": "918dcba624b475e94d5876fc1b18404075c2897356b40fd298ffe880ffb2740f"
+    },
+    {
+      "path": "index.d.cts",
+      "source": "https://raw.githubusercontent.com/ai/nanoid/3.3.11/index.d.cts",
+      "bytes": 2252,
+      "sha256": "a45ee7555d019a67fbe092898d1aef0b1d02a9f6679ab84461ff515b4460d706"
+    },
+    {
+      "path": "index.d.ts",
+      "source": "https://raw.githubusercontent.com/ai/nanoid/3.3.11/index.d.ts",
+      "bytes": 2252,
+      "sha256": "a45ee7555d019a67fbe092898d1aef0b1d02a9f6679ab84461ff515b4460d706"
+    },
+    {
+      "path": "index.js",
+      "source": "https://raw.githubusercontent.com/ai/nanoid/3.3.11/index.js",
+      "bytes": 3342,
+      "sha256": "80240bdba91e8677f67553b96c579e32c02b0ba9479d3f7d9880e7da734b9eef"
+    },
+    {
+      "path": "non-secure/index.cjs",
+      "source": "https://raw.githubusercontent.com/ai/nanoid/3.3.11/non-secure/index.cjs",
+      "bytes": 1114,
+      "sha256": "edd044dcdf7f937621c0b6e324377b3693cc30faf7a22d769d533d5f69c54698"
+    },
+    {
+      "path": "non-secure/index.js",
+      "source": "https://raw.githubusercontent.com/ai/nanoid/3.3.11/non-secure/index.js",
+      "bytes": 1104,
+      "sha256": "ff752fc203f5639643d2e3718126ee96c60ac3ce6d5b91813c6ff44d2ef6741a"
+    },
+    {
+      "path": "non-secure/package.json",
+      "source": "https://raw.githubusercontent.com/ai/nanoid/3.3.11/non-secure/package.json",
+      "bytes": 99,
+      "sha256": "2f9b8c4bee9312538f388b49c13987f4565ac25d6756fabdbbb771d339945e3e"
+    },
+    {
+      "path": "package.json",
+      "source": "https://raw.githubusercontent.com/ai/nanoid/3.3.11/package.json",
+      "bytes": 2978,
+      "sha256": "ba8a0a1bca686824ea01c3d25ae8804ecd5ed9a7585e61ed714c1e2319af11b1"
+    },
+    {
+      "path": "url-alphabet/index.cjs",
+      "source": "https://raw.githubusercontent.com/ai/nanoid/3.3.11/url-alphabet/index.cjs",
+      "bytes": 280,
+      "sha256": "be6e4ca31eae5e502f2b22234382fd535ea7d2059fdde18c75c499a62cf53d32"
+    },
+    {
+      "path": "url-alphabet/index.js",
+      "source": "https://raw.githubusercontent.com/ai/nanoid/3.3.11/url-alphabet/index.js",
+      "bytes": 270,
+      "sha256": "2054b694c11cbc76c1d24a4b0bacda8af7cf8ebf6e9cd3cc21ff88c6976c1083"
+    },
+    {
+      "path": "url-alphabet/package.json",
+      "source": "https://raw.githubusercontent.com/ai/nanoid/3.3.11/url-alphabet/package.json",
+      "bytes": 99,
+      "sha256": "2f9b8c4bee9312538f388b49c13987f4565ac25d6756fabdbbb771d339945e3e"
+    }
+  ]
+}

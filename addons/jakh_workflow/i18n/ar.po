@@ -1,0 +1,136 @@
+# Arabic translation of JAKH ERP customer-facing modules.
+# Common framework terminology follows the bundled upstream Arabic catalogs.
+# Original component license and copyright notices remain in the source distribution.
+msgid ""
+msgstr ""
+"Project-Id-Version: JAKH ERP 2.0\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+#. module: jakh_workflow
+#. odoo-python
+#: code:addons/jakh_workflow/handover.py:0
+msgid "A construction manager must hand over the approved study."
+msgstr "يجب أن يسلّم مدير الإنشاءات الدراسة المعتمدة."
+
+#. module: jakh_workflow
+#: model:ir.model.constraint,message:jakh_workflow.constraint_jakh_project_contract_estimate_unique
+msgid "An approved study creates only one commercial contract."
+msgstr "لا يمكن أن تُنشئ الدراسة المعتمدة أكثر من عقد تجاري واحد."
+
+#. module: jakh_workflow
+#. odoo-python
+#: code:addons/jakh_workflow/handover.py:0
+msgid "Approved estimate and commercial identity links are immutable."
+msgstr "لا يمكن تعديل روابط دراسة التكاليف المعتمدة والهوية التجارية."
+
+#. module: jakh_workflow
+#. odoo-python
+#: code:addons/jakh_workflow/handover.py:0
+msgid "Commercial BOQ must match the approved estimate."
+msgstr "يجب أن يطابق جدول الكميات التجاري دراسة التكاليف المعتمدة."
+
+#. module: jakh_workflow
+#: model:ir.model.fields,field_description:jakh_workflow.field_jakh_estimate__commercial_contract_id
+#: model_terms:ir.ui.view,arch_db:jakh_workflow.view_estimate_commercial
+msgid "Commercial Contract"
+msgstr "العقد التجاري"
+
+#. module: jakh_workflow
+#. odoo-python
+#: code:addons/jakh_workflow/handover.py:0
+msgid ""
+"Commercial quantities and rates must match the approved study; changes "
+"require a controlled revision."
+msgstr ""
+"يجب أن تطابق الكميات والأسعار التجارية الدراسة المعتمدة؛ وتتطلب التغييرات "
+"مراجعة خاضعة للرقابة."
+
+#. module: jakh_workflow
+#: model:ir.model,name:jakh_workflow.model_jakh_estimate
+msgid "Construction BOQ Estimate"
+msgstr "دراسة تكاليف جدول كميات الإنشاءات"
+
+#. module: jakh_workflow
+#. odoo-python
+#: code:addons/jakh_workflow/handover.py:0
+msgid "Create estimate-linked contracts through approved handover."
+msgstr "أنشئ العقود المرتبطة بدراسة التكاليف من خلال التسليم المعتمد."
+
+#. module: jakh_workflow
+#: model:ir.model.fields,field_description:jakh_workflow.field_jakh_estimate__display_name
+#: model:ir.model.fields,field_description:jakh_workflow.field_jakh_project_contract__display_name
+#: model:ir.model.fields,field_description:jakh_workflow.field_jakh_project_contract_line__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: jakh_workflow
+#. odoo-python
+#: code:addons/jakh_workflow/handover.py:0
+msgid "Hand over the approved estimate first."
+msgstr "سلّم دراسة التكاليف المعتمدة أولاً."
+
+#. module: jakh_workflow
+#. odoo-python
+#: code:addons/jakh_workflow/handover.py:0
+msgid ""
+"Award direct cost, cost budget and BOQ identity must match the frozen "
+"approved study."
+msgstr ""
+"يجب أن تطابق التكلفة المباشرة وموازنة التكلفة وهوية البند عند الترسية "
+"الدراسة المعتمدة الثابتة."
+
+#. module: jakh_workflow
+#. odoo-python
+#: code:addons/jakh_workflow/handover.py:0
+msgid "Source-linked contract items must preserve an approved BOQ identity."
+msgstr "يجب أن تحافظ بنود العقد المرتبطة بالمصدر على هوية بند كميات معتمد."
+
+#. module: jakh_workflow
+#. odoo-python
+#: code:addons/jakh_workflow/handover.py:0
+msgid ""
+"Source-linked contract prices and award costs must come from the frozen "
+"approved study."
+msgstr ""
+"يجب أن تأتي أسعار العقد وتكاليف الترسية المرتبطة بالمصدر من الدراسة المعتمدة"
+" الثابتة."
+
+#. module: jakh_workflow
+#. odoo-python
+#: code:addons/jakh_workflow/handover.py:0
+msgid ""
+"Frozen award costs and source identities cannot be edited, including before "
+"activation."
+msgstr ""
+"لا يمكن تعديل تكاليف الترسية وهويات المصدر الثابتة، حتى قبل تفعيل العقد."
+
+#. module: jakh_workflow
+#: model:ir.model.fields,field_description:jakh_workflow.field_jakh_estimate__id
+#: model:ir.model.fields,field_description:jakh_workflow.field_jakh_project_contract__id
+#: model:ir.model.fields,field_description:jakh_workflow.field_jakh_project_contract_line__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: jakh_workflow
+#: model:ir.module.module,shortdesc:base.module_jakh_workflow
+msgid "JAKH Estimate-to-Commercial Handover"
+msgstr "تسليم دراسة التكاليف إلى الشؤون التجارية في JAKH"
+
+#. module: jakh_workflow
+#: model:ir.model.fields,field_description:jakh_workflow.field_jakh_project_contract__jakh_estimate_id
+msgid "Jakh Estimate"
+msgstr "دراسة تكاليف JAKH"
+
+#. module: jakh_workflow
+#: model:ir.model,name:jakh_workflow.model_jakh_project_contract
+msgid "Measured construction contract"
+msgstr "عقد إنشاءات قائم على القياس"
+
+#. module: jakh_workflow
+#: model:ir.model,name:jakh_workflow.model_jakh_project_contract_line
+msgid "Contract BOQ measurement item"
+msgstr "بند قياس جدول كميات العقد"

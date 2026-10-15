@@ -1,0 +1,17 @@
+id,name,model_id,group_id/id,operation,domain
+cost_code_reader,Cost code readers,jakh.cost.code,base.group_user,r,
+cost_code_manager,Cost code management,jakh.cost.code,jakh_core.group_manager,cru,
+cost_code_company,Cost code company restriction,jakh.cost.code,,crud,"[('company_id', 'in', company_ids)]"
+wbs_reader,WBS readers,jakh.wbs,base.group_user,r,
+wbs_manager,WBS management,jakh.wbs,jakh_core.group_manager,crud,
+wbs_company,WBS company restriction,jakh.wbs,,crud,"[('company_id', 'in', company_ids)]"
+wbs_project,WBS project visibility,jakh.wbs,,crud,"[('project_id', 'access', 'read')]"
+audit_reader,Business audit readers,jakh.audit.event,jakh_core.group_manager,r,
+audit_company,Business audit company restriction,jakh.audit.event,,crud,"[('company_id', 'in', company_ids)]"
+location_reader,Project location readers,jakh.project.location,base.group_user,r,
+location_manager,Project location management,jakh.project.location,jakh_core.group_manager,cru,
+location_company,Project location company restriction,jakh.project.location,,crud,"[('company_id', 'in', company_ids)]"
+location_project,Project location visibility,jakh.project.location,,crud,"[('project_id', 'access', 'read')]"
+discipline_reader,Construction discipline readers,jakh.discipline,base.group_user,r,
+discipline_manager,Construction discipline management,jakh.discipline,jakh_core.group_manager,cru,
+discipline_company,Construction discipline company restriction,jakh.discipline,,crud,"[('company_id', 'in', company_ids)]"

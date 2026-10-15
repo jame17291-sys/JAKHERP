@@ -1,0 +1,112 @@
+# One compose project per customer. Never reuse database or filestore volumes across customers.
+services:
+  db:
+    image: postgres:16.15-bookworm@sha256:0ea6700a3b4f0ae6ce746519073558aed4d88a79d8d07622a9a644946c7319c4
+    entrypoint: [/bin/bash, /deploy/db-entrypoint.sh]
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: jakh_cluster_admin
+      POSTGRES_PASSWORD_FILE: /run/secrets/cluster_password
+      POSTGRES_INITDB_ARGS: --data-checksums --auth-host=scram-sha-256
+      JAKH_DATABASE: ${JAKH_DATABASE:?Set an explicit customer database name}
+      JAKH_DB_USER: ${JAKH_DB_USER:?Set an explicit customer database owner role}
+    secrets: [db_password, cluster_password]
+    volumes:
+      - database:/var/lib/postgresql/data
+      - ./db-entrypoint.sh:/deploy/db-entrypoint.sh:ro
+      - ./init-customer.sql:/deploy/init-customer.sql:ro
+      - ./init-customer.sh:/docker-entrypoint-initdb.d/10-customer.sh:ro
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U "$${POSTGRES_USER}" -d "$${POSTGRES_DB}"']
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    networks: [private]
+    restart: unless-stopped
+  app:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    environment:
+      JAKH_DATABASE: ${JAKH_DATABASE:?Set an explicit customer database name}
+      JAKH_DB_USER: ${JAKH_DB_USER:?Set an explicit customer database owner role}
+      JAKH_OWNER_LOGIN: ${JAKH_OWNER_LOGIN:?Set an explicit owner email}
+      JAKH_PROXY_MODE: ${JAKH_PROXY_MODE:-false}
+    secrets: [db_password, master_password, owner_password]
+    volumes: ['filestore:/var/lib/jakh-odoo']
+    tmpfs: ['/run/jakh:mode=0700', '/tmp:mode=1777']
+    read_only: true
+    security_opt: ['no-new-privileges:true']
+    cap_drop: [ALL]
+    cap_add: [CHOWN, SETUID, SETGID, DAC_READ_SEARCH]
+    ports: ['127.0.0.1:${JAKH_HTTP_PORT:-8810}:8069']
+    depends_on:
+      db: {condition: service_healthy}
+    networks: [private]
+    restart: unless-stopped
+  # Infrastructure option only: no OIDC provider is automatically activated in Odoo.
+  # Configure TLS hostname, realm/client, mapping and logout acceptance before enabling in production.
+  idp-db:
+    profiles: [sso]
+    image: postgres:16.15-bookworm@sha256:0ea6700a3b4f0ae6ce746519073558aed4d88a79d8d07622a9a644946c7319c4
+    entrypoint: [/bin/bash, /deploy/db-entrypoint.sh]
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: jakh_cluster_admin
+      POSTGRES_PASSWORD_FILE: /run/secrets/cluster_password
+      POSTGRES_INITDB_ARGS: --data-checksums --auth-host=scram-sha-256
+      JAKH_DATABASE: keycloak
+      JAKH_DB_USER: jakh_identity
+    secrets:
+      - {source: idp_db_password, target: db_password}
+      - {source: idp_cluster_password, target: cluster_password}
+    volumes:
+      - identity-database:/var/lib/postgresql/data
+      - ./db-entrypoint.sh:/deploy/db-entrypoint.sh:ro
+      - ./init-customer.sql:/deploy/init-customer.sql:ro
+      - ./init-customer.sh:/docker-entrypoint-initdb.d/10-customer.sh:ro
+    networks: [private]
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U jakh_identity -d keycloak']
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  keycloak:
+    profiles: [sso]
+    image: quay.io/keycloak/keycloak:26.8.0@sha256:27b3230fbabb8c9ff3c66c864cf09dcd8a41aca82e5100679d109ef0eeb05741
+    environment:
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://idp-db:5432/keycloak
+      KC_DB_USERNAME: jakh_identity
+      KC_BOOTSTRAP_ADMIN_USERNAME: ${JAKH_IDP_ADMIN:-jakh-idp-bootstrap}
+    secrets:
+      - source: idp_db_password
+        uid: '1000'
+        gid: '0'
+        mode: 0400
+      - source: idp_admin_password
+        uid: '1000'
+        gid: '0'
+        mode: 0400
+    entrypoint: [/bin/bash, -ec]
+    command:
+      - 'export KC_DB_PASSWORD="$$(</run/secrets/idp_db_password)"; export KC_BOOTSTRAP_ADMIN_PASSWORD="$$(</run/secrets/idp_admin_password)"; exec /opt/keycloak/bin/kc.sh start-dev'
+    ports: ['127.0.0.1:${JAKH_IDP_PORT:-8081}:8080']
+    depends_on:
+      idp-db: {condition: service_healthy}
+    networks: [private]
+    security_opt: ['no-new-privileges:true']
+volumes:
+  database:
+  filestore:
+  identity-database:
+networks:
+  private:
+secrets:
+  cluster_password: {file: '${JAKH_SECRETS_DIR:?Generate private secret files first}/cluster-password'}
+  db_password: {file: '${JAKH_SECRETS_DIR:?Generate private secret files first}/db-password'}
+  master_password: {file: '${JAKH_SECRETS_DIR:?Generate private secret files first}/master-password'}
+  owner_password: {file: '${JAKH_SECRETS_DIR:?Generate private secret files first}/owner-password'}
+  idp_db_password: {file: '${JAKH_SECRETS_DIR:?Generate private secret files first}/idp-db-password'}
+  idp_admin_password: {file: '${JAKH_SECRETS_DIR:?Generate private secret files first}/idp-admin-password'}
+  idp_cluster_password: {file: '${JAKH_SECRETS_DIR:?Generate private secret files first}/idp-cluster-password'}

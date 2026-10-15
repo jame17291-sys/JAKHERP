@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Presentation only. Keep source fields and XPath targets, installed
+         features, permissions and saved configuration values intact. -->
+    <record id="settings_cleanup_general" model="ir.ui.view">
+        <field name="name">JAKH settings: available general features</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='inter_company']" position="attributes">
+                <attribute name="invisible">not module_account_inter_company_rules</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="settings_cleanup_product" model="ir.ui.view">
+        <field name="name">JAKH settings: available product features</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="product.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='process_barcode_lookup_setting']" position="attributes">
+                <attribute name="invisible">not module_product_barcodelookup</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="settings_cleanup_sales" model="ir.ui.view">
+        <field name="name">JAKH settings: available sales features</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="sale.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='setting_commission']" position="attributes">
+                <attribute name="invisible">not module_sale_commission</attribute>
+            </xpath>
+            <xpath expr="//setting[@id='amazon_connector']" position="attributes">
+                <attribute name="invisible">not module_sale_amazon</attribute>
+            </xpath>
+            <xpath expr="//setting[@id='shopee_connector']" position="attributes">
+                <attribute name="invisible">not module_sale_shopee</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="settings_cleanup_purchase" model="ir.ui.view">
+        <field name="name">JAKH settings: available purchase features</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="purchase.res_config_settings_view_form_purchase"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='three_way_matching']" position="attributes">
+                <attribute name="invisible">not module_account_3way_match</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="settings_cleanup_inventory" model="ir.ui.view">
+        <field name="name">JAKH settings: available inventory features</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="stock.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='quality_control']" position="attributes">
+                <attribute name="invisible">not module_quality_control</attribute>
+            </xpath>
+            <xpath expr="//div[field[@name='module_quality_control_worksheet']]" position="attributes">
+                <attribute name="invisible" add="not module_quality_control_worksheet" separator=" or "/>
+            </xpath>
+            <xpath expr="//setting[@id='process_operations_barcodes']" position="attributes">
+                <attribute name="invisible">not module_stock_barcode</attribute>
+            </xpath>
+            <xpath expr="//setting[@id='process_stock_barcodelookup']" position="attributes">
+                <attribute name="invisible">not module_stock_barcode_barcodelookup</attribute>
+            </xpath>
+            <!-- This is a module marketplace shortcut, not the existing
+                 delivery-method configuration button or any connector. -->
+            <xpath expr="//button[@name='%(stock.ir_module_module_action_delivery_provider_modules)d']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="settings_cleanup_accounting" model="ir.ui.view">
+        <field name="name">JAKH settings: available accounting features</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='avatax_settings']" position="attributes">
+                <attribute name="invisible" add="not module_account_avatax" separator=" or "/>
+            </xpath>
+            <xpath expr="//setting[@id='update_exchange_rates']" position="attributes">
+                <attribute name="invisible" add="not module_currency_rate_live" separator=" or "/>
+            </xpath>
+            <xpath expr="//setting[@id='intrastat_statistics']" position="attributes">
+                <attribute name="invisible" add="not module_account_intrastat" separator=" or "/>
+            </xpath>
+            <xpath expr="//setting[@id='account_batch_payment']" position="attributes">
+                <attribute name="invisible">not module_account_batch_payment</attribute>
+            </xpath>
+            <xpath expr="//setting[@id='collect_customer_payment']" position="attributes">
+                <attribute name="invisible" add="not module_account_sepa_direct_debit" separator=" or "/>
+            </xpath>
+            <xpath expr="//setting[@id='sepa_payments']" position="attributes">
+                <attribute name="invisible">not module_account_iso20022</attribute>
+            </xpath>
+            <xpath expr="//setting[@id='account_ocr_settings']" position="attributes">
+                <attribute name="invisible">not module_account_extract</attribute>
+            </xpath>
+            <xpath expr="//setting[field[@name='module_account_bank_statement_import_qif']]" position="attributes">
+                <attribute name="invisible">not module_account_bank_statement_import_qif</attribute>
+            </xpath>
+            <xpath expr="//setting[@id='account_budget']" position="attributes">
+                <attribute name="invisible">not module_account_budget</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="settings_cleanup_credit_portal" model="ir.ui.view">
+        <field name="name">JAKH settings: no provider credit-shop promotion</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="iap.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='iap_credits_setting']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//div[@id='iap_portal']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Owners can still inspect balances and account configuration. Only
+         outbound purchase buttons are removed from these views. -->
+    <record id="settings_cleanup_credit_account_form" model="ir.ui.view">
+        <field name="name">JAKH service account: no credit-shop shortcut</field>
+        <field name="model">iap.account</field>
+        <field name="inherit_id" ref="iap.iap_account_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_buy_credits']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="settings_cleanup_credit_account_list" model="ir.ui.view">
+        <field name="name">JAKH service accounts: no credit-shop shortcut</field>
+        <field name="model">iap.account</field>
+        <field name="inherit_id" ref="iap.iap_account_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_buy_credits']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="settings_cleanup_crm_service_copy" model="ir.ui.view">
+        <field name="name">JAKH settings: factual external CRM services</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="crm.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <!-- Do not conceal active automatic enrichment or uninstall its
+                 provider. Keep the installed toggle and auto/manual radios. -->
+            <xpath expr="//setting[field[@name='module_crm_iap_enrich']]" position="attributes">
+                <attribute name="string">External Lead Enrichment</attribute>
+                <attribute name="help">Review the configured external company-data enrichment service. Provider charges and customer data-transfer approvals apply; existing automatic/manual choices are unchanged.</attribute>
+            </xpath>
+            <xpath expr="//setting[@id='crm_iap_mine_settings']" position="attributes">
+                <attribute name="string">External Prospect Search</attribute>
+                <attribute name="help">Review an installed external prospect-search service. Provider charges and customer data-transfer approvals apply.</attribute>
+                <attribute name="invisible">not module_crm_iap_mine</attribute>
+            </xpath>
+            <xpath expr="//setting[@id='website_crm_iap_reveal_settings']" position="attributes">
+                <attribute name="string">External Visitor Identification</attribute>
+                <attribute name="help">Review an installed external website-visitor identification service. Enable only after customer approval of its data-transfer and privacy terms.</attribute>
+                <attribute name="invisible">not module_website_crm_iap_reveal</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- These provider addons are already installed in both isolated staging
+         customers. Retain their controls; hide only the purchase widgets. -->
+    <record id="settings_cleanup_partner_service_promotion" model="ir.ui.view">
+        <field name="name">JAKH settings: contact enrichment without credit promotion</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="partner_autocomplete.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='partner_autocomplete']//widget[@name='iap_buy_more_credits']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="settings_cleanup_sms_service_promotion" model="ir.ui.view">
+        <field name="name">JAKH settings: SMS controls without credit promotion</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="sms.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='sms']//widget[@name='iap_buy_more_credits']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="settings_cleanup_lead_enrichment_promotion" model="ir.ui.view">
+        <field name="name">JAKH settings: lead enrichment without credit promotion</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="crm_iap_enrich.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[field[@name='module_crm_iap_enrich']]//widget[@name='iap_buy_more_credits']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="settings_cleanup_lead_mining_promotion" model="ir.ui.view">
+        <field name="name">JAKH settings: prospect service without credit promotion</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="crm_iap_mine.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='crm_iap_mine_settings']//widget[@name='iap_buy_more_credits']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="settings_cleanup_delivery_sms_promotion" model="ir.ui.view">
+        <field name="name">JAKH delivery SMS: no credit-shop shortcut</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="stock_sms.res_config_settings_view_form_stock"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='stock_text_confirmation']//widget[@name='iap_buy_more_credits']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

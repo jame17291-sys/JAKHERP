@@ -1,0 +1,19 @@
+<odoo>
+  <record id="material_request_return_form" model="ir.ui.view"><field name="name">jakh.material.request.return.form</field><field name="model">jakh.material.request</field><field name="inherit_id" ref="jakh_operations.material_request_form"/><field name="arch" type="xml"><xpath expr="//header/field[@name='state']" position="before"><button name="action_prepare_return" type="object" string="Request material return" groups="jakh_core.group_manager,jakh_core.group_project_manager,jakh_core.group_procurement" invisible="state not in ('approved','done') or issued_quantity == 0"/></xpath></field></record>
+  <record id="material_return_list" model="ir.ui.view"><field name="name">jakh.material.return.list</field><field name="model">jakh.material.return</field><field name="arch" type="xml"><list><field name="name"/><field name="material_request_id"/><field name="project_id"/><field name="issue_move_id"/><field name="quantity"/><field name="state" widget="badge"/><field name="approved_by"/><field name="approved_at"/></list></field></record>
+  <record id="material_return_form" model="ir.ui.view">
+    <field name="name">jakh.material.return.form</field><field name="model">jakh.material.return</field><field name="arch" type="xml"><form><header>
+      <button name="action_submit" type="object" string="Submit return" class="btn-primary" invisible="state != 'draft'"/>
+      <button name="action_approve" type="object" string="Approve return" class="btn-primary" groups="jakh_core.group_manager,jakh_core.group_project_manager" invisible="state != 'submitted'"/>
+      <button name="action_prepare_picking" type="object" string="Create / open return transfer" groups="jakh_core.group_manager,jakh_core.group_procurement" invisible="state not in ('approved','done')"/>
+      <button name="action_reject" type="object" string="Reject" groups="jakh_core.group_manager,jakh_core.group_project_manager" invisible="state != 'submitted'"/>
+      <field name="state" widget="statusbar"/>
+    </header><sheet><div class="alert alert-info" role="status">An approved return reverses physical site consumption through native stock valuation. The original issue and posted journal stay unchanged; a separate negative job-cost fact preserves the same BOQ and location.</div>
+      <group><group><field name="name" readonly="state != 'draft'"/><field name="issue_move_id" readonly="state != 'draft'" domain="[('state','=','done'),('jakh_material_request_id','!=',False),('jakh_material_return_id','=',False)]"/><field name="material_request_id"/><field name="project_id"/><field name="company_id"/></group><group><field name="contract_line_id"/><field name="wbs_id"/><field name="location_id"/><field name="product_id"/><field name="uom_id"/><field name="quantity" readonly="state != 'draft'"/><field name="approved_by"/><field name="approved_at"/></group></group>
+      <field name="reason" readonly="state != 'draft'"/><field name="evidence_attachment_ids" widget="many2many_binary" readonly="state != 'draft'"/>
+      <group string="Native return transfers"><field name="picking_ids" readonly="1"><list create="false" edit="false" delete="false"><field name="name"/><field name="state"/><field name="date_done"/></list></field></group>
+    </sheet><chatter/></form></field>
+  </record>
+  <record id="action_material_returns" model="ir.actions.act_window"><field name="name">Material returns</field><field name="res_model">jakh.material.return</field><field name="view_mode">list,form</field></record>
+  <menuitem id="menu_material_returns" name="Material returns" parent="jakh_core.menu_construction" action="action_material_returns" sequence="32" groups="jakh_core.group_manager,jakh_core.group_project_manager,jakh_core.group_procurement"/>
+</odoo>

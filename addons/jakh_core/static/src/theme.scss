@@ -1,0 +1,39 @@
+$jakh-ink: #20333b;
+$jakh-teal: #146e65;
+.jakh-dashboard { padding: clamp(20px, 2.6vw, 34px); background: #f6f8f7; color: $jakh-ink; }
+// Native actions contain their own scrolling renderer. This client action is
+// itself the renderer: constrain it to the action manager and keep every
+// section reachable, including at browser zoom and in short viewports.
+body.o_web_client > .o_action_manager > .jakh-dashboard.o_action {
+    display: block;
+    height: 100%;
+    min-height: 0;
+    min-width: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: auto;
+    scrollbar-gutter: stable;
+    &::-webkit-scrollbar { display: block; width: 10px; }
+    &::-webkit-scrollbar-thumb { background: #93aaa7; border: 2px solid #f6f8f7; border-radius: 8px; }
+    &::-webkit-scrollbar-track { background: #f6f8f7; }
+}
+.jakh-dashboard-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 28px; h1 { font-size: clamp(25px, 2.5vw, 32px); margin: 0 0 10px; font-weight: 700; letter-spacing: -.7px; } p { color: #748891; } }
+.jakh-dashboard-heading .jakh-dashboard-eyebrow { color: $jakh-teal; font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 8px; }
+.jakh-section-heading { margin-bottom: 16px; h2 { font-size: 18px; font-weight: 700; margin-bottom: 6px; } p { color: #647780; margin: 0; } }
+.jakh-module-directory { margin-bottom: 32px; }
+.jakh-module-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.jakh-module { position: relative; display: flex; flex-direction: column; gap: 6px; text-align: start; min-width: 0; min-height: 76px; padding-block: 18px; padding-inline: 18px 40px; background: #fff; color: $jakh-ink; border: 1px solid #e0e7e6; border-radius: 10px; > span { font-size: 14px; font-weight: 600; } small { color: #647780; font-size: 11px; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; } > i { position: absolute; right: 16px; top: 20px; color: $jakh-teal; } &:hover { border-color: $jakh-teal; background: #f0f7f5; } &:focus-visible { outline: 3px solid $jakh-teal; outline-offset: 3px; } }
+// Native icon glyphs intentionally keep direction:ltr. Their physical anchor
+// must be mirrored by the native compiler; an icon-relative logical end would
+// remain on the right in Arabic and collide with the right-aligned title.
+.jakh-kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.jakh-kpi { text-align: start; background: white; border: 1px solid #e0e7e6; border-radius: 12px; padding: 24px; display: grid; gap: 12px; color: inherit; transition: border-color .15s; strong { font-size: 30px; font-weight: 700; } > span { font-size: 13px; font-weight: 600; } small { color: $jakh-teal; font-size: 12px; } &:hover { border-color: $jakh-teal; } &:focus-visible { outline: 3px solid $jakh-teal; outline-offset: 3px; } }
+.jakh-dashboard-footer { color: #748891; margin-top: 30px; max-width: 900px; }
+.jakh-portfolio { margin-block: 28px; }
+.jakh-portfolio-heading { display: flex; justify-content: space-between; align-items: start; gap: 16px; }
+.jakh-project-control-table { overflow-x: auto; margin-block: 20px 12px; background: #fff; border: 1px solid #e0e7e6; border-radius: 12px; padding: 8px; }
+.jakh-project-control-table table { min-width: 980px; margin: 0; }
+.jakh-project-control-table th, .jakh-project-control-table td { text-align: start; padding: 14px; }
+.jakh-project-control-table button { white-space: nowrap; }
+.jakh-portfolio .jakh-kpi strong { font-size: clamp(19px, 2.2vw, 28px); }
+@media(max-width: 540px) { .jakh-dashboard-heading { align-items: flex-start; gap: 12px; } .jakh-kpi-grid, .jakh-module-grid { grid-template-columns: 1fr; } }

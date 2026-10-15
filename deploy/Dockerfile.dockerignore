@@ -1,0 +1,14 @@
+__pycache__
+**/__pycache__
+*.pyc
+**/*.pyc
+*.sqlite*
+*.log
+.env*
+secrets
+**/secrets
+data
+**/data/filestore
+work
+tests
+.git

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="jakh_branding.CrmProbabilityEmptyGuidance" t-inherit="crm.PlsTooltip" t-inherit-mode="extension">
+        <!-- The native tooltip uses exactly 0 as its unavailable-computation
+             sentinel, then supplies illustrative factors. Do not present these
+             factors or a 0% wheel as an actual prediction. Positive computed
+             probabilities and their native controls remain untouched. -->
+        <xpath expr="//div[hasclass('o_crm_pls_tooltip')]" position="before">
+            <div t-if="this.props.probability === 0.0" class="o_crm_pls_tooltip py-2 px-3">
+                <h5>Probability insights are not available yet.</h5>
+                <p class="mb-0 text-muted">Record won and lost opportunities to build a history for probability estimates.</p>
+            </div>
+        </xpath>
+        <xpath expr="//div[hasclass('o_crm_pls_tooltip')][not(@t-if)]" position="attributes">
+            <attribute name="t-if">this.props.probability !== 0.0</attribute>
+        </xpath>
+    </t>
+</templates>

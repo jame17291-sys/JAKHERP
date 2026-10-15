@@ -1,0 +1,24 @@
+<odoo>
+  <!-- Stop the native empty view from displaying fictitious customers/prices.
+       This changes presentation only; no sales documents are deleted/imported. -->
+  <record id="sale_list_without_sample" model="ir.ui.view">
+    <field name="name">JAKH sales lists show actual records</field><field name="model">sale.order</field>
+    <field name="inherit_id" ref="sale.sale_order_tree"/><field name="priority">99</field>
+    <field name="arch" type="xml"><xpath expr="//list" position="attributes"><attribute name="sample">0</attribute></xpath></field>
+  </record>
+  <record id="sale_kanban_without_sample" model="ir.ui.view">
+    <field name="name">JAKH sales kanban shows actual records</field><field name="model">sale.order</field>
+    <field name="inherit_id" ref="sale.view_sale_order_kanban"/><field name="priority">99</field>
+    <field name="arch" type="xml"><xpath expr="//kanban" position="attributes"><attribute name="sample">0</attribute></xpath></field>
+  </record>
+  <record id="sale_graph_without_sample" model="ir.ui.view">
+    <field name="name">JAKH sales charts show actual records</field><field name="model">sale.order</field>
+    <field name="inherit_id" ref="sale.view_sale_order_graph"/><field name="priority">99</field>
+    <field name="arch" type="xml"><xpath expr="//graph" position="attributes"><attribute name="sample">0</attribute></xpath></field>
+  </record>
+  <record id="sale_pivot_without_sample" model="ir.ui.view">
+    <field name="name">JAKH sales pivots show actual records</field><field name="model">sale.order</field>
+    <field name="inherit_id" ref="sale.view_sale_order_pivot"/><field name="priority">99</field>
+    <field name="arch" type="xml"><xpath expr="//pivot" position="attributes"><attribute name="sample">0</attribute></xpath></field>
+  </record>
+</odoo>

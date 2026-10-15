@@ -1,0 +1,132 @@
+<odoo>
+  <record id="control_report_workflow_form" model="ir.ui.view">
+    <field name="name">jakh.project.control.report.workflow.form</field>
+    <field name="model">jakh.project.control.report</field>
+    <field name="inherit_id" ref="control_report_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//field[@name='scope_note']" position="before">
+        <group string="Project performance"><field name="total_cpi_display"/><field name="total_spi_display"/></group>
+      </xpath>
+      <xpath expr="//field[@name='cost_performance_index']" position="replace"><field name="cost_performance_display"/></xpath>
+      <xpath expr="//field[@name='schedule_performance_index']" position="replace"><field name="schedule_performance_display"/></xpath>
+    </field>
+  </record>
+  <record id="control_report_workflow_list" model="ir.ui.view">
+    <field name="name">jakh.project.control.report.workflow.list</field>
+    <field name="model">jakh.project.control.report.line</field>
+    <field name="inherit_id" ref="control_report_line_list"/>
+    <field name="arch" type="xml">
+      <xpath expr="//field[@name='cost_performance_index']" position="replace"><field name="cost_performance_display"/></xpath>
+      <xpath expr="//field[@name='schedule_performance_index']" position="replace"><field name="schedule_performance_display"/></xpath>
+    </field>
+  </record>
+  <record id="control_report_workflow_pivot" model="ir.ui.view">
+    <field name="name">jakh.project.control.report.workflow.pivot</field>
+    <field name="model">jakh.project.control.report.line</field>
+    <field name="inherit_id" ref="control_report_line_pivot"/>
+    <field name="arch" type="xml">
+      <xpath expr="//field[@name='cost_performance_index']" position="replace"/>
+      <xpath expr="//field[@name='schedule_performance_index']" position="replace"/>
+    </field>
+  </record>
+  <record id="cash_forecast_workflow_form" model="ir.ui.view">
+    <field name="name">jakh.project.cash.forecast.workflow.form</field>
+    <field name="model">jakh.project.cash.forecast</field>
+    <field name="inherit_id" ref="cash_forecast_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//header/field[@name='state']" position="before">
+        <button name="action_cancel" type="object" string="Cancel cash forecast" groups="jakh_core.group_manager,jakh_core.group_finance" invisible="state != 'approved'" confirm="Cancel this cash forecast? The original and its reversal remain in the audit history."/>
+      </xpath>
+      <xpath expr="//field[@name='source_reference']" position="after">
+        <field name="replaces_id" readonly="state != 'draft'" domain="[('project_id','=',project_id),('wbs_id','=',wbs_id),('cash_direction','=',cash_direction),('state','=','approved')]"/>
+        <field name="replaced_by_id" invisible="not replaced_by_id"/>
+        <field name="cancellation_reason" readonly="state not in ('draft','approved')" invisible="state not in ('approved','cancelled')"/>
+        <field name="cancelled_at" invisible="state != 'cancelled'"/>
+      </xpath>
+    </field>
+  </record>
+  <record id="schedule_workflow_form" model="ir.ui.view">
+    <field name="name">jakh.report.schedule.workflow.form</field>
+    <field name="model">jakh.report.schedule</field>
+    <field name="inherit_id" ref="schedule_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//field[@name='last_run_at']" position="after">
+        <field name="currency_id" invisible="1"/>
+        <field name="cash_horizon_days" invisible="report_type != 'cash_flow'"/>
+        <field name="opening_cash" groups="jakh_core.group_financial" invisible="report_type != 'cash_flow'"/>
+      </xpath>
+      <xpath expr="//field[@name='delivery_ids']/list" position="replace">
+        <list create="false" edit="false" delete="false" decoration-danger="state == 'failed'">
+          <field name="run_on"/><field name="last_attempt_at"/><field name="report_type"/><field name="owner_id"/>
+          <field name="state" widget="badge"/><field name="attempt_count"/>
+          <button name="action_open_report" type="object" string="Open detail" icon="fa-external-link" invisible="state != 'generated'"/>
+          <button name="action_download_csv" type="object" string="CSV" invisible="state != 'generated'"/>
+          <button name="action_download_xlsx" type="object" string="XLSX" invisible="state != 'generated'"/>
+          <button name="action_retry" type="object" string="Retry" invisible="state != 'failed'"/>
+        </list>
+      </xpath>
+    </field>
+  </record>
+  <record id="report_delivery_workflow_form" model="ir.ui.view">
+    <field name="name">jakh.report.delivery.workflow.form</field>
+    <field name="model">jakh.report.delivery</field>
+    <field name="arch" type="xml">
+      <form create="false" edit="false" delete="false">
+        <header>
+          <button name="action_open_report" type="object" string="Open report detail" class="btn-primary" invisible="state != 'generated'"/>
+          <button name="action_download_csv" type="object" string="Download CSV" invisible="state != 'generated'"/>
+          <button name="action_download_xlsx" type="object" string="Download XLSX" invisible="state != 'generated'"/>
+          <button name="action_retry" type="object" string="Retry report" class="btn-primary" invisible="state != 'failed'"/>
+          <field name="state" widget="statusbar"/>
+        </header>
+        <sheet>
+          <group><group><field name="schedule_id"/><field name="project_id"/><field name="company_id"/><field name="owner_id"/><field name="report_type"/></group>
+          <group><field name="run_on"/><field name="generated_at" invisible="state != 'generated'"/><field name="last_attempt_at"/><field name="attempt_count"/></group></group>
+          <group invisible="state != 'failed'"><field name="error_message"/></group>
+          <div class="alert alert-info" invisible="state != 'generated'" role="status">CSV and XLSX are saved snapshots. Open report detail recalculates the same reporting date using your current access rights.</div>
+        </sheet>
+      </form>
+    </field>
+  </record>
+  <record id="cashflow_policy_list" model="ir.ui.view">
+    <field name="name">jakh.cashflow.policy.list</field><field name="model">jakh.cashflow.policy</field>
+    <field name="arch" type="xml"><list><field name="name"/><field name="company_id"/><field name="effective_from"/><field name="effective_to"/><field name="state" widget="badge"/><field name="approved_by"/><field name="approved_at"/></list></field>
+  </record>
+  <record id="cashflow_policy_form" model="ir.ui.view">
+    <field name="name">jakh.cashflow.policy.form</field><field name="model">jakh.cashflow.policy</field>
+    <field name="arch" type="xml">
+      <form><header><button name="action_approve" type="object" string="Approve accounting policy" class="btn-primary" invisible="state != 'draft'"/><button name="action_retire" type="object" string="Retire policy" invisible="state != 'approved'"/><field name="state" widget="statusbar"/></header>
+        <sheet>
+          <group><group><field name="name" readonly="state != 'draft'"/><field name="company_id" readonly="state != 'draft'"/><field name="effective_from" readonly="state != 'draft'"/><field name="effective_to" readonly="state != 'draft'"/></group>
+          <group><field name="approved_by"/><field name="approved_at"/></group></group>
+          <group><field name="cash_account_ids" widget="many2many_tags" domain="[('company_ids','in',[company_id])]" readonly="state != 'draft'"/><field name="basis" readonly="state != 'draft'"/></group>
+          <field name="line_ids" readonly="state != 'draft'"><list editable="bottom"><field name="account_id" domain="[('company_ids','in',[parent.company_id])]"/><field name="category"/><field name="rationale"/></list></field>
+          <div class="alert alert-info" role="status">Finance must approve which accounts represent cash and which counterpart accounts represent operating, investing and financing activity. Mixed, noncash and unmapped cash journals remain exceptions for review.</div>
+        </sheet>
+      </form>
+    </field>
+  </record>
+  <record id="action_cashflow_policies" model="ir.actions.act_window"><field name="name">Cash-flow accounting policies</field><field name="res_model">jakh.cashflow.policy</field><field name="view_mode">list,form</field></record>
+  <menuitem id="menu_cashflow_policies" name="Cash-flow accounting policies" parent="jakh_core.menu_reports" action="action_cashflow_policies" sequence="12" groups="jakh_core.group_manager,jakh_core.group_finance"/>
+  <record id="financial_report_workflow_form" model="ir.ui.view">
+    <field name="name">jakh.financial.report.workflow.form</field><field name="model">jakh.financial.report</field><field name="inherit_id" ref="financial_report_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//header" position="inside"><button name="action_export_csv" type="object" string="Download CSV"/><button name="action_export_xlsx" type="object" string="Download XLSX"/></xpath>
+      <xpath expr="//field[@name='date_to']" position="after"><field name="cashflow_policy_id" domain="[('company_id','=',company_id),('state','in',['approved','retired'])]" invisible="report_type != 'cash_flow'"/><field name="generated_at"/></xpath>
+      <xpath expr="//field[@name='scope_note']" position="before">
+        <group string="Posted cash reconciliation" invisible="report_type != 'cash_flow' or not generated_at">
+          <group><field name="cash_opening_balance"/><field name="cash_operating"/><field name="cash_investing"/><field name="cash_financing"/></group>
+          <group><field name="cash_closing_balance"/><field name="cash_unresolved"/><field name="cash_reconciliation_residual"/><field name="cash_report_complete"/></group>
+        </group>
+        <div class="alert alert-warning" invisible="report_type != 'cash_flow' or not generated_at or cash_report_complete" role="status">The cash report has unresolved source classifications or a reconciliation residual. Review the journal detail before accepting these totals.</div>
+      </xpath>
+      <xpath expr="//field[@name='line_ids']/list/field[@name='label']" position="after"><field name="cashflow_category" optional="show"/><field name="classification_note" optional="hide"/></xpath>
+    </field>
+  </record>
+  <record id="financial_report_workflow_line_list" model="ir.ui.view">
+    <field name="name">jakh.financial.report.workflow.line.list</field><field name="model">jakh.financial.report.line</field><field name="inherit_id" ref="financial_report_line_list"/>
+    <field name="arch" type="xml"><xpath expr="//field[@name='label']" position="after"><field name="cashflow_category" optional="show"/><field name="classification_note" optional="hide"/></xpath></field>
+  </record>
+  <record id="action_company_cashflow" model="ir.actions.act_window"><field name="name">Posted company cash movements</field><field name="res_model">jakh.financial.report</field><field name="view_mode">form</field><field name="context">{'default_report_type':'cash_flow'}</field><field name="target">current</field></record>
+  <menuitem id="menu_company_cashflow" name="Company cash flow" parent="jakh_core.menu_reports" action="action_company_cashflow" sequence="11" groups="jakh_core.group_manager,jakh_core.group_finance"/>
+</odoo>

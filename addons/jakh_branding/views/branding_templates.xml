@@ -1,0 +1,148 @@
+<odoo>
+  <template id="layout_brand" inherit_id="web.layout" name="JAKH browser identity">
+    <xpath expr="//title" position="attributes"><attribute name="t-out">title or 'JAKH ERP'</attribute></xpath>
+    <xpath expr="//link[@rel='shortcut icon']" position="attributes"><attribute name="t-att-href">'/jakh/brand/icon/32.png?v=2'</attribute></xpath>
+  </template>
+  <template id="login_brand" inherit_id="web.login_layout" name="JAKH sign-in identity">
+    <xpath expr="//div[@t-if='not res_company.uses_default_logo']" position="replace">
+      <div class="text-center pb-3 border-bottom mb-4">
+        <img class="jakh-auth-brand" src="/jakh_branding/static/img/wordmark.svg" alt="JAKH ERP"/>
+        <div class="jakh-auth-caption">Construction · Quality · HSE</div>
+        <img t-if="not res_company.uses_default_logo" t-attf-src="/web/binary/company_logo{{ '?dbname='+db if db else '' }}" t-att-alt="res_company.name" class="mt-3" style="max-height:64px;max-width:100%;width:auto"/>
+      </div>
+    </xpath>
+    <xpath expr="//a[contains(@href, 'odoo.com')]" position="replace"><span class="text-muted">JAKH Contracting Platform</span></xpath>
+  </template>
+  <template id="login_metadata" inherit_id="web.login" name="JAKH sign-in metadata">
+    <xpath expr="//meta[@property='og:site_name']" position="attributes"><attribute name="content">JAKH ERP</attribute></xpath>
+    <xpath expr="//meta[@name='twitter:site']" position="replace"/>
+  </template>
+  <template id="bootstrap_icons" inherit_id="web.webclient_bootstrap" name="JAKH application icons">
+    <xpath expr="//link[@rel='apple-touch-icon']" position="attributes"><attribute name="href">/jakh/brand/icon/180.png?v=2</attribute></xpath>
+    <xpath expr="//meta[@name='theme-color']" position="attributes"><attribute name="content">#172e39</attribute></xpath>
+  </template>
+  <template id="brand_promotion" inherit_id="web.brand_promotion_message" name="JAKH platform footer">
+    <xpath expr="." position="replace"><span>JAKH ERP</span></xpath>
+  </template>
+  <template id="offline_brand" inherit_id="web.webclient_offline" name="JAKH offline page">
+    <xpath expr="//div[@class='card']/img" position="replace"><img src="/jakh/brand/icon/192.png" alt="JAKH ERP"/></xpath>
+    <xpath expr="//div[@class='card']/p" position="replace"><p>Check your network connection and come back here. JAKH ERP will load when you are back online.</p></xpath>
+  </template>
+  <template id="report_title" inherit_id="web.report_layout" name="JAKH report identity">
+    <xpath expr="//title/t" position="attributes"><attribute name="t-out">title or 'JAKH ERP Report'</attribute></xpath>
+  </template>
+  <template id="report_preview_title" inherit_id="web.report_preview_layout" name="JAKH report preview identity">
+    <xpath expr="//title/t" position="attributes"><attribute name="t-out">title or 'JAKH ERP Report'</attribute></xpath>
+  </template>
+  <template id="portal_brand" inherit_id="portal.portal_record_sidebar" name="JAKH customer portal identity">
+    <xpath expr="//div[a[contains(@href,'odoo.com')]]" position="replace"><div class="d-none d-lg-block mt-4 small text-center text-muted">JAKH ERP</div></xpath>
+  </template>
+  <template id="mail_brand" inherit_id="mail.mail_notification_layout" name="JAKH notification footer">
+    <xpath expr="//a[contains(@href,'odoo.com')]/.." position="replace">
+      <div t-if="show_footer" style="color:#555555;font-size:11px;">JAKH ERP
+        <span t-if="show_unfollow" id="mail_unfollow"> | <a href="/mail/unfollow" style="color:#555555;">Unfollow</a></span>
+      </div>
+    </xpath>
+  </template>
+  <template id="mail_light_brand" inherit_id="mail.mail_notification_light" name="JAKH compact notification footer">
+    <xpath expr="//a[contains(@href,'odoo.com')]/.." position="replace">
+      <td align="center" style="min-width:590px;">JAKH ERP
+        <span t-if="show_unfollow" id="mail_unfollow"> | <a href="/mail/unfollow" style="color:#555555;">Unfollow</a></span>
+      </td>
+    </xpath>
+  </template>
+  <template id="help_page" name="JAKH help">
+    <t t-call="web.frontend_layout" title="'JAKH ERP Help'" no_header="True" no_footer="True">
+      <main class="jakh-help">
+        <img src="/jakh_branding/static/img/wordmark.svg" alt="JAKH ERP" width="240"/>
+        <h1>JAKH ERP Help</h1>
+        <p>Use the single Modules column or the dashboard to open your work. CRM, estimating, projects, commercial, procurement, finance, Quality/HSE and document control are available together according to your permissions. Reports and My Approvals are always in the same navigation.</p>
+        <p>Contact your platform owner for access, process configuration, training or support. Do not send passwords or private invitation links.</p>
+        <section t-if="demo_available" class="jakh-demo-intro" aria-labelledby="demo-help-title">
+          <h2 id="demo-help-title">Retained construction demo</h2>
+          <p>Explore the synthetic construction journey and open the demo records your role can access. Changes remain available for your next visit.</p>
+          <a href="/jakh/demo" class="btn btn-primary">Open the demo walkthrough</a>
+        </section>
+        <h2>Administration and integrations</h2>
+        <p>Use Administration to manage authorized users, company configuration and permissions. Email, SMS, enrichment, external accounts and other integrations require an explicitly approved provider and tested configuration. Do not assume a bundled option is configured or included in your subscription.</p>
+        <p>Financial reports use posted records. Operational dashboards show only records you are authorized to access. Review the basis, company, currency and selected period before using a total.</p>
+        <h2 id="optional-features">Implementation scope</h2>
+        <p>This staging release includes the foundation and connected contracting workflows. An optional module or setting does not prove that its functionality or licensing is included. Review requirements and acceptance evidence before enabling extensions.</p>
+        <h2 id="licenses">Open-source notices</h2>
+        <p>This platform includes open-source components. Their original licenses, copyright notices and source provenance are retained in the distributed source package. Obtain the complete source and notices from your platform owner.</p>
+        <h2 id="crm-probability">Opportunity probability</h2>
+        <p>Probability estimates use recorded lead outcomes and configured attributes. They are estimates, not promises. Review the available history and adjust a manual probability when justified.</p>
+        <a href="/jakh" class="btn btn-primary">Return to JAKH ERP</a>
+      </main>
+    </t>
+  </template>
+  <template id="demo_page" name="JAKH retained construction demo">
+    <t t-call="web.frontend_layout" title="'JAKH ERP Demo'" no_header="True" no_footer="True">
+      <main class="jakh-help jakh-demo">
+        <img src="/jakh_branding/static/img/wordmark.svg" alt="JAKH ERP" width="240"/>
+        <p class="jakh-demo-label">SYNTHETIC DEMO · RETAINED DATA</p>
+        <h1>Construction demo walkthrough</h1>
+        <p>Follow the completed reference journey, then practise with the pending work. Every record opens in the native JAKH ERP form with your normal permissions.</p>
+        <div class="jakh-demo-intro">
+          <h2>Before you start</h2>
+          <p>Select only the synthetic demo company. Use the single Modules column for all work and the language selector for English or Arabic. Keep this guide open while you follow its record links.</p>
+          <p>The guide shows only records your role can read. A missing link can mean restricted access, an unavailable snapshot or a record changed since preparation. Ask the platform owner for the appropriate role; do not share accounts.</p>
+          <p>A retained report snapshot may expire. Use Reports to create a new snapshot when required.</p>
+        </div>
+        <nav t-if="demo_stages" class="jakh-demo-index" aria-label="Demo stages">
+          <a t-foreach="demo_stages" t-as="stage" t-att-href="'#demo-' + stage['key']"><t t-out="stage['title']"/></a>
+        </nav>
+        <p t-if="not demo_stages" class="jakh-demo-intro">No retained demo records are available to your current role. Ask the platform owner to review access or prepare the dataset.</p>
+        <section t-foreach="demo_stages" t-as="stage" class="jakh-demo-stage" t-att-id="'demo-' + stage['key']">
+          <h2 t-out="stage['title']"/>
+          <h3>What to click</h3>
+          <p t-out="stage['instructions']"/>
+          <h3>Expected result</h3>
+          <p t-out="stage['expected']"/>
+          <div class="jakh-demo-links" aria-label="Available demo records">
+            <a t-foreach="stage['links']" t-as="link" t-att-href="link['url']" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary"><t t-out="link['label']"/><span class="visually-hidden"> (opens in a new tab)</span></a>
+          </div>
+        </section>
+        <section class="jakh-demo-intro">
+          <h2>Keep your work</h2>
+          <p>This demo is retained. Closing the browser, signing out or restarting the application does not reset your changes. There is no automatic deletion or reset.</p>
+          <p>To start again, ask the platform owner to prepare a separate synthetic dataset or restore a matched database and filestore backup. Keep the existing demonstration history until the owner explicitly approves its replacement.</p>
+          <p>Restoring application source alone does not undo database changes.</p>
+          <h2>Demo boundaries</h2>
+          <p>All scenario data is synthetic. It is for training and review, not production, compliance evidence or statutory localization acceptance. No external API keys, live Primavera service, banking connection or real payment is required.</p>
+          <p>Report schedules and external delivery remain disabled unless separately reviewed and configured. The native workflow still enforces approval roles and record access.</p>
+        </section>
+        <div class="jakh-demo-links"><a href="/jakh" class="btn btn-primary">Return to JAKH ERP</a><a href="/jakh/help" class="btn btn-outline-primary">Help &amp; product information</a></div>
+      </main>
+    </t>
+  </template>
+  <template id="digest_brand" inherit_id="digest.digest_mail_main" name="JAKH digest identity">
+    <xpath expr="//div[@class='by_odoo']" position="replace">
+      <div class="jakh_digest_sender" style="margin-bottom:15px;">Sent by JAKH ERP
+        <t t-if="unsubscribe_token"> – <a t-attf-href="/digest/#{object.id}/unsubscribe?token=#{unsubscribe_token}&amp;user_id=#{user.id}" target="_blank" style="text-decoration:none;">Unsubscribe</a></t>
+        <t t-elif="object and object._name == 'digest.digest'"> – <a t-att-href="'/jakh/digest.digest/%s' % object.id" target="_blank" style="text-decoration:none;">Unsubscribe</a></t>
+      </div>
+    </xpath>
+    <xpath expr="//p[@id='powered']" position="replace"><p style="font-weight:bold;">JAKH ERP</p></xpath>
+    <xpath expr="//t[@t-call='digest.digest_section_mobile']" position="replace"><p>Open JAKH ERP in your browser to review the contributing records.</p></xpath>
+    <xpath expr="//tr[@t-foreach='tips']" position="replace"/>
+    <xpath expr="//table[@t-if=&quot;kpi_info.get('kpi_tip')&quot;]" position="replace"/>
+  </template>
+  <template id="purchase_portal_connection_guidance" inherit_id="purchase.portal_my_purchase_order" name="JAKH structured purchase document guidance">
+    <xpath expr="//div[@id='portal_connect_software_modal']//div[@class='modal-body']/div[1]" position="replace">
+      <div><h5>Connect your purchasing system</h5><p>Use the structured purchase document below with a compatible UBL integration. Access is subject to the document's existing permissions.</p></div>
+    </xpath>
+    <xpath expr="//div[@id='portal_connect_software_modal']//div[@class='modal-body']/div[2]/h5" position="replace"><h5>Structured document URL</h5></xpath>
+    <xpath expr="//div[@id='portal_connect_software_modal']//div[@class='modal-body']/div[2]/p" position="replace">
+      <p>Copy this URL to retrieve this purchase document in UBL format. Ask your integration administrator to validate access and field mapping before importing it.</p>
+    </xpath>
+    <xpath expr="//div[@id='portal_connect_software_modal']//div[@class='modal-body']/div[3]" position="replace"/>
+  </template>
+  <template id="invoice_qr_identity" inherit_id="account.report_invoice_document" name="Invoice QR code without vendor overlay">
+    <xpath expr="//img[@id='qrcode_odoo_logo']" position="replace"/>
+    <xpath expr="//img[@id='qrcode_odoo_logo']" position="replace"/>
+  </template>
+  <template id="invoice_qr_preview_identity" inherit_id="account.report_invoice_qr_code_preview" name="Invoice QR preview without vendor overlay">
+    <xpath expr="//img[@id='qrcode_odoo_logo']" position="replace"/>
+  </template>
+</odoo>

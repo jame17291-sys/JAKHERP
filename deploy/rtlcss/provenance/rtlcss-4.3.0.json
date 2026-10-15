@@ -1,0 +1,69 @@
+{
+  "name": "rtlcss",
+  "version": "4.3.0",
+  "repository": "https://github.com/MohammadYounes/rtlcss",
+  "ref": "f1a08a67fc536cf84e11736fbb0f1ae0221e3d11",
+  "license": "MIT",
+  "files": [
+    {
+      "path": "LICENSE",
+      "source": "https://raw.githubusercontent.com/MohammadYounes/rtlcss/f1a08a67fc536cf84e11736fbb0f1ae0221e3d11/LICENSE",
+      "bytes": 1088,
+      "sha256": "f794bbd01ba0a43e2b9b4b41dd574ec6b732bcdf7f0c984d4b439d937de48f1f"
+    },
+    {
+      "path": "bin/rtlcss.js",
+      "source": "https://raw.githubusercontent.com/MohammadYounes/rtlcss/f1a08a67fc536cf84e11736fbb0f1ae0221e3d11/bin/rtlcss.js",
+      "bytes": 7840,
+      "sha256": "faf29172855bb02c9a1760c5049e50b83f7776e69b817b8fc9389796997fd68c"
+    },
+    {
+      "path": "lib/config-loader.js",
+      "source": "https://raw.githubusercontent.com/MohammadYounes/rtlcss/f1a08a67fc536cf84e11736fbb0f1ae0221e3d11/lib/config-loader.js",
+      "bytes": 1811,
+      "sha256": "b40beb9e69e2a88ca931c914412f3595d82653d6c164f7901157c030c2c5d725"
+    },
+    {
+      "path": "lib/config.js",
+      "source": "https://raw.githubusercontent.com/MohammadYounes/rtlcss/f1a08a67fc536cf84e11736fbb0f1ae0221e3d11/lib/config.js",
+      "bytes": 2035,
+      "sha256": "95dd6726482c9367d1436f2671312e9f7848c43b9ce9396f528509eabaef4e83"
+    },
+    {
+      "path": "lib/directive-parser.js",
+      "source": "https://raw.githubusercontent.com/MohammadYounes/rtlcss/f1a08a67fc536cf84e11736fbb0f1ae0221e3d11/lib/directive-parser.js",
+      "bytes": 952,
+      "sha256": "b3a2102b5439b96b730551bf3881d1741a26b1d4bc759e2f497dce348f7e339c"
+    },
+    {
+      "path": "lib/plugin.js",
+      "source": "https://raw.githubusercontent.com/MohammadYounes/rtlcss/f1a08a67fc536cf84e11736fbb0f1ae0221e3d11/lib/plugin.js",
+      "bytes": 17525,
+      "sha256": "075562a2a7e7631440f71a7b50eed62894a0834d5ed0ba1c078210cf9b80baca"
+    },
+    {
+      "path": "lib/rtlcss.js",
+      "source": "https://raw.githubusercontent.com/MohammadYounes/rtlcss/f1a08a67fc536cf84e11736fbb0f1ae0221e3d11/lib/rtlcss.js",
+      "bytes": 8320,
+      "sha256": "207f9a1f69a144320ffc0436b44fcfeda1706e3c4724252726af82e872443969"
+    },
+    {
+      "path": "lib/state.js",
+      "source": "https://raw.githubusercontent.com/MohammadYounes/rtlcss/f1a08a67fc536cf84e11736fbb0f1ae0221e3d11/lib/state.js",
+      "bytes": 1327,
+      "sha256": "b1a16a489eb79279bc3643ddce2499b09282044eb9831064eae3fa95ba69dd61"
+    },
+    {
+      "path": "lib/util.js",
+      "source": "https://raw.githubusercontent.com/MohammadYounes/rtlcss/f1a08a67fc536cf84e11736fbb0f1ae0221e3d11/lib/util.js",
+      "bytes": 8200,
+      "sha256": "de3a3a8a5eea2faa14ca76f175f17b6879f91a1f9e4e59b65547bf3a55529e1f"
+    },
+    {
+      "path": "package.json",
+      "source": "https://raw.githubusercontent.com/MohammadYounes/rtlcss/f1a08a67fc536cf84e11736fbb0f1ae0221e3d11/package.json",
+      "bytes": 1339,
+      "sha256": "51a803d060279a1c71e5c84c252b2a7e7ad20008526439ee029513fc9afb5b76"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+<odoo>
+  <record id="cash_document_list" model="ir.ui.view">
+    <field name="name">jakh.contract.cash.document.list</field><field name="model">jakh.contract.cash.document</field>
+    <field name="arch" type="xml"><list><field name="name"/><field name="contract_id"/><field name="kind"/><field name="date"/><field name="amount"/><field name="currency_id" column_invisible="True"/><field name="state"/><field name="invoice_state"/><field name="payment_state"/><field name="settled"/></list></field>
+  </record>
+  <record id="cash_document_form" model="ir.ui.view">
+    <field name="name">jakh.contract.cash.document.form</field><field name="model">jakh.contract.cash.document</field>
+    <field name="arch" type="xml"><form><header>
+      <button name="action_submit" type="object" string="Submit" class="btn-primary" invisible="state != 'draft'"/>
+      <button name="action_approve" type="object" string="Approve" class="btn-primary" invisible="state != 'submitted'" groups="jakh_core.group_manager,jakh_core.group_finance"/>
+      <button name="action_create_invoice" type="object" string="Create / open invoice" invisible="state not in ('approved','invoiced')"/>
+      <button name="action_register_payment" type="object" string="Register payment" invisible="not invoice_id or invoice_state != 'posted' or settled"/>
+      <button name="action_cancel" type="object" string="Cancel / acknowledge reversal" invisible="state == 'cancelled'"/>
+      <field name="state" widget="statusbar"/>
+    </header><sheet>
+      <group><group><field name="name" readonly="state != 'draft'"/><field name="contract_id" readonly="state != 'draft'"/><field name="kind" readonly="state != 'draft'"/><field name="date" readonly="state != 'draft'"/><field name="amount" readonly="state != 'draft'"/><field name="currency_id" invisible="1"/><field name="reason" readonly="state != 'draft'"/></group>
+      <group><field name="project_id"/><field name="company_id"/><field name="partner_id"/><field name="approved_by"/><field name="approved_at"/><field name="invoice_id"/><field name="invoice_state"/><field name="payment_state"/><field name="settled"/></group></group>
+    </sheet><chatter/></form></field>
+  </record>
+  <record id="action_contract_cash_documents" model="ir.actions.act_window"><field name="name">Advances and retention releases</field><field name="res_model">jakh.contract.cash.document</field><field name="view_mode">list,form</field></record>
+  <menuitem id="menu_contract_cash_documents" name="Advances &amp; retention releases" parent="jakh_core.menu_construction" action="action_contract_cash_documents" sequence="51" groups="jakh_core.group_financial"/>
+
+  <record id="final_account_list" model="ir.ui.view"><field name="name">jakh.project.final.account.list</field><field name="model">jakh.project.final.account</field><field name="arch" type="xml"><list><field name="name"/><field name="contract_id"/><field name="project_id"/><field name="state"/><field name="certified_gross"/><field name="recovered_advance"/><field name="released_retention"/><field name="currency_id" column_invisible="True"/><field name="closed_at"/></list></field></record>
+  <record id="final_account_form" model="ir.ui.view">
+    <field name="name">jakh.project.final.account.form</field><field name="model">jakh.project.final.account</field>
+    <field name="arch" type="xml"><form><header>
+      <button name="action_submit" type="object" string="Submit final account" class="btn-primary" invisible="state != 'draft'"/>
+      <button name="action_approve" type="object" string="Approve final settlement" invisible="state != 'submitted'" groups="jakh_core.group_manager"/>
+      <button name="action_close" type="object" string="Close contract and project" class="btn-primary" invisible="state != 'approved'" groups="jakh_core.group_manager"/>
+      <button name="action_reopen" type="object" string="Reopen for correction" invisible="state != 'closed'" groups="jakh_core.group_manager"/>
+      <field name="state" widget="statusbar"/>
+    </header><sheet>
+      <div class="oe_button_box" name="button_box"><button name="action_open_contract" type="object" class="oe_stat_button" icon="fa-file-text-o" string="Contract"/><button name="action_open_project" type="object" class="oe_stat_button" icon="fa-building-o" string="Project"/></div>
+      <group><group><field name="name" readonly="state != 'draft'"/><field name="contract_id" readonly="state != 'draft'"/><field name="project_id"/><field name="company_id"/><field name="currency_id" invisible="1"/><field name="reason" readonly="state != 'draft'"/><field name="reopen_reason" invisible="state not in ('closed','reopened')"/></group>
+      <group><field name="certified_gross"/><field name="recovered_advance"/><field name="released_retention"/><field name="approved_by"/><field name="approved_at"/><field name="closed_by"/><field name="closed_at"/></group></group>
+    </sheet><chatter/></form></field>
+  </record>
+  <record id="action_project_final_accounts" model="ir.actions.act_window"><field name="name">Final accounts and closeout</field><field name="res_model">jakh.project.final.account</field><field name="view_mode">list,form</field></record>
+  <menuitem id="menu_project_final_accounts" name="Final accounts &amp; closeout" parent="jakh_core.menu_construction" action="action_project_final_accounts" sequence="52" groups="jakh_core.group_financial"/>
+
+  <record id="contract_cash_navigation" model="ir.ui.view"><field name="name">jakh.project.contract.cash.navigation</field><field name="model">jakh.project.contract</field><field name="inherit_id" ref="jakh_operations.contract_form"/><field name="arch" type="xml">
+    <xpath expr="//sheet/group" position="before"><div class="oe_button_box" name="button_box" groups="jakh_core.group_financial">
+      <button name="action_open_certificates" type="object" class="oe_stat_button" icon="fa-file-text-o" string="Certificates"/>
+      <button name="action_open_cash_documents" type="object" class="oe_stat_button" icon="fa-money" string="Advances / retention"/>
+      <button name="action_open_final_accounts" type="object" class="oe_stat_button" icon="fa-check-square-o" string="Final accounts"/>
+    </div></xpath>
+    <xpath expr="//notebook" position="inside"><page string="Cash and closeout" groups="jakh_core.group_financial"><group><field name="settled_advance"/><field name="retention_held"/><field name="retention_released"/></group><field name="cash_document_ids" readonly="1"><list create="0" delete="0"><field name="name"/><field name="kind"/><field name="amount"/><field name="state"/><field name="invoice_id"/><field name="settled"/></list></field><field name="final_account_ids" readonly="1"><list create="0" delete="0"><field name="name"/><field name="state"/><field name="closed_at"/></list></field></page></xpath>
+  </field></record>
+  <record id="certificate_cash_navigation" model="ir.ui.view"><field name="name">jakh.payment.certificate.cash.navigation</field><field name="model">jakh.payment.certificate</field><field name="inherit_id" ref="jakh_operations.certificate_form"/><field name="arch" type="xml">
+    <xpath expr="//header" position="inside"><button name="action_register_payment" type="object" string="Register payment" invisible="not invoice_id or state == 'cancelled'" groups="jakh_core.group_manager,jakh_core.group_finance"/><button name="action_confirm_reversal" type="object" string="Acknowledge native credit" invisible="state != 'invoiced'" groups="jakh_core.group_manager,jakh_core.group_finance"/></xpath>
+  </field></record>
+</odoo>

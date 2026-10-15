@@ -1,0 +1,40 @@
+<odoo>
+  <record id="contract_certificate_review_form" model="ir.ui.view">
+    <field name="name">jakh.project.contract.certificate.review.form</field><field name="model">jakh.project.contract</field>
+    <field name="inherit_id" ref="jakh_operations.contract_form"/>
+    <field name="arch" type="xml"><xpath expr="//field[@name='finance_approved_by']" position="after"><field name="certificate_review_policy" readonly="state != 'draft'"/></xpath></field>
+  </record>
+  <record id="certificate_completion_form" model="ir.ui.view">
+    <field name="name">jakh.payment.certificate.completion.form</field><field name="model">jakh.payment.certificate</field>
+    <field name="inherit_id" ref="jakh_operations.certificate_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//button[@name='action_approve']" position="attributes"><attribute name="invisible">state != 'submitted' or review_stage not in ('finance', False)</attribute></xpath>
+      <xpath expr="//header/field[@name='state']" position="before">
+        <button name="action_review_approve" type="object" string="Accept review" class="btn-primary" groups="jakh_core.group_manager,jakh_core.group_technical,jakh_core.group_project_manager" invisible="state != 'submitted' or review_stage not in ('technical','commercial')"/>
+        <button name="action_return" type="object" string="Return for correction" groups="jakh_core.group_manager,jakh_core.group_technical,jakh_core.group_project_manager,jakh_core.group_finance" invisible="state != 'submitted'"/>
+      </xpath>
+      <xpath expr="//field[@name='approval_sequence']" position="after"><field name="review_stage"/><field name="review_cycle"/><field name="submitted_at"/><field name="approved_at"/></xpath>
+      <xpath expr="//sheet/group[1]" position="after">
+        <group string="Review and correction">
+          <field name="review_note" readonly="state != 'submitted'" invisible="state != 'submitted'"/>
+          <field name="return_reason" invisible="not return_reason"/>
+        </group>
+      </xpath>
+      <xpath expr="//field[@name='line_ids']/list/field[@name='cumulative_quantity']" position="before"><field name="previous_quantity" readonly="1"/></xpath>
+      <xpath expr="//field[@name='line_ids']/list/field[@name='cumulative_quantity']" position="after"><field name="current_quantity" readonly="1"/><field name="remaining_quantity" readonly="1"/><field name="approved_contract_quantity" optional="hide"/><field name="measurement_frozen" optional="hide"/></xpath>
+      <xpath expr="//sheet" position="inside">
+        <div class="alert alert-info" role="status">Previous, current and remaining quantities are frozen at finance approval. A returned submission keeps its review history; correcting the draft starts a new submission cycle.</div>
+        <group string="Review history"><field name="review_ids" readonly="1"><list create="false" edit="false" delete="false"><field name="cycle"/><field name="stage"/><field name="decision"/><field name="reviewer_id"/><field name="reviewed_at"/><field name="note"/></list></field></group>
+      </xpath>
+    </field>
+  </record>
+  <record id="certificate_variation_quantity_form" model="ir.ui.view">
+    <field name="name">jakh.payment.certificate.variation.quantity.form</field><field name="model">jakh.payment.certificate</field>
+    <field name="inherit_id" ref="jakh_operations.certificate_form_variations"/>
+    <field name="arch" type="xml">
+      <xpath expr="//field[@name='variation_line_ids']/list/field[@name='cumulative_quantity']" position="before"><field name="previous_quantity" readonly="1"/></xpath>
+      <xpath expr="//field[@name='variation_line_ids']/list/field[@name='cumulative_quantity']" position="after"><field name="current_quantity" readonly="1"/><field name="remaining_quantity" readonly="1"/><field name="approved_contract_quantity" optional="hide"/></xpath>
+      <xpath expr="//field[@name='variation_line_ids']/list/field[@name='variation_id']" position="attributes"><attribute name="domain">[('contract_id','=',parent.contract_id),('variation_type','=','owner'),('state','in',['approved','certified']),('boq_scope_omission','=',False)]</attribute></xpath>
+    </field>
+  </record>
+</odoo>

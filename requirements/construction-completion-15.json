@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "programme": "JAKH contracting-flow completion",
+  "preparedOn": "2026-10-15",
+  "release": "jakh_operations 20.0.5.0.0",
+  "sourceWorkbook": "Netsuite iConstruction Demo Steps.xlsx",
+  "scope": "The 15 agreed implementation steps, not automatic closure of all 42 Buna SOW gaps.",
+  "engineeringVerification": "The immutable r5 demo-guide package passed 193 native tests in a clean-install Saudi acceptance customer; the maintained source passed the same 193-test suite in a separate UAE acceptance customer, both with zero failures/errors. All 126 structural/deployment/layout/demo-safety tests passed with actual RTL and zero skips. Both live synthetic previews were upgraded to the exact r5 package; each retains 121 source links and 30 balanced posted journals. English/Arabic dashboard and guide were checked. This is engineering evidence, not signed UAT or production acceptance.",
+  "operatingGuide": "../README.md#the-15-step-construction-operating-guide",
+  "operatingSequence": ["CRM/tender", "Reviewed estimate and approved handover", "Project/WBS/BOQ budget setup", "Material and subcontract execution", "Owner/supplier measurement and certification", "Posted finance and reconciled payments", "Final account and controlled closure"],
+  "statusDefinitions": {
+    "implemented-engineering-only": "Source implementation and synthetic technical evidence; not signed customer acceptance.",
+    "implemented-final-regression-pending": "Implemented workflow with a new regression awaiting the final release rerun.",
+    "implemented-interface-live-acceptance-pending": "JAKH-side interfaces and review gates are implemented; authorized vendor transport/data and customer reconciliation are not accepted.",
+    "implemented-journey-release-gates-pending": "Connected engineering journey, isolated native bootstrap and local preview cutover are verified; customer migration, deployment-platform and production acceptance gates remain open."
+  },
+  "customerUatSigned": false,
+  "productionAccepted": false,
+  "newSourceDeclaredDeployed": true,
+  "deployedScope": "Exact immutable r5 package on isolated localhost synthetic previews only; not production.",
+  "freshProvisioningAccepted": true,
+  "freshProvisioningScope": "Native synthetic bootstrap/enrollment only; final r5 Saudi clean install and full regression, with earlier dual-customer bootstrap evidence preserved. Container build, hosted control plane and customer production provisioning are not accepted.",
+  "allSowGapsClosed": false,
+  "sowAcceptancePolicy": "acceptance-matrix.json remains an unsigned broader baseline. Related gap IDs below are supporting implementation pointers, not automatic state changes; planned/partial rows retain their remaining UAT conditions.",
+  "actualArtifactEvidence": {
+    "bilingualExports": {
+      "evidence": "../../../work/odoo-build/flow15/export-proofs/20261014T134727Z-187d4d05522002fe/export-evidence.json",
+      "scope": "Normal-owner rollback-only synthetic QA; 3 native governed templates, 4 report variants, English/Arabic PDF and XLSX. No persisted opening balances or source-filestore changes.",
+      "visualAcceptance": "All eight single-page PDFs visually reviewed in English/Arabic; native RTL, complete tables, branded headers/footers and non-wrapping dates verified. Eight XLSX outputs passed the native structural/total/RTL checks. This is scoped synthetic export QA, not customer UAT.",
+      "productionAcceptance": false
+    },
+    "recoveryRehearsal": {
+      "evidence": "../../../work/odoo-build/flow15/recovery-drills/20261015T062656Z-a-94c7b2e7a933dedf/recovery-evidence.json",
+      "status": "Retained-demo synthetic database-plus-filestore restore passed; canonical rows/source IDs, permissions, 168 attachments and 30 balanced posted journals matched. Recovery clone not enrolled or served.",
+      "financialRestoreLimit": "Posted synthetic financial data reconciled; customer financial migration/restore, production RPO and operational acceptance remain required.",
+      "productionRpoOrSlaValidated": false
+    },
+    "retainedDemo": {
+      "scenario": "jakh-construction-demo-v1",
+      "guide": "../deploy/demo-walkthrough.html",
+      "liveGuides": ["http://127.0.0.1:8810/jakh/demo", "http://127.0.0.1:8811/jakh/demo"],
+      "sourceLinksPerCustomer": 121,
+      "postedBalancedJournalsPerCustomer": 30,
+      "automaticReset": false,
+      "scope": "Active eleven-villa project, completed reference, editable BOQ intake and pending practice actions; permission-aware bilingual guide; report schedules paused and external transports disabled."
+    }
+  },
+  "steps": [
+    {
+      "step": 1, "title": "Project, cost centre, WBS and building/floor setup", "engineeringStatus": "implemented-engineering-only",
+      "operatorFlow": "Select the legal entity, retain the handover-created project/cost centre, define real buildings/floors/zones and disciplines, then submit a BOQ quantity/budget allocation for finance approval.",
+      "implementation": "Native analytic cost centre; permanent project/location/discipline identity; released-budget and currency locking; capped, immutable and dated building allocation plans.",
+      "tests": ["addons/jakh_core/tests/test_construction_setup.py", "addons/jakh_operations/tests/test_boq_location_budget.py"],
+      "relatedSowGaps": ["PRC-01", "GATE-02"]
+    },
+    {
+      "step": 2, "title": "Certificate rejection and resubmission", "engineeringStatus": "implemented-engineering-only",
+      "operatorFlow": "Submit measurement to the configured review route; record a reasoned return, correct the draft and resubmit to a new review cycle.",
+      "implementation": "Technical/commercial/finance route, return/resubmit controls and immutable actor/quantity/decision history.",
+      "tests": ["addons/jakh_operations/tests/test_certificate_completion.py::test_full_route_return_resubmit_and_no_finance_bypass"],
+      "relatedSowGaps": ["COM-04"]
+    },
+    {
+      "step": 3, "title": "Reviewed Excel BOQ intake", "engineeringStatus": "implemented-engineering-only",
+      "operatorFlow": "Add workbooks to a draft estimate, map columns, review file/sheet/row errors and totals, confirm the reviewed source and commit once.",
+      "implementation": "Multi-file/sheet named mappings, retained provenance, formula/numeric/UOM/duplicate validation, stale-evidence detection and atomic idempotent typed-line import.",
+      "tests": ["addons/jakh_estimate/tests/test_boq_intake.py::test_multifile_preview_review_atomic_commit_and_retry", "addons/jakh_estimate/tests/test_boq_intake.py::test_named_mapping_and_total_reconciliation_errors"],
+      "relatedSowGaps": ["TND-01", "TND-04", "TND-13"],
+      "boundary": "Structured reviewed import is implemented; uncertain/unstructured extraction and assisted assembly suggestions are separate SOW conditions."
+    },
+    {
+      "step": 4, "title": "Parent/child allocation caps", "engineeringStatus": "implemented-engineering-only",
+      "operatorFlow": "Define parent BOQ caps and percentage-valued children; check allocation totals and submit only a fully reviewed hierarchy.",
+      "implementation": "Stable identities, explicit percentage/monetary limits and leaf-only costing/snapshots/handover without parent double-counting.",
+      "tests": ["addons/jakh_estimate/tests/test_costing_standalone.py", "addons/jakh_estimate/tests/test_boq_intake.py::test_percentage_group_import_pricing_and_native_handover"],
+      "relatedSowGaps": ["TND-12"]
+    },
+    {
+      "step": 5, "title": "Separate cost, overhead and profit", "engineeringStatus": "implemented-engineering-only",
+      "operatorFlow": "Review resource/direct costs, the separate indirect allocation, overhead/profit and existing markup basis; compare versions, approve and hand over without re-entry.",
+      "implementation": "Frozen direct-cost, direct-plus-indirect budget and selling figures, approved snapshot enforcement, company-currency native quotation/analytic/project/WBS handover and draft before/after evidence.",
+      "tests": ["addons/jakh_estimate/tests/test_costing_standalone.py", "addons/jakh_estimate/tests/test_boq_intake.py::test_percentage_group_import_pricing_and_native_handover", "addons/jakh_estimate/tests/test_estimate.py"],
+      "relatedSowGaps": ["TND-02", "TND-03", "TND-06", "TND-08", "TND-10", "TND-11", "GATE-02"],
+      "boundary": "Handover uses company currency and the product primary UOM. Foreign source amounts remain preserved; FX and secondary-UOM transactional acceptance remain separately governed."
+    },
+    {
+      "step": 6, "title": "Post-award BOQ revisions", "engineeringStatus": "implemented-engineering-only",
+      "operatorFlow": "Submit priced additions or unperformed-scope omissions on the same contract; approve their variation/budget effects and inspect the current BOQ alongside its original award.",
+      "implementation": "Controlled same-contract revision, original-value retention, source-linked additions and measurement limits without double invoice deductions or rewriting awarded lines.",
+      "tests": ["addons/jakh_operations/tests/test_contract_revision.py::test_addition_preserves_baseline_and_publishes_once", "addons/jakh_operations/tests/test_contract_revision.py::test_unperformed_omission_reduces_scope_without_double_invoice_deduction"],
+      "relatedSowGaps": ["COM-02", "COM-04"],
+      "boundary": "This is not arbitrary rate rewriting, legal contract-clause acceptance or every commercial amendment case."
+    },
+    {
+      "step": 7, "title": "Material demand to procurement, stock and job cost", "engineeringStatus": "implemented-engineering-only",
+      "operatorFlow": "Approve site demand, check unreserved stores, prepare a partial issue/shortage PR, approve and release the PO, validate actual receipts, match AP and issue to the location. Return unused material through reviewed evidence.",
+      "implementation": "Product/UOM/rate/discount/tax and cumulative receipt/bill/credit caps, partial backorders, protected stock/posting evidence and capped native issue/return. Stocked AP assets do not duplicate site-consumption job cost.",
+      "tests": ["addons/jakh_operations/tests/test_material_completion.py", "addons/jakh_operations/tests/test_material_matching.py"],
+      "passedRegression": "Late-bill no-op refresh, cancelled/partial return recovery, source-default protection and three-way matching are included in the passed 193-test native suite.",
+      "relatedSowGaps": ["PRC-06", "EXE-01", "EXE-03", "GATE-03"],
+      "boundary": "Matching uses the approved source, not an unapproved tolerance. Broad optimization, unsupported cost/valuation changes and supplier scorecards remain separate."
+    },
+    {
+      "step": 8, "title": "Same-BOQ subcontract acceptance to payment", "engineeringStatus": "implemented-engineering-only",
+      "operatorFlow": "Configure the finance agreement, release the subcontract, approve SES/supplier certificates, create/post/pay matched AP, recover funded advances and release retained amounts.",
+      "implementation": "One project/BOQ through PR/PO/SES, capped accepted work and billing/credits, posted advance/retention ledgers, native payment and controlled closure.",
+      "tests": ["addons/jakh_operations/tests/test_subcontract_workflow.py", "addons/jakh_operations/tests/test_subcontract_cash_workflow.py", "addons/jakh_operations/tests/test_end_to_end.py"],
+      "relatedSowGaps": ["PLN-04", "EXE-03", "COM-04", "GATE-03"]
+    },
+    {
+      "step": 9, "title": "Owner cumulative measurement", "engineeringStatus": "implemented-engineering-only",
+      "operatorFlow": "Prepare the next certificate, enter cumulative approved BOQ/variation measurements, finish reviews, then create/post the invoice and reconcile receipts; use controlled credits for corrections.",
+      "implementation": "Previous/current/cumulative/remaining quantities, frozen measurements, funded-advance and retention caps, negative adjustments and final-account checks.",
+      "tests": ["addons/jakh_operations/tests/test_certificate_completion.py::test_quantity_snapshots_include_variations_and_preserve_prior_certificate", "addons/jakh_operations/tests/test_closeout_workflow.py"],
+      "relatedSowGaps": ["COM-04", "GATE-03"]
+    },
+    {
+      "step": 10, "title": "Drawing context and physical/financial progress", "engineeringStatus": "implemented-engineering-only",
+      "operatorFlow": "Review controlled drawing/submittal revisions with location/discipline context; accept validated P6 status and compare physical, certified and billed progress separately.",
+      "implementation": "Controlled revisions/attachments and lifecycle dates, latest accepted budget-weighted physical progress, certified financial progress and posted billing; missing funded-WBS progress remains undefined.",
+      "tests": ["addons/jakh_assurance/tests/test_assurance.py", "addons/jakh_operations/tests/test_construction_reporting.py::test_progress_percentages_are_distinct_and_missing_physical_status_is_undefined"],
+      "relatedSowGaps": ["TOF-01", "TOF-02", "TOF-03", "PLN-03", "PLN-06", "GATE-08"]
+    },
+    {
+      "step": 11, "title": "BOQ/building reporting and bilingual exports", "engineeringStatus": "implemented-engineering-only",
+      "operatorFlow": "Choose company/project/WBS/as-of/location scope, inspect BOQ/building or unbilled detail, drill to sources and export native English/Arabic reports.",
+      "implementation": "Dated CVR/allocations, current approved cash forecasts, posted financials, explicit unallocated history, XLSX/PDF source-permission checks and maintained JAKH paper layouts using native translations/RTL.",
+      "tests": ["addons/jakh_operations/tests/test_construction_reporting.py", "addons/jakh_operations/tests/test_boq_location_budget.py", "addons/jakh_operations/tests/test_pdf_renderer.py", "addons/jakh_operations/tests/test_reporting_workflow.py"],
+      "relatedSowGaps": ["COM-01", "GATE-03", "GATE-08"],
+      "boundary": "Actual exports generated; complete visual/customer/mobile UAT remains pending. Cash forecast and posted direct cash movement are not statutory indirect cash flow or consolidation."
+    },
+    {
+      "step": 12, "title": "Decision dashboard and thresholds", "engineeringStatus": "implemented-engineering-only",
+      "operatorFlow": "Use permitted dashboard measures and source drill-down; approve exception thresholds/owners/due dates, resolve actions and recheck before closure.",
+      "implementation": "Separate company currencies, governed project measures, undefined-index handling and deduplicated threshold escalation history.",
+      "tests": ["tests/test_dashboard_frontend.mjs", "addons/jakh_operations/tests/test_construction_reporting.py"],
+      "relatedSowGaps": ["COM-01", "GATE-08"]
+    },
+    {
+      "step": 13, "title": "Audit, permissions and identity integrity", "engineeringStatus": "implemented-engineering-only",
+      "operatorFlow": "Apply the approved roles; review covered before/after edits, review cycles, source/posted evidence and corrections under the signed-in identity.",
+      "implementation": "Restricted JAKH financial fields, immutable facts/reviews, protected public context/state/source aliases, rounded-content retry matching, currency-history locking and current-permission reports/exports.",
+      "tests": ["addons/jakh_operations/tests/test_operations.py", "addons/jakh_operations/tests/test_context_integrity.py", "addons/jakh_operations/tests/test_ledger_retry_integrity.py", "addons/jakh_operations/tests/test_integration_http.py"],
+      "relatedSowGaps": ["PRC-02", "PRC-03", "PRC-04", "GATE-01"],
+      "boundary": "Engineering tests are not an independent security review or signed customer role-matrix acceptance."
+    },
+    {
+      "step": 14, "title": "Specialist integration interfaces and live acceptance", "engineeringStatus": "implemented-interface-live-acceptance-pending",
+      "operatorFlow": "Approve source project/WBS mappings, send versioned revision identities to the inbox, inspect errors, retry failures and use normal business acceptance/posting.",
+      "implementation": "Native expiring API-key intake, reviewed P6/Jisr/plant bindings, validated payload/provenance, immutable inbox and duplicate-safe business preparation.",
+      "tests": ["addons/jakh_operations/tests/test_integration_mapping.py", "addons/jakh_operations/tests/test_actual_integration.py", "addons/jakh_operations/tests/test_integration_http.py"],
+      "relatedSowGaps": ["PLN-06", "PLN-08", "GATE-09"],
+      "externalGate": "Actual vendor endpoints/service identities, protected credentials, authorized live messages and vendor/customer reconciliation remain required. No live connection is asserted; P6 and Jisr stay their specialist masters."
+    },
+    {
+      "step": 15, "title": "End-to-end and production acceptance", "engineeringStatus": "implemented-journey-release-gates-pending",
+      "operatorFlow": "Reconcile project facts to posted GL/AP/AR, settle commercial balances and field/document actions, approve final account/closure and complete release evidence before authorized cutover.",
+      "implementation": "Continuous opportunity-to-settled-final-account proof; separate-customer packaging/roles/filestores; pinned lean runtime and bootstrap tooling; retained synthetic recovery evidence; evidence-controlled production gate.",
+      "tests": ["addons/jakh_operations/tests/test_end_to_end.py::test_opportunity_to_settled_final_account_without_reentry", "tests/test_native_recovery_drill.py", "tests/test_lean_runtime.py", "addons/jakh_operations/tests/test_execution_controls.py"],
+      "relatedSowGaps": ["GATE-01", "GATE-03", "GATE-05", "GATE-06", "GATE-07", "GATE-10"],
+      "externalGate": "Local final regression/bootstrap/preview cutover are verified. Container/hosting deployment acceptance, customer and finance UAT, independent security review, two mock migrations plus reconciled authorized production load, production SSO/MFA/owner control plane, residency/backups/monitoring and UAE/KSA tax/e-invoicing acceptance remain unaccepted."
+    }
+  ],
+  "integrityPolicy": "Never use sample values as opening balances; never infer or silently split historical location/currency data; preserve native security, accounting, audit, historical sources and licenses.",
+  "knownScopeBoundaries": [
+    "Company-currency contracting transactions; reviewed FX and secondary-UOM transactional workflows remain separate",
+    "P6 is schedule master and Jisr is payroll master; interfaces are not live vendor acceptance",
+    "In-app permission-aware scheduled delivery; outbound customer email requires recipient/gateway policy",
+    "Posted direct cash movement and project cash forecast are not statutory indirect cash flow or consolidation",
+    "Real construction specifications require approved authority/edition/revision evidence; an uploaded standards label is not compliance",
+    "UAE/KSA tax/localization and e-invoicing require customer-specific authorized production onboarding; sandbox/configuration alone is insufficient",
+    "Synthetic recovery timing is not production RPO/availability/SLA acceptance; repeat with reconciled customer finance and stock data",
+    "Native synthetic bootstrap and local preview cutover are verified; container/hosting deployment and production identity/control-plane acceptance remain pending",
+    "Broad SOW assets/WIP, supplier scorecards, assembly suggestions and independently tracked gaps remain separately governed"
+  ]
+}

@@ -1,0 +1,22 @@
+<odoo>
+  <record id="boq_intake_list" model="ir.ui.view"><field name="name">jakh.boq.import.batch.list</field><field name="model">jakh.boq.import.batch</field><field name="arch" type="xml"><list><field name="name"/><field name="estimate_id"/><field name="error_count"/><field name="reviewed_by"/><field name="reviewed_at"/><field name="state" widget="badge"/></list></field></record>
+  <record id="boq_intake_form" model="ir.ui.view"><field name="name">jakh.boq.import.batch.form</field><field name="model">jakh.boq.import.batch</field><field name="arch" type="xml"><form><header>
+    <button name="action_preview" type="object" string="Preview all workbooks" class="btn-primary" invisible="state != 'draft'"/>
+    <button name="action_review" type="object" string="Approve reviewed intake" class="btn-primary" invisible="state != 'preview' or error_count != 0"/>
+    <button name="action_commit" type="object" string="Add reviewed rows to BOQ" class="btn-primary" invisible="state != 'reviewed'"/>
+    <button name="action_reset" type="object" string="Reset preview / mapping" invisible="state not in ('preview','reviewed')"/>
+    <field name="state" widget="statusbar"/>
+  </header><sheet><group><field name="name" readonly="state != 'draft'"/><field name="estimate_id" readonly="state != 'draft'"/><field name="company_id"/><field name="currency_id"/><field name="error_count"/></group>
+    <div class="alert alert-info" role="status">Map column headings exactly. Every leaf must resolve an existing unit, product reference and company cost code. Parent groups cap child values and are not counted twice. Formula cells are rejected; supply reviewed values. All files commit together only after a clean reconciliation.</div>
+    <field name="file_ids" readonly="state != 'draft'"><list><field name="filename"/><field name="sheet_name"/><field name="header_row"/><field name="expected_direct_total"/><field name="currency_id" column_invisible="True"/></list>
+      <form><sheet><group><field name="batch_id" invisible="1"/><field name="company_id" invisible="1"/><field name="currency_id" invisible="1"/><field name="filename"/><field name="upload" filename="filename"/><field name="sheet_name"/><field name="header_row"/><field name="expected_direct_total"/><field name="reconcile_zero_total"/></group>
+        <group string="Column mapping"><group><field name="code_column"/><field name="description_column"/><field name="quantity_column"/><field name="uom_column"/><field name="unit_cost_column"/></group><group><field name="cost_code_column"/><field name="product_column"/><field name="parent_code_column"/><field name="allocation_percent_column"/><field name="is_group_column"/></group></group>
+        <group string="Defaults when optional columns are absent"><field name="default_product_id"/><field name="default_cost_code_id"/></group>
+      </sheet></form>
+    </field>
+    <group invisible="state == 'draft'"><field name="preview_text" nolabel="1"/><field name="confirmed" readonly="state != 'preview'"/><field name="reviewed_by"/><field name="reviewed_at"/><field name="committed_at"/></group>
+    <field name="row_ids"><list create="false" edit="false" delete="false"><field name="file_id"/><field name="source_sheet"/><field name="source_row"/><field name="code"/><field name="line_uuid" optional="hide"/></list></field>
+  </sheet><chatter/></form></field></record>
+  <record id="action_boq_intake" model="ir.actions.act_window"><field name="name">Reviewed BOQ intake</field><field name="res_model">jakh.boq.import.batch</field><field name="view_mode">list,form</field></record>
+  <menuitem id="menu_boq_intake" name="BOQ workbook intake" parent="menu_estimates" action="action_boq_intake" sequence="5" groups="jakh_core.group_manager,jakh_core.group_estimator"/>
+</odoo>

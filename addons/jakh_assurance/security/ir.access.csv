@@ -1,0 +1,19 @@
+id,name,model_id,group_id/id,operation,domain
+case_reader,Assurance readers,jakh.assurance.case,base.group_user,r,
+case_quality,Quality action editors,jakh.assurance.case,jakh_core.group_quality,cru,
+case_technical,Technical action editors,jakh.assurance.case,jakh_core.group_technical,cru,
+case_manager,Assurance manager,jakh.assurance.case,jakh_core.group_manager,crud,
+case_company,Assurance company scope,jakh.assurance.case,,crud,"[('company_id', 'in', company_ids)]"
+case_project,Assurance project visibility,jakh.assurance.case,,crud,"[('project_id', 'access', 'read')]"
+document_reader,Controlled document readers,jakh.document,base.group_user,r,
+document_technical,Technical document editors,jakh.document,jakh_core.group_technical,cru,
+document_quality,Quality document editors,jakh.document,jakh_core.group_quality,cru,
+document_manager,Document management,jakh.document,jakh_core.group_manager,crud,
+document_company,Document company scope,jakh.document,,crud,"[('company_id', 'in', company_ids)]"
+document_project,Document project visibility,jakh.document,,crud,"[('project_id', 'access', 'read')]"
+revision_reader,Revision readers,jakh.document.revision,base.group_user,r,
+revision_technical,Technical revision editors,jakh.document.revision,jakh_core.group_technical,cru,
+revision_quality,Quality revision editors,jakh.document.revision,jakh_core.group_quality,cru,
+revision_manager,Revision management,jakh.document.revision,jakh_core.group_manager,crud,
+revision_company,Revision company scope,jakh.document.revision,,crud,"[('company_id', 'in', company_ids)]"
+revision_document,Revision document visibility,jakh.document.revision,,crud,"[('document_id', 'access', 'read')]"

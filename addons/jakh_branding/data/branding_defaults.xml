@@ -1,0 +1,16 @@
+<odoo>
+  <function model="res.users" name="_jakh_apply_brand_defaults"/>
+  <record id="mail.group_mail_notification_type_inbox" model="res.groups"><field name="name">Receive notifications in JAKH ERP</field></record>
+  <record id="auth_signup.set_password_email" model="mail.template">
+    <field name="subject">{{ object.create_uid.name }} from {{ object.company_id.name }} invites you to JAKH ERP</field>
+    <field name="body_html" type="html"><t>
+      <p>Hello <t t-out="object.name"/>,</p>
+      <p><b t-out="object.company_id.name"/> has invited you to JAKH ERP.</p>
+      <p>This invitation is valid for <t t-out="object.env['ir.config_parameter'].sudo().get_int('auth_signup.signup.validity.hours') or 144"/> hours. Choose your own password securely; do not share this invitation.</p>
+      <p><a t-att-href="object.partner_id._get_signup_url()" style="background:#146e65;color:white;padding:10px 16px;text-decoration:none;border-radius:5px;">Accept invitation</a></p>
+      <p>Your sign-in email: <t t-out="object.email"/></p>
+      <p>After activation, open <a t-att-href="object.get_base_url()">JAKH ERP</a>.</p>
+      <p>The <t t-out="object.company_id.name"/> team</p>
+    </t></field>
+  </record>
+</odoo>

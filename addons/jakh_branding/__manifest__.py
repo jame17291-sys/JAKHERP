@@ -1,0 +1,32 @@
+{
+    'name': 'JAKH Platform Branding',
+    'version': '20.0.1.7.0',
+    'category': 'Construction',
+    'summary': 'JAKH identity across sign-in, platform UI, portal and notifications',
+    'author': 'JAKH',
+    'license': 'LGPL-3',
+    'depends': ['jakh_core', 'auth_signup', 'portal', 'base_setup', 'mysubscription', 'digest', 'iap', 'partner_autocomplete', 'sms', 'stock_sms', 'crm_iap_enrich', 'crm_iap_mine'],
+    'data': ['views/branding_templates.xml', 'views/settings_views.xml', 'views/settings_cleanup.xml', 'views/sales_presentation.xml', 'views/crm_presentation.xml', 'views/lead_generation_disabled.xml', 'data/branding_defaults.xml', 'data/privacy_defaults.xml', 'data/lead_generation_policy.xml'],
+    'assets': {
+        'web._assets_primary_variables': [
+            ('prepend', 'jakh_branding/static/src/theme_variables.scss'),
+        ],
+        'web.assets_backend': [
+            'jakh_branding/static/src/backend_branding.js',
+            'jakh_branding/static/src/backend_branding.xml',
+            'jakh_branding/static/src/frontend_cleanup.js',
+            'jakh_branding/static/src/frontend_cleanup.xml',
+            'jakh_branding/static/src/crm_guidance.js',
+            'jakh_branding/static/src/crm_guidance.xml',
+            'jakh_branding/static/src/routes.js',
+            'jakh_branding/static/src/sidebar.js',
+            'jakh_branding/static/src/sidebar.xml',
+            'jakh_branding/static/src/sidebar.scss',
+            'jakh_branding/static/src/language_switch.js',
+            'jakh_branding/static/src/language_switch.xml',
+            'jakh_branding/static/src/language_switch.scss',
+        ],
+        'web.assets_frontend': ['jakh_branding/static/src/branding.scss'],
+    },
+    'installable': True,
+}
